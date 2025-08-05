@@ -73,17 +73,12 @@ const App = () => {
     e.preventDefault();
     setIsModalOpen(false);
     
-    if (selectedCountries.length === 0) {
-      showPopup("Please select at least one country to compare.", "warning");
+    if (selectedCountries.length < MAX_COUNTRIES) {
+      showPopup(`Please select ${MAX_COUNTRIES} countries to compare. You have selected ${selectedCountries.length}.`, "error");
       return;
     }
     
-    // Fill comparison array with selected countries and remaining slots with "Pick Country"
-    const newComparison = [...selectedCountries];
-    while (newComparison.length < MAX_COUNTRIES) {
-      newComparison.push("Pick Country");
-    }
-    setComparisonCountries(newComparison.slice(0, MAX_COUNTRIES));
+    setComparisonCountries(selectedCountries.slice(0, MAX_COUNTRIES));
     document.querySelector(".comparison-wrapper")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -162,26 +157,6 @@ const App = () => {
               </Button>
             )}
           </div>
-          {selectedCountries.length > 0 && (
-            <div className="selected-countries-summary">
-              <h3>Selected Countries ({selectedCountries.length}/{MAX_COUNTRIES})</h3>
-              <div className="selected-countries-list">
-                {selectedCountries.map(country => (
-                  <div key={country} className="selected-country-tag">
-                    <img src={getFlagUrl(country)} alt={`${country} flag`} />
-                    <span>{country}</span>
-                    <button 
-                      onClick={() => toggleCountrySelection(country)}
-                      className="remove-country"
-                      aria-label={`Remove ${country}`}
-                    >
-                      ×
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
           <div style={{ textAlign: "center", marginTop: "30px" }}>
             <Button type="submit">Compare</Button>
           </div>
@@ -199,10 +174,7 @@ const App = () => {
       />
 
       {/* Selector Dropdowns */}
-      {comparisonCountries.some(country => country !== "Pick Country") && (
-        <div className="selectors-section">
-          <h3>Quick Country Selection</h3>
-          <div className="selectors-grid">
+      <div className="selectors-grid">
         <div></div>
         {REGIONS.map((region, i) => (
           <div key={region}>
@@ -210,7 +182,6 @@ const App = () => {
               id={`country${i + 1}`}
               value={comparisonCountries[i]}
               onChange={e => handleCountrySelect(e, i)}
-              className="country-selector"
             >
               <option value="Pick Country">Select Country</option>
               {COUNTRIES.map(country => (
@@ -221,9 +192,7 @@ const App = () => {
             </select>
           </div>
         ))}
-          </div>
-        </div>
-      )}
+      </div>
 
       {/* Comparison Table */}
       <ComparisonTable comparisonCountries={comparisonCountries} />

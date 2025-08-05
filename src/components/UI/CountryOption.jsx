@@ -2,7 +2,7 @@ import React from "react";
 import { getFlagUrl } from "../../utils/countryUtils";
 
 const CountryOption = ({ country, isSelected, onClick }) => (
-  <label className={`country-option ${isSelected ? 'selected' : ''}`}>
+  <label className="country-option">
     <input
       type="checkbox"
       name="country"
@@ -12,7 +12,7 @@ const CountryOption = ({ country, isSelected, onClick }) => (
     />
     <span className="checkmark"></span>
     <img src={getFlagUrl(country)} alt={country} />
-    <div className="country-name">{country}</div>
+    <div style={{ textAlign: "center" }}>{country}</div>
   </label>
 );
 
