@@ -4,6 +4,7 @@ import { getFlagUrl, getCountryData, EVALUATION_CATEGORIES } from "../../utils/c
 
 const ComparisonTable = ({ comparisonCountries }) => {
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [showInstructions, setShowInstructions] = useState(true);
 
   const toggleCategory = (category) => {
     setExpandedCategories(prev => ({
@@ -33,7 +34,7 @@ const ComparisonTable = ({ comparisonCountries }) => {
     };
     return questions[category] || [];
   };
-  const renderEvaluationCell = (country, category) => {
+  const renderEvaluationCell = (country, category, isExpanded = false) => {
     if (country === "Pick Country") return "--";
     
     const countryData = getCountryData(country);
@@ -46,6 +47,9 @@ const ComparisonTable = ({ comparisonCountries }) => {
     };
     const formatValue = (value) => !value ? "NO" : (value === "No" ? "NO" : "YES");
     
+    // When expanded, don't show the combined view
+    if (isExpanded) return null;
+    
     return (
       <div className="evaluation-container">
         <span className={getBoxClass(countryData[aKey])}>
@@ -53,6 +57,23 @@ const ComparisonTable = ({ comparisonCountries }) => {
         </span>
         <span className={getBoxClass(countryData[bKey])}>
           {formatValue(countryData[bKey])}
+        </span>
+      </div>
+    );
+  };
+
+  const renderQuestionAnswer = (country, category, questionIndex) => {
+    if (country === "Pick Country") return "--";
+    
+    const countryData = getCountryData(country);
+    const questionKey = questionIndex === 0 ? `${category} a` : `${category} b`;
+    const value = countryData[questionKey];
+    const hasValue = value && value !== "No";
+    
+    return (
+      <div className="single-answer">
+        <span className={`evaluation-box ${hasValue ? 'yes' : 'no'}`}>
+          {hasValue ? "YES" : "NO"}
         </span>
       </div>
     );
@@ -78,20 +99,54 @@ const ComparisonTable = ({ comparisonCountries }) => {
     );
   };
 
+  const hasSelectedCountries = comparisonCountries.some(country => country !== "Pick Country");
+
   return (
     <div className="comparison-wrapper">
       <div className="table-center-header">
         <h1>Vaccination Comparison Table</h1>
+        {showInstructions && (
+          <div className="instructions-banner">
+            <div className="instructions-content">
+              <span className="instructions-icon">💡</span>
+              <div className="instructions-text">
+                <strong>How to use:</strong> Select up to 6 countries above to compare their vaccination programs. 
+                Click on category headers to expand and see detailed questions.
+              </div>
+              <button 
+                className="close-instructions" 
+                onClick={() => setShowInstructions(false)}
+                aria-label="Close instructions"
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
+        {!hasSelectedCountries && (
+          <div className="empty-state">
+            <div className="empty-state-icon">📊</div>
+            <h3>No Countries Selected</h3>
+            <p>Please select countries from the section above to start comparing vaccination programs.</p>
+          </div>
+        )}
       </div>
       
-      <div className="comparison-table" id="comparisonTable">
+      {hasSelectedCountries && (
+        <div className="comparison-table" id="comparisonTable">
         <div className="table-header question-header">Question</div>
         {comparisonCountries.map((country, i) => (
           <div key={i} className="table-header country-header" id={`c${i + 1}Name`}>
-            {country === "Pick Country" ? "Select Country" : country}
+            {country === "Pick Country" ? (
+              <span className="select-country-placeholder">Select Country</span>
+            ) : (
+              <div className="country-header-content">
+                <img src={getFlagUrl(country)} alt={`${country} flag`} className="country-flag" />
+                <span>{country}</span>
+              </div>
+            )}
           </div>
         ))}
-
 
         {EVALUATION_CATEGORIES.map(category => (
           <React.Fragment key={category}>
@@ -105,7 +160,7 @@ const ComparisonTable = ({ comparisonCountries }) => {
             </div>
             {comparisonCountries.map((country, i) => (
               <div key={i} className="evaluation-cell" id={`c${i + 1}${category}`}>
-                {renderEvaluationCell(country, category)}
+                {renderEvaluationCell(country, category, expandedCategories[category])}
               </div>
             ))}
             
@@ -118,21 +173,7 @@ const ComparisonTable = ({ comparisonCountries }) => {
                     </div>
                     {comparisonCountries.map((country, i) => (
                       <div key={i} className="question-answer-cell">
-                        {country === "Pick Country" ? "--" : (
-                          <div className="single-answer">
-                            {(() => {
-                              const countryData = getCountryData(country);
-                              const questionKey = qIndex === 0 ? `${category} a` : `${category} b`;
-                              const value = countryData[questionKey];
-                              const hasValue = value && value !== "No";
-                              return (
-                                <span className={`evaluation-box ${hasValue ? 'yes' : 'no'}`}>
-                                  {hasValue ? "YES" : "NO"}
-                                </span>
-                              );
-                            })()}
-                          </div>
-                        )}
+                        {renderQuestionAnswer(country, category, qIndex)}
                       </div>
                     ))}
                   </React.Fragment>
@@ -148,7 +189,8 @@ const ComparisonTable = ({ comparisonCountries }) => {
             {calculateCountryScore(country)}
           </div>
         ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
