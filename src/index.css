@@ -91,6 +91,39 @@ body {
   margin-bottom: 30px;
 }
 
+.country-search-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+}
+
+.country-filter-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  font-size: 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.country-filter-input:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+}
+
+.country-search-container .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+}
+
 .country-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -198,7 +231,19 @@ body {
 /* COMPARISON SECTION */
 .comparison-wrapper {
   text-align: center;
-  margin-top: 1rem;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.table-center-header {
+  margin-bottom: 30px;
+}
+
+.table-center-header h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
 }
 
 .selectors-grid {
@@ -219,31 +264,108 @@ body {
 .comparison-table {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  gap: 10px;
+  gap: 8px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.question-header {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  color: white;
+  font-weight: bold;
+  padding: 15px 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.country-header {
+  background-color: #e9ecef;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 15px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.category-header {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  color: white;
+  font-weight: bold;
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluation-cell {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.evaluation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.evaluation-box {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 40px;
   text-align: center;
 }
 
-.table-header {
-  background-color: #f0f0f0;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 6px;
+.evaluation-box.yes {
+  background-color: #28a745;
+  color: white;
 }
 
-.label-cell {
-  background-color: #f9f9f9;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 6px;
+.evaluation-box.no {
+  background-color: #dc3545;
+  color: white;
 }
 
-.table-cell {
+.score-header {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  color: white;
+  font-weight: bold;
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-cell {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-score {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  padding: 8px 16px;
   border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .table-cell img {
@@ -270,32 +392,17 @@ body {
   .comparison-table,
   .selectors-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
-}
-
-.ab-box {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.value-box {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #fff;
-  font-size: 0.85rem;
-}
-
-.value-box.green {
-  background-color: #28a745; /* Green */
-}
-
-.value-box.red {
-  background-color: #dc3545; /* Red */
-}
-
-.value-box.gray {
-  background-color: #6c757d; /* Gray for missing values */
+  
+  .evaluation-container {
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .evaluation-box {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
 }

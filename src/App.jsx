@@ -16,6 +16,7 @@ import { REGIONS, MAX_COUNTRIES, DISPLAY_COUNTRIES } from "./utils/countryUtils"
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [countryFilterQuery, setCountryFilterQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [comparisonCountries, setComparisonCountries] = useState(
@@ -100,6 +101,13 @@ const App = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+  // Filter countries based on search query
+  const filteredCountries = COUNTRIES.filter(country =>
+    country.toLowerCase().includes(countryFilterQuery.toLowerCase())
+  );
+
+  const displayCountries = countryFilterQuery ? filteredCountries : COUNTRIES.slice(0, DISPLAY_COUNTRIES);
+  const remainingCount = countryFilterQuery ? 0 : Math.max(0, COUNTRIES.length - DISPLAY_COUNTRIES);
   return (
     <>
       {/* Banner Section */}
@@ -123,9 +131,19 @@ const App = () => {
       {/* Countries Section */}
       <section className="countries-section">
         <h2>Search by Countries</h2>
+        <div className="country-search-container">
+          <input
+            type="text"
+            placeholder="Filter countries..."
+            value={countryFilterQuery}
+            onChange={(e) => setCountryFilterQuery(e.target.value)}
+            className="country-filter-input"
+          />
+          <span className="search-icon">🔍</span>
+        </div>
         <form id="compareForm" onSubmit={handleCompare}>
           <div className="country-grid">
-            {COUNTRIES.slice(0, DISPLAY_COUNTRIES).map(country => (
+            {displayCountries.map(country => (
               <CountryOption
                 key={country}
                 country={country}
@@ -133,9 +151,9 @@ const App = () => {
                 onClick={toggleCountrySelection}
               />
             ))}
-            {COUNTRIES.length > DISPLAY_COUNTRIES && (
+            {remainingCount > 0 && (
               <Button onClick={() => setIsModalOpen(true)}>
-                + {COUNTRIES.length - DISPLAY_COUNTRIES} More
+                + {remainingCount} More
               </Button>
             )}
           </div>

@@ -9,16 +9,19 @@ const ComparisonTable = ({ comparisonCountries }) => {
     const aKey = `${category} a`;
     const bKey = `${category} b`;
     
-    const getBoxClass = (value) => value === "No" ? "value-box red" : "value-box green";
-    const formatValue = (value) => !value ? "--" : (value === "No" ? "No" : "Yes");
+    const getBoxClass = (value) => {
+      if (!value || value === "No") return "evaluation-box no";
+      return "evaluation-box yes";
+    };
+    const formatValue = (value) => !value ? "NO" : (value === "No" ? "NO" : "YES");
     
     return (
-      <div className="ab-box">
+      <div className="evaluation-container">
         <span className={getBoxClass(countryData[aKey])}>
-          A: {formatValue(countryData[aKey])}
+          {formatValue(countryData[aKey])}
         </span>
         <span className={getBoxClass(countryData[bKey])}>
-          B: {formatValue(countryData[bKey])}
+          {formatValue(countryData[bKey])}
         </span>
       </div>
     );
@@ -31,49 +34,48 @@ const ComparisonTable = ({ comparisonCountries }) => {
     const yesCount = EVALUATION_CATEGORIES.reduce((count, category) => {
       const aKey = `${category} a`;
       const bKey = `${category} b`;
+      const totalQuestions = EVALUATION_CATEGORIES.length * 2; // 2 questions per category
       if (countryData[aKey] && countryData[aKey] !== "No") count++;
       if (countryData[bKey] && countryData[bKey] !== "No") count++;
       return count;
     }, 0);
     
-    return `${yesCount}/8`;
+    return (
+      <span className="country-score">
+        {yesCount}/8
+      </span>
+    );
   };
 
   return (
     <div className="comparison-wrapper">
+      <div className="table-center-header">
+        <h1>Vaccination Comparison Table</h1>
+      </div>
+      
       <div className="comparison-table" id="comparisonTable">
-        <div className="table-header">Info</div>
+        <div className="table-header question-header">Question</div>
         {comparisonCountries.map((country, i) => (
-          <div key={i} className="table-header" id={`c${i + 1}Name`}>
+          <div key={i} className="table-header country-header" id={`c${i + 1}Name`}>
             {country === "Pick Country" ? "Select Country" : country}
           </div>
         ))}
 
-        <div className="label-cell">Flag</div>
-        {comparisonCountries.map((country, i) => (
-          <div key={i} className="table-cell" id={`c${i + 1}Flag`}>
-            {country !== "Pick Country" && getFlagUrl(country) ? (
-              <img src={getFlagUrl(country)} alt={country} />
-            ) : (
-              "--"
-            )}
-          </div>
-        ))}
 
         {EVALUATION_CATEGORIES.map(category => (
           <React.Fragment key={category}>
-            <div className="label-cell">{category}</div>
+            <div className="category-header">{category}</div>
             {comparisonCountries.map((country, i) => (
-              <div key={i} className="table-cell" id={`c${i + 1}${category}`}>
+              <div key={i} className="evaluation-cell" id={`c${i + 1}${category}`}>
                 {renderEvaluationCell(country, category)}
               </div>
             ))}
           </React.Fragment>
         ))}
 
-        <div className="label-cell">Country Score Total (CST)</div>
+        <div className="score-header">Country Score Total</div>
         {comparisonCountries.map((country, i) => (
-          <div key={i} className="table-cell" id={`c${i + 1}TotalYes`}>
+          <div key={i} className="score-cell" id={`c${i + 1}TotalYes`}>
             {calculateCountryScore(country)}
           </div>
         ))}
