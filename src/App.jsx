@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./App.css";
-import { COUNTRIES } from "./lib/data";
+import { COUNTRIES, COUNTRIES_WITH_REGION } from "./lib/data";
 
 // Components
 import Button from "./components/UI/Button";
@@ -11,7 +10,11 @@ import CountriesModal from "./components/Modal/CountriesModal";
 import ComparisonTable from "./components/Comparison/ComparisonTable";
 
 // Utils
-import { REGIONS, MAX_COUNTRIES, DISPLAY_COUNTRIES } from "./utils/countryUtils";
+import {
+  REGIONS,
+  MAX_COUNTRIES,
+  DISPLAY_COUNTRIES,
+} from "./utils/countryUtils";
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,24 +25,29 @@ const App = () => {
   const [comparisonCountries, setComparisonCountries] = useState(
     Array(MAX_COUNTRIES).fill("Pick Country")
   );
-  const [popup, setPopup] = useState({ show: false, message: "", type: "info" });
+  const [popup, setPopup] = useState({
+    show: false,
+    message: "",
+    type: "info",
+  });
 
   const searchRef = useRef(null);
   const suggestionsRef = useRef(null);
 
   // Popup functions
-  const showPopup = (message, type = "info") => setPopup({ show: true, message, type });
+  const showPopup = (message, type = "info") =>
+    setPopup({ show: true, message, type });
   const closePopup = () => setPopup({ show: false, message: "", type: "info" });
 
   // Search functionality
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-    
+
     if (query) {
-      const filtered = COUNTRIES
-        .filter(country => country.toLowerCase().includes(query.toLowerCase()))
-        .slice(0, 10);
+      const filtered = COUNTRIES.filter((country) =>
+        country.toLowerCase().includes(query.toLowerCase())
+      ).slice(0, 10);
       setSuggestions(filtered);
     } else {
       setSuggestions([]);
@@ -54,16 +62,19 @@ const App = () => {
 
   // Country selection
   const toggleCountrySelection = (country) => {
-    setSelectedCountries(prev => {
+    setSelectedCountries((prev) => {
       if (prev.includes(country)) {
-        return prev.filter(c => c !== country);
+        return prev.filter((c) => c !== country);
       }
-      
+
       if (prev.length >= MAX_COUNTRIES) {
-        showPopup(`You can select a maximum of ${MAX_COUNTRIES} countries for comparison.`, "warning");
+        showPopup(
+          `You can select a maximum of ${MAX_COUNTRIES} countries for comparison.`,
+          "warning"
+        );
         return prev;
       }
-      
+
       return [...prev, country];
     });
   };
@@ -72,14 +83,19 @@ const App = () => {
   const handleCompare = (e) => {
     e.preventDefault();
     setIsModalOpen(false);
-    
+
     if (selectedCountries.length < MAX_COUNTRIES) {
-      showPopup(`Please select ${MAX_COUNTRIES} countries to compare. You have selected ${selectedCountries.length}.`, "error");
+      showPopup(
+        `Please select ${MAX_COUNTRIES} countries to compare. You have selected ${selectedCountries.length}.`,
+        "error"
+      );
       return;
     }
-    
+
     setComparisonCountries(selectedCountries.slice(0, MAX_COUNTRIES));
-    document.querySelector(".comparison-wrapper")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .querySelector(".comparison-wrapper")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleCountrySelect = (e, index) => {
@@ -91,40 +107,54 @@ const App = () => {
   // Click outside handler
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (searchRef.current && !searchRef.current.contains(e.target) &&
-          suggestionsRef.current && !suggestionsRef.current.contains(e.target)) {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(e.target) &&
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(e.target)
+      ) {
         setSuggestions([]);
       }
     };
-    
+
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   // Filter countries based on search query
-  const filteredCountries = COUNTRIES.filter(country =>
+  const filteredCountries = COUNTRIES.filter((country) =>
     country.toLowerCase().includes(countryFilterQuery.toLowerCase())
   );
 
-  const displayCountries = countryFilterQuery ? filteredCountries : COUNTRIES.slice(0, DISPLAY_COUNTRIES);
-  const remainingCount = countryFilterQuery ? 0 : Math.max(0, COUNTRIES.length - DISPLAY_COUNTRIES);
+  const displayCountries = countryFilterQuery
+    ? filteredCountries
+    : COUNTRIES.slice(0, DISPLAY_COUNTRIES);
+  const remainingCount = countryFilterQuery
+    ? 0
+    : Math.max(0, COUNTRIES.length - DISPLAY_COUNTRIES);
   return (
     <>
       {/* Banner Section */}
       <section className="banner">
-        <div className="banner-left">
-          <h1>Vaccination Comparison<br />Review of 2025</h1>
-          <SearchBar
-            searchQuery={searchQuery}
-            onSearch={handleSearch}
-            suggestions={suggestions}
-            onSuggestionClick={handleSuggestionClick}
-            searchRef={searchRef}
-            suggestionsRef={suggestionsRef}
-          />
-        </div>
-        <div className="banner-right">
-          <img src="LADY-1.png" alt="Vaccinated Woman" />
+        <div className="container">
+          <div className="banner-left">
+            <h1>
+              Vaccination Comparison
+              <br />
+              Review of 2025
+            </h1>
+            <SearchBar
+              searchQuery={searchQuery}
+              onSearch={handleSearch}
+              suggestions={suggestions}
+              onSuggestionClick={handleSuggestionClick}
+              searchRef={searchRef}
+              suggestionsRef={suggestionsRef}
+            />
+          </div>
+          <div className="banner-right">
+            <img src="LADY-1.png" alt="Vaccinated Woman" />
+          </div>
         </div>
       </section>
 
@@ -143,7 +173,7 @@ const App = () => {
         </div>
         <form id="compareForm" onSubmit={handleCompare}>
           <div className="country-grid">
-            {displayCountries.map(country => (
+            {displayCountries.map((country) => (
               <CountryOption
                 key={country}
                 country={country}
@@ -181,14 +211,16 @@ const App = () => {
             <select
               id={`country${i + 1}`}
               value={comparisonCountries[i]}
-              onChange={e => handleCountrySelect(e, i)}
+              onChange={(e) => handleCountrySelect(e, i)}
             >
-              <option value="Pick Country">Select Country</option>
-              {COUNTRIES.map(country => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
+              <option value="">Select Country {region}</option>
+              {COUNTRIES_WITH_REGION.filter((c,i) => c.region === region).map(
+                (c) => (
+                  <option key={c.name} value={c.name}>
+                    {c.name}
+                  </option>
+                )
+              )}
             </select>
           </div>
         ))}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Table</title>
+    <style>
+        .comparison-wrapper {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 300px repeat(6, 1fr);
+            gap: 2px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+
+        .table-header {
+            background-color: #ff9500;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .question-header {
+            background-color: #ff9500;
+        }
+
+        .country-header {
+            background-color: #e6e6e6;
+            color: #333;
+        }
+
+        .category-header {
+            background-color: #ff9500;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.2s;
+        }
+
+        .category-header:hover {
+            background-color: #e6850e;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expand-icon {
+            transition: transform 0.2s;
+            font-size: 12px;
+        }
+
+        .expand-icon.expanded {
+            transform: rotate(180deg);
+        }
+
+        .evaluation-cell {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .evaluation-container {
+            display: flex;
+            gap: 5px;
+        }
+
+        .evaluation-box {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .evaluation-box.yes {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .evaluation-box.no {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .question-detail {
+            background-color: #f8f9fa;
+            padding: 12px 15px;
+            border-left: 4px solid #ff9500;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .question-answer-cell {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .score-header {
+            background-color: #ff9500;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .score-cell {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .country-score {
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .comparison-table {
+                grid-template-columns: 250px repeat(6, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .comparison-table {
+                grid-template-columns: 200px repeat(6, 1fr);
+                font-size: 14px;
+            }
+            
+            .question-detail {
+                font-size: 13px;
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // Mock data and utilities (replace with your actual imports)
+        const EVALUATION_CATEGORIES = ["Goals", "Plan", "Implementation", "Evaluation"];
+        
+        const mockCountryData = {
+            "Comoros": {
+                "Goals a": "Yes", "Goals b": "No",
+                "Plan a": "Yes", "Plan b": "No", 
+                "Implementation a": "No", "Implementation b": "Yes",
+                "Evaluation a": "Yes", "Evaluation b": "No"
+            },
+            "Eritrea": {
+                "Goals a": "Yes", "Goals b": "No",
+                "Plan a": "Yes", "Plan b": "No",
+                "Implementation a": "No", "Implementation b": "Yes", 
+                "Evaluation a": "Yes", "Evaluation b": "No"
+            },
+            "Guatemala": {
+                "Goals a": "Yes", "Goals b": "No",
+                "Plan a": "Yes", "Plan b": "No",
+                "Implementation a": "No", "Implementation b": "Yes",
+                "Evaluation a": "Yes", "Evaluation b": "No"
+            },
+            "Guinea": {
+                "Goals a": "No", "Goals b": "Yes",
+                "Plan a": "No", "Plan b": "Yes",
+                "Implementation a": "Yes", "Implementation b": "No",
+                "Evaluation a": "No", "Evaluation b": "Yes"
+            },
+            "Georgia": {
+                "Goals a": "Yes", "Goals b": "Yes",
+                "Plan a": "Yes", "Plan b": "Yes",
+                "Implementation a": "Yes", "Implementation b": "Yes",
+                "Evaluation a": "Yes", "Evaluation b": "Yes"
+            },
+            "Germany": {
+                "Goals a": "Yes", "Goals b": "Yes",
+                "Plan a": "Yes", "Plan b": "Yes",
+                "Implementation a": "Yes", "Implementation b": "Yes",
+                "Evaluation a": "Yes", "Evaluation b": "Yes"
+            }
+        };
+
+        const getCountryData = (country) => {
+            return mockCountryData[country] || {};
+        };
+
+        const ComparisonTable = ({ comparisonCountries }) => {
+            const [expandedCategories, setExpandedCategories] = useState({});
+
+            const toggleCategory = (category) => {
+                setExpandedCategories(prev => ({
+                    ...prev,
+                    [category]: !prev[category]
+                }));
+            };
+
+            const getQuestions = (category) => {
+                const questions = {
+                    "Goals": [
+                        "There are goals for future vaccine needs (e.g., over the next 3, 5 or 10 years).",
+                        "There is ≥1 specific, officially published and well-known national vaccination target to be reached by a specific date (e.g., measles elimination by end 2025)."
+                    ],
+                    "Plan": [
+                        "There is one (and only one) plan published by a WHO-type NITAG.",
+                        "Pipeline vaccines are continuously reviewed pre-licensure by NITAG."
+                    ],
+                    "Implementation": [
+                        "There are clearly defined responsibilities and accountabilities for implementation of the NITAG plan with action in case of failure.",
+                        "The NITAG plan is regularly supported by government-funded national information campaigns."
+                    ],
+                    "Evaluation": [
+                        "There are up to date (≤ every 2 years) validated studies on vaccine-uptake, completion and compliance at age 2 years, before school entry, for adolescents and for those ≥65 years (some countries: ≥60 years).",
+                        "There is scientifically sound and timely (≤2 years) burden-of-disease data by age group on all vaccine-preventable diseases including relevant pipeline vaccines."
+                    ]
+                };
+                return questions[category] || [];
+            };
+
+            const renderEvaluationCell = (country, category) => {
+                if (country === "Pick Country") return "--";
+                
+                const countryData = getCountryData(country);
+                const aKey = `${category} a`;
+                const bKey = `${category} b`;
+                
+                const getBoxClass = (value) => {
+                    if (!value || value === "No") return "evaluation-box no";
+                    return "evaluation-box yes";
+                };
+                const formatValue = (value) => !value ? "NO" : (value === "No" ? "NO" : "YES");
+                
+                return (
+                    <div className="evaluation-container">
+                        <span className={getBoxClass(countryData[aKey])}>
+                            {formatValue(countryData[aKey])}
+                        </span>
+                        <span className={getBoxClass(countryData[bKey])}>
+                            {formatValue(countryData[bKey])}
+                        </span>
+                    </div>
+                );
+            };
+
+            const renderQuestionAnswer = (country, category, questionIndex) => {
+                if (country === "Pick Country") return "--";
+                
+                const countryData = getCountryData(country);
+                const questionKey = questionIndex === 0 ? `${category} a` : `${category} b`;
+                const value = countryData[questionKey];
+                const hasValue = value && value !== "No";
+                
+                return (
+                    <span className={`evaluation-box ${hasValue ? 'yes' : 'no'}`}>
+                        {hasValue ? "YES" : "NO"}
+                    </span>
+                );
+            };
+
+            const calculateCountryScore = (country) => {
+                if (country === "Pick Country") return "--";
+                
+                const countryData = getCountryData(country);
+                const yesCount = EVALUATION_CATEGORIES.reduce((count, category) => {
+                    const aKey = `${category} a`;
+                    const bKey = `${category} b`;
+                    if (countryData[aKey] && countryData[aKey] !== "No") count++;
+                    if (countryData[bKey] && countryData[bKey] !== "No") count++;
+                    return count;
+                }, 0);
+                
+                return (
+                    <span className="country-score">
+                        {yesCount}/8
+                    </span>
+                );
+            };
+
+            return (
+                <div className="comparison-wrapper">
+                    <div className="comparison-table">
+                        {/* Header Row */}
+                        <div className="table-header question-header">Question</div>
+                        {comparisonCountries.map((country, i) => (
+                            <div key={i} className="table-header country-header">
+                                {country === "Pick Country" ? "Select Country" : country}
+                            </div>
+                        ))}
+
+                        {/* Category Rows */}
+                        {EVALUATION_CATEGORIES.map(category => (
+                            <React.Fragment key={category}>
+                                {/* Category Header Row */}
+                                <div className="category-header" onClick={() => toggleCategory(category)}>
+                                    <div className="category-title">
+                                        <span className={`expand-icon ${expandedCategories[category] ? 'expanded' : ''}`}>
+                                            ▼
+                                        </span>
+                                        {category}
+                                    </div>
+                                </div>
+                                
+                                {/* Country Data Cells for this Category */}
+                                {!expandedCategories[category] && (
+                                    comparisonCountries.map((country, i) => (
+                                        <div key={i} className="evaluation-cell">
+                                            {renderEvaluationCell(country, category)}
+                                        </div>
+                                    ))
+                                )}
+                                
+                                {/* Expanded Questions */}
+                                {expandedCategories[category] && (
+                                    getQuestions(category).map((question, qIndex) => (
+                                        <React.Fragment key={`${category}-q${qIndex}`}>
+                                            <div className="question-detail">
+                                                {question}
+                                            </div>
+                                            {comparisonCountries.map((country, i) => (
+                                                <div key={i} className="question-answer-cell">
+                                                    {renderQuestionAnswer(country, category, qIndex)}
+                                                </div>
+                                            ))}
+                                        </React.Fragment>
+                                    ))
+                                )}
+                            </React.Fragment>
+                        ))}
+
+                        {/* Score Row */}
+                        <div className="score-header">Country Score Total</div>
+                        {comparisonCountries.map((country, i) => (
+                            <div key={i} className="score-cell">
+                                {calculateCountryScore(country)}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        // Demo with sample countries
+        const App = () => {
+            const sampleCountries = ["Comoros", "Eritrea", "Guatemala", "Guinea", "Georgia", "Germany"];
+            
+            return <ComparisonTable comparisonCountries={sampleCountries} />;
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

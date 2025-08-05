@@ -1,0 +1,99 @@
+.comparison-wrapper {
+  text-align: center;
+  padding: 40px 20px 0 20px;
+  background-color: #f8f9fa;
+  min-height: 60vh;
+}
+.table-center-header h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin: 0 0 30px 0;
+  font-weight: 600;
+}
+.category-yesno-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 1000px;
+  table-layout: fixed;
+}
+.category-yesno-table th,
+.category-yesno-table td {
+  border: 1px solid #e9ecef;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: top;
+  padding: 12px 8px;
+  width: 100px; /* Each cell is exactly 100px */
+  max-width: 100px;
+  min-width: 100px;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+.category-yesno-table th {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  color: white;
+  font-weight: bold;
+}
+.category-header {
+  font-size: 16px;
+  color: #333;
+}
+.question-list {
+  text-align: left;
+  padding-left: 18px;
+  margin: 8px 0 0 0;
+}
+.question-list li {
+  font-size: 13px;
+  color: #495057;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+.evaluation-box {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 44px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.evaluation-box.yes {
+  background-color: #28a745;
+  color: white;
+}
+.evaluation-box.no {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media (max-width: 1050px) {
+  .category-yesno-table {
+    width: 100%;
+    font-size: 13px;
+  }
+  .category-yesno-table th,
+  .category-yesno-table td {
+    font-size: 12px;
+    padding: 8px 3px;
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+  }
+  .table-center-header h1 {
+    font-size: 20px;
+  }
+  .evaluation-box {
+    font-size: 11px;
+    padding: 3px 7px;
+    min-width: 22px;
+  }
+  .category-header {
+    font-size: 13px;
+  }
+}

@@ -80,10 +80,6 @@ const ComparisonTable = ({ comparisonCountries }) => {
 
   return (
     <div className="comparison-wrapper">
-      <div className="table-center-header">
-        <h1>Vaccination Comparison Table</h1>
-      </div>
-      
       <div className="comparison-table" id="comparisonTable">
         <div className="table-header question-header">Question</div>
         {comparisonCountries.map((country, i) => (

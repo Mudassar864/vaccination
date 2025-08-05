@@ -1,24 +1,25 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
+
 }
 
-/* BANNER SECTION */
+/* ================== BANNER SECTION ================== */
 .banner {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   background-color: #fef2e4;
-  padding: 80px 100px;
-  flex-wrap: wrap;
-  overflow: hidden;
 }
-
+.banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
 .banner-left {
-  max-width: 600px;
-  margin-left: 100px;
+  flex: 3;
 }
 
 .banner-left h1 {
@@ -57,12 +58,12 @@ body {
   position: absolute;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   max-height: 200px;
   overflow-y: auto;
   z-index: 10;
-  display: block;
+  display: none;
 }
 
 #suggestions li {
@@ -76,10 +77,14 @@ body {
 }
 
 .banner-right {
-  z-index: 1;
+  flex: 1;
+}
+.banner-right img {
+  width: 400px;
+  height: auto;
 }
 
-/* COUNTRY SECTION */
+/* ================== COUNTRY SECTION ================== */
 .countries-section {
   background-color: #f4f6fc;
   padding: 40px 20px;
@@ -133,6 +138,7 @@ body {
 }
 
 .country-option {
+  max-width: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -140,7 +146,7 @@ body {
   padding: 15px 10px;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.3s;
   border: 2px solid transparent;
@@ -172,8 +178,8 @@ body {
 }
 
 .country-option input[type="checkbox"]:checked + .checkmark {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
+  background-color: #4caf50;
+  border-color: #4caf50;
 }
 
 .country-option .checkmark::after {
@@ -193,7 +199,7 @@ body {
   transform: rotate(45deg);
 }
 
-/* MODAL */
+/* ================== MODAL ================== */
 .modal {
   position: fixed;
   top: 0;
@@ -210,10 +216,10 @@ body {
 .modal-content {
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
   max-width: 800px;
   width: 90%;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
 }
@@ -222,17 +228,37 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
   cursor: pointer;
 }
 
+.close-button:hover {
+  color: black;
+}
 
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
 
-/* COMPARISON SECTION */
+.modal-grid button {
+  background-color: #f4f6fc;
+  border: 1px solid #ccc;
+}
+
+/* ================== COMPARISON TABLE ================== */
+
 .comparison-wrapper {
   text-align: center;
   padding: 40px 20px;
+  padding-top: 0px;
   background-color: #f8f9fa;
+  min-height: 60vh;
 }
 
 .table-center-header {
@@ -249,10 +275,13 @@ body {
 .selectors-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 1rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  margin-top: 1rem;
+  gap: 8px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  
 }
 
 .selectors-grid select {
@@ -281,6 +310,7 @@ body {
   padding: 15px 10px;
   border-radius: 8px;
   font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .country-header {
@@ -330,15 +360,15 @@ body {
 .question-detail {
   background-color: #f8f9fa;
   color: #495057;
-  padding: 12px 8px;
   border-radius: 8px;
   font-size: 13px;
   line-height: 1.4;
-  border-left: 4px solid #ff8c42;
   text-align: left;
 }
 
-.question-answer-cell {
+.question-answer-cell,
+.evaluation-cell,
+.score-cell {
   background-color: #ffffff;
   padding: 8px;
   border-radius: 8px;
@@ -352,13 +382,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.evaluation-cell {
-  background-color: #ffffff;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
 }
 
 .evaluation-container {
@@ -399,18 +422,8 @@ body {
   justify-content: center;
 }
 
-.score-cell {
-  background-color: #ffffff;
-  padding: 12px 8px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .country-score {
-  background: linear-gradient(135deg, #dc3545, #c82333);
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -422,6 +435,7 @@ body {
   width: 40px;
 }
 
+/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -432,11 +446,14 @@ body {
   .banner-left,
   .banner-right {
     max-width: 100%;
+    margin-left: 0;
   }
 
   .banner-right {
     position: static;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
   }
 
   .comparison-table,
@@ -444,13 +461,13 @@ body {
     grid-template-columns: 1fr;
     gap: 8px;
   }
-  
+
   .evaluation-container {
     flex-direction: row;
     gap: 8px;
     justify-content: center;
   }
-  
+
   .evaluation-box {
     font-size: 10px;
     padding: 4px 8px;
