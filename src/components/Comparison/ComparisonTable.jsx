@@ -6,7 +6,7 @@ import {
   EVALUATION_CATEGORIES,
 } from "../../utils/countryUtils";
 
-const ComparisonTable = ({ comparisonCountries }) => {
+const ComparisonTable = ({ comparisonCountries, countries, onCountrySelect }) => {
   const [expandedCategories, setExpandedCategories] = useState(() => {
     const initialExpandedState = {};
     EVALUATION_CATEGORIES.forEach((category) => {
@@ -45,9 +45,12 @@ const ComparisonTable = ({ comparisonCountries }) => {
   };
 
   const renderSingleEvaluationAnswer = (country, category, questionIndex) => {
-    if (country === "Pick Country") return "--";
+    // Show "--" for empty country or "Pick Country"
+    if (!country || country === "Pick Country" || country === "--") return "--";
 
     const countryData = getCountryData(country);
+    if (!countryData) return "--";
+
     const questionKey = questionIndex === 0 ? `${category} a` : `${category} b`;
     const value = countryData[questionKey];
 
@@ -58,8 +61,6 @@ const ComparisonTable = ({ comparisonCountries }) => {
     const formatValue = (val) => (!val || val === "No" ? "NO" : "YES");
 
     const isYes = formatValue(value) === "YES";
-    // Placeholder URL: In a real application, you would fetch the actual URL
-    // from your countryData or a specific mapping based on country, category, and question.
     const linkUrl = isYes ? value : null;
 
     return (
@@ -81,9 +82,12 @@ const ComparisonTable = ({ comparisonCountries }) => {
   };
 
   const calculateCountryScore = (country) => {
-    if (country === "Pick Country") return "--";
+    // Show "--" for empty country or "Pick Country"
+    if (!country || country === "Pick Country" || country === "--") return "--";
 
     const countryData = getCountryData(country);
+    if (!countryData) return "--";
+
     const yesCount = EVALUATION_CATEGORIES.reduce((count, category) => {
       const aKey = `${category} a`;
       const bKey = `${category} b`;
@@ -95,177 +99,235 @@ const ComparisonTable = ({ comparisonCountries }) => {
     return <span className="country-score">{yesCount}/8</span>;
   };
 
+  // Calculate dynamic widths based on number of countries
+  const numCountries = comparisonCountries.length;
+  const minTableWidth = 800;
+  const maxTableWidth = 1400;
+  const tableWidth = Math.max(
+    minTableWidth,
+    Math.min(maxTableWidth, 200 + numCountries * 150)
+  );
+  const columnWidth =
+    numCountries > 0 ? `${(tableWidth - 200) / numCountries}px` : "150px";
+
   return (
     <div className="comparison-wrapper">
       <style>
         {`
-          table {
-            width: 1000px;
-            border-collapse: separate;
-            border-spacing: 10px;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            table-layout: fixed;
+            .comparison-wrapper {
+              overflow-x: auto;
+              width: 1440px;
+              max-width: 100%;
+              margin: 0 auto;
+            }
+            table {
+              width: 1200px; /* fixed table width */
+              border-collapse: separate;
+              border-spacing: 10px;
+              margin: 20px auto;
+              font-family: Arial, sans-serif;
+              table-layout: fixed; /* important for fixed-width cells */
+            }
 
-          }
-          th, td {
-            border: none;
-            padding: 15px;
-            text-align: center;
-            background-color: #fff;
-            width: calc((1000px - 6 * 10px) / 7);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-          }
-          th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-          }
-          td.category-cell {
-            text-align: left;
-            vertical-align: middle;
-            font-weight: bold;
-            padding: 0;
-            background-color: #fff;
-          }
-          td.category-cell.category-cell-collapsed-bg {
-            background-color: #F8AC58;
-          }
-          td.category-cell table {
-            width: 100%;
-            height: 100%;
-            border-collapse: collapse;
-            margin: 0;
-          }
-          td.category-cell table td {
-            border: none;
-            text-align: left;
-            vertical-align: middle;
-            padding: 10px 15px;
-            font-weight: normal;
-            font-size: 0.9em;
-          }
-          td.category-cell .category-name {
-            display: block;
-            padding: 15px;
-            background-color: #F8AC58;
-            border-bottom: none;
-            font-weight: bold;
-            font-size: 1em;
-            cursor: pointer;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-          }
-          tr.gap-row td {
-            height: 20px;
-            border: none;
-            background-color: transparent;
-            padding: 0;
-            box-shadow: none;
-          }
-          .evaluation-box {
-            display: inline-block;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            font-weight: bold;
-          }
-          .evaluation-box.yes {
-            background-color: #d4edda;
-            color: #155724;
-          }
-          .evaluation-box.no {
-            background-color: #f8d7da;
-            color: #721c24;
-          }
-          .expand-icon {
-            transition: transform 0.2s ease-in-out;
-            margin-right: 5px;
-          }
-          .expand-icon.expanded {
-            transform: rotate(180deg);
-          }
-          .collapsible-questions-table,.collapsible-questions-table td, .collapsible-questions-table tr{
-          background-color: #C5BDBB;}
-        `}
+            th, td {
+              border: none;
+              padding: 15px;
+              text-align: center; /* center content */
+              background-color: #fff;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+              overflow: hidden;
+              word-wrap: break-word;
+            }
+
+            th:first-child,
+            td:first-child {
+              width: 250px;  /* fixed width for Questions column */
+              min-width: 250px;
+            }
+
+            th:not(:first-child),
+            td:not(:first-child) {
+              width: 150px;  /* fixed width for each country column */
+              min-width: 150px;
+            }
+
+           
+            
+            th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+            }
+           
+            td.category-cell {
+              text-align: left;
+              vertical-align: middle;
+              font-weight: bold;
+              padding: 0;
+              background-color: #fff;
+            }
+            td.category-cell.category-cell-collapsed-bg {
+              background-color: #F8AC58;
+            }
+            td.category-cell table {
+              width: 100%;
+              height: 100%;
+              border-collapse: collapse;
+              margin: 0;
+            }
+            td.category-cell table td {
+              border: none;
+              text-align: left;
+              vertical-align: middle;
+              padding: 10px 15px;
+              font-weight: normal;
+              font-size: 0.9em;
+            }
+            td.category-cell .category-name {
+              display: block;
+              padding: 15px;
+              background-color: #F8AC58;
+              border-bottom: none;
+              font-weight: bold;
+              font-size: 1em;
+              cursor: pointer;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+            }
+            tr.gap-row td {
+              height: 20px;
+              border: none;
+              background-color: transparent;
+              padding: 0;
+              box-shadow: none;
+            }
+            .evaluation-box {
+              display: inline-block;
+              padding: 6px 10px;
+              border-radius: 4px;
+              font-size: 0.85em;
+              font-weight: bold;
+            }
+            .evaluation-box.yes {
+              background-color: #d4edda;
+              color: #155724;
+            }
+            .evaluation-box.no {
+              background-color: #f8d7da;
+              color: #721c24;
+            }
+            .expand-icon {
+              transition: transform 0.2s ease-in-out;
+              margin-right: 5px;
+            }
+            .expand-icon.expanded {
+              transform: rotate(180deg);
+            }
+            .collapsible-questions-table, .collapsible-questions-table td, .collapsible-questions-table tr {
+              background-color: #C5BDBB;
+            }
+            .empty-state {
+              color: #666;
+              font-style: italic;
+            }
+          `}
       </style>
 
-      <table>
-        <thead>
-          <tr>
-            <th style={{background:"#F8AC58"}}>Questions</th>
-            {comparisonCountries.map((country, i) => (
-              <th key={i}>
-                {country === "Pick Country" ? `Pick Country` : country}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {EVALUATION_CATEGORIES.map((category) => (
-            <React.Fragment key={category}>
+      {comparisonCountries.length === 0 ? (
+        <div style={{ textAlign: "center", padding: "40px", color: "#666" }}>
+          <h3>No countries selected for comparison</h3>
+          <p>
+            Please select at least 6 countries to view the comparison table.
+          </p>
+        </div>
+      ) : (
+        <div style={{ overflowX: "auto" }}>
+          <table>
+            <thead>
               <tr>
-                <td
-                  rowSpan="2"
-                  className={`category-cell ${
-                    expandedCategories[category]
-                      ? ""
-                      : "category-cell-collapsed-bg"
-                  }`}
-                >
-                  <div
-                    className="category-name collapsible-category-header"
-                    onClick={() => toggleCategory(category)}
-                  >
-                    <span
-                      className={`expand-icon ${
-                        expandedCategories[category] ? "expanded" : ""
+                <th style={{ background: "#F8AC58" }}>Questions</th>
+                {comparisonCountries.map((country, i) => (
+                  <th key={i}>
+                    {!country ||
+                    country === "Pick Country" ||
+                    country === "--" ? (
+                      <span className="empty-state">--</span>
+                    ) : (
+                      country
+                    )}
+                  </th>
+                ))}
+              </tr>
+              
+            </thead>
+            <tbody>
+              {EVALUATION_CATEGORIES.map((category) => (
+                <React.Fragment key={category}>
+                  <tr>
+                    <td
+                      rowSpan="2"
+                      className={`category-cell ${
+                        expandedCategories[category]
+                          ? ""
+                          : "category-cell-collapsed-bg"
                       }`}
                     >
-                      ▼
-                    </span>
-                    {category}
-                  </div>
-                  <table
-                    className="collapsible-questions-table"
-                    style={{
-                      display: expandedCategories[category] ? "table" : "none",
-                    }}
-                  >
-                    {getQuestions(category).map((question, qIndex) => (
-                      <tr key={qIndex}>
-                        <td>{question}</td>
-                      </tr>
+                      <div
+                        className="category-name collapsible-category-header"
+                        onClick={() => toggleCategory(category)}
+                      >
+                        <span
+                          className={`expand-icon ${
+                            expandedCategories[category] ? "expanded" : ""
+                          }`}
+                        >
+                          ▼
+                        </span>
+                        {category}
+                      </div>
+                      <table
+                        className="collapsible-questions-table"
+                        style={{
+                          display: expandedCategories[category]
+                            ? "table"
+                            : "none",
+                        }}
+                      >
+                        {getQuestions(category).map((question, qIndex) => (
+                          <tr key={qIndex}>
+                            <td>{question}</td>
+                          </tr>
+                        ))}
+                      </table>
+                    </td>
+                    {comparisonCountries.map((country, i) => (
+                      <td key={i}>
+                        {renderSingleEvaluationAnswer(country, category, 0)}
+                      </td>
                     ))}
-                  </table>
+                  </tr>
+                  <tr>
+                    {comparisonCountries.map((country, i) => (
+                      <td key={i}>
+                        {renderSingleEvaluationAnswer(country, category, 1)}
+                      </td>
+                    ))}
+                  </tr>
+                </React.Fragment>
+              ))}
+
+              <tr>
+                <td className="category-cell">
+                  <div className="category-name">Score</div>
                 </td>
                 {comparisonCountries.map((country, i) => (
-                  <td key={i}>
-                    {renderSingleEvaluationAnswer(country, category, 0)}
-                  </td>
+                  <td key={i}>{calculateCountryScore(country)}</td>
                 ))}
               </tr>
-              <tr>
-                {comparisonCountries.map((country, i) => (
-                  <td key={i}>
-                    {renderSingleEvaluationAnswer(country, category, 1)}
-                  </td>
-                ))}
-              </tr>
-            </React.Fragment>
-          ))}
-
-          <tr>
-            <td className="category-cell">
-              <div className="category-name">Score</div>
-            </td>
-            {comparisonCountries.map((country, i) => (
-              <td key={i}>{calculateCountryScore(country)}</td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

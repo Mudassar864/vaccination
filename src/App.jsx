@@ -66,15 +66,6 @@ const App = () => {
       if (prev.includes(country)) {
         return prev.filter((c) => c !== country);
       }
-
-      if (prev.length >= MAX_COUNTRIES) {
-        showPopup(
-          `You can select a maximum of ${MAX_COUNTRIES} countries for comparison.`,
-          "warning"
-        );
-        return prev;
-      }
-
       return [...prev, country];
     });
   };
@@ -91,8 +82,7 @@ const App = () => {
       );
       return;
     }
-
-    setComparisonCountries(selectedCountries.slice(0, MAX_COUNTRIES));
+    setComparisonCountries(selectedCountries);
     document
       .querySelector(".comparison-wrapper")
       ?.scrollIntoView({ behavior: "smooth" });
@@ -227,7 +217,11 @@ const App = () => {
       </div>
 
       {/* Comparison Table */}
-      <ComparisonTable comparisonCountries={comparisonCountries} />
+      <ComparisonTable 
+        comparisonCountries={comparisonCountries}
+        countries={COUNTRIES}
+        onCountrySelect={handleCountrySelect}
+      />
 
       {/* Custom Popup */}
       <Popup popup={popup} onClose={closePopup} />
