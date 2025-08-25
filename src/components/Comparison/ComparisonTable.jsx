@@ -4,9 +4,10 @@ import {
   getFlagUrl,
   getCountryData,
   EVALUATION_CATEGORIES,
+  REGIONS,
 } from "../../utils/countryUtils";
 
-const ComparisonTable = ({ comparisonCountries, countries, onCountrySelect }) => {
+const ComparisonTable = ({ comparisonCountries, countries, countriesWithRegion, onCountrySelect }) => {
   const [expandedCategories, setExpandedCategories] = useState(() => {
     const initialExpandedState = {};
     EVALUATION_CATEGORIES.forEach((category) => {
@@ -244,6 +245,37 @@ const ComparisonTable = ({ comparisonCountries, countries, onCountrySelect }) =>
         <div style={{ overflowX: "auto" }}>
           <table>
             <thead>
+              <tr>
+                <th style={{background:"none",boxShadow:"none"}} ></th>
+                {comparisonCountries.map((country, i) => {
+                  const regionName = REGIONS[i % REGIONS.length];
+                  return (
+                    <th key={i} style={{ padding: "10px" }}>
+                      <select
+                        value={country === "Pick Country" ? "" : country}
+                        onChange={(e) => onCountrySelect && onCountrySelect(e, i)}
+                        style={{
+                          width: "100%",
+                          padding: "8px",
+                          borderRadius: "4px",
+                          border: "1px solid #ddd",
+                          fontSize: "0.85em",
+                          backgroundColor: "#fff"
+                        }}
+                      >
+                        <option value="">{regionName}</option>
+                        {(countriesWithRegion || [])
+                          .filter((c) => c.region === regionName)
+                          .map((c) => (
+                            <option key={c.name} value={c.name}>
+                              {c.name}
+                            </option>
+                          ))}
+                      </select>
+                    </th>
+                  );
+                })}
+              </tr>
               <tr>
                 <th style={{ background: "#F8AC58" }}>Questions</th>
                 {comparisonCountries.map((country, i) => (

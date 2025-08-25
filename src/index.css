@@ -436,7 +436,7 @@ body {
 
 /* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
-  .banner {
+  .banner .container {
     flex-direction: column;
     text-align: center;
     padding: 40px 20px;

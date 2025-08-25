@@ -194,7 +194,7 @@ const App = () => {
       />
 
       {/* Selector Dropdowns */}
-      <div className="selectors-grid">
+      {/* <div className="selectors-grid">
         <div></div>
         {REGIONS.map((region, i) => (
           <div key={region}>
@@ -214,12 +214,13 @@ const App = () => {
             </select>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Comparison Table */}
       <ComparisonTable 
         comparisonCountries={comparisonCountries}
         countries={COUNTRIES}
+        countriesWithRegion={COUNTRIES_WITH_REGION}
         onCountrySelect={handleCountrySelect}
       />
 
