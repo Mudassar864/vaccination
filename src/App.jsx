@@ -74,14 +74,6 @@ const App = () => {
   const handleCompare = (e) => {
     e.preventDefault();
     setIsModalOpen(false);
-
-    if (selectedCountries.length < MAX_COUNTRIES) {
-      showPopup(
-        `Please select ${MAX_COUNTRIES} countries to compare. You have selected ${selectedCountries.length}.`,
-        "error"
-      );
-      return;
-    }
     setComparisonCountries(selectedCountries);
     document
       .querySelector(".comparison-wrapper")

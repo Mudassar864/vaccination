@@ -1,99 +1,173 @@
-.comparison-wrapper {
-  text-align: center;
-  padding: 40px 20px 0 20px;
-  background-color: #f8f9fa;
-  min-height: 60vh;
-}
-.table-center-header h1 {
-  font-size: 32px;
-  color: #2c3e50;
-  margin: 0 0 30px 0;
-  font-weight: 600;
-}
-.category-yesno-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  width: 1000px;
-  table-layout: fixed;
-}
-.category-yesno-table th,
-.category-yesno-table td {
-  border: 1px solid #e9ecef;
-  font-size: 15px;
-  text-align: center;
-  vertical-align: top;
-  padding: 12px 8px;
-  width: 100px; /* Each cell is exactly 100px */
-  max-width: 100px;
-  min-width: 100px;
-  word-break: break-word;
-  box-sizing: border-box;
-}
-.category-yesno-table th {
-  background: linear-gradient(135deg, #ff8c42, #ff6b35);
-  color: white;
-  font-weight: bold;
-}
-.category-header {
-  font-size: 16px;
-  color: #333;
-}
-.question-list {
-  text-align: left;
-  padding-left: 18px;
-  margin: 8px 0 0 0;
-}
-.question-list li {
-  font-size: 13px;
-  color: #495057;
-  line-height: 1.4;
-  margin-bottom: 3px;
-}
-.evaluation-box {
-  display: inline-block;
-  padding: 6px 18px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  min-width: 44px;
-  text-align: center;
-  margin-bottom: 2px;
-}
-.evaluation-box.yes {
-  background-color: #28a745;
-  color: white;
-}
-.evaluation-box.no {
-  background-color: #dc3545;
-  color: white;
-}
+ .comparison-wrapper {
+              overflow-x: auto;
+              width: 1440px;
+              max-width: 100%;
+              margin: 0 auto;
+            }
+            table {
+              width: 1200px; /* fixed table width */
+              border-collapse: separate;
+              border-spacing: 10px;
+              margin: 20px auto;
+              font-family: Arial, sans-serif;
+              table-layout: fixed; /* important for fixed-width cells */
+            }
 
-@media (max-width: 1050px) {
-  .category-yesno-table {
-    width: 100%;
-    font-size: 13px;
-  }
-  .category-yesno-table th,
-  .category-yesno-table td {
-    font-size: 12px;
-    padding: 8px 3px;
-    width: 80px;
-    min-width: 80px;
-    max-width: 80px;
-  }
-  .table-center-header h1 {
-    font-size: 20px;
-  }
-  .evaluation-box {
-    font-size: 11px;
-    padding: 3px 7px;
-    min-width: 22px;
-  }
-  .category-header {
-    font-size: 13px;
-  }
-}
+            th, td {
+              border: none;
+              padding: 15px;
+              background-color: #fff;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+              overflow: hidden;
+              word-wrap: break-word;
+            }
+
+           
+            th:not(:first-child),
+            td:not(:first-child) {
+              width: 120px;  /* fixed width for each country column */
+              min-width: 120px;
+            }
+
+           
+            
+            th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+            }
+           
+            td.category-cell {
+              text-align: left;
+              vertical-align: middle;
+              font-weight: bold;
+              padding: 0;
+              background-color: #fff;
+            }
+            td.category-cell.category-cell-collapsed-bg {
+              background-color: #F8AC58;
+            }
+            td.category-cell table {
+              width: 100%;
+              height: 100%;
+              border-collapse: collapse;
+              margin: 0;
+            }
+            td.category-cell table td {
+              border: none;
+              text-align: left;
+              vertical-align: middle;
+              padding: 10px 15px;
+              font-weight: normal;
+              font-size: 0.9em;
+            }
+            td.category-cell .category-name {
+              display: block;
+              padding: 15px;
+              background-color: #F8AC58;
+              border-bottom: none;
+              font-weight: bold;
+              font-size: 1em;
+              cursor: pointer;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+            }
+            tr.gap-row td {
+              height: 20px;
+              border: none;
+              background-color: transparent;
+              padding: 0;
+              box-shadow: none;
+            }
+            .evaluation-box {
+              display: inline-block;
+              padding: 6px 10px;
+              border-radius: 4px;
+              font-size: 0.85em;
+              font-weight: bold;
+            }
+            .evaluation-box.yes {
+              background-color: #d4edda;
+              color: #155724;
+            }
+            .evaluation-box.no {
+              background-color: #f8d7da;
+              color: #721c24;
+            }
+            .expand-icon {
+              transition: transform 0.2s ease-in-out;
+              margin-right: 5px;
+            }
+            .expand-icon.expanded {
+              transform: rotate(180deg);
+            }
+            .collapsible-questions-table, .collapsible-questions-table td, .collapsible-questions-table tr {
+              background-color: #C5BDBB;
+            }
+            .empty-state {
+              color: #666;
+              font-style: italic;
+            }
+              /* Enhanced Dropdown Styling */
+    select {
+      appearance: none; /* Remove default browser styling */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 100%;
+      padding: 10px 30px 10px 12px; /* Adjust padding for arrow */
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #ffffff;
+      font-size: 0.9em;
+      font-family: Arial, sans-serif;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.3s ease; /* Smooth transitions for hover/focus */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom Dropdown Arrow */
+    select::-ms-expand {
+      display: none; /* Hide default arrow in IE */
+    }
+    th {
+      position: relative; /* For positioning the custom arrow */
+    }
+    select::after {
+      content: '▼';
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8em;
+      color: #F8AC58; /* Match table's accent color */
+      pointer-events: none; /* Prevent arrow from intercepting clicks */
+    }
+
+    /* Hover Effect */
+    select:hover {
+      border-color: #F8AC58;
+      box-shadow: 0 0 8px rgba(248, 172, 88, 0.3);
+      background-color: #f9f9f9;
+    }
+
+    /* Focus Effect */
+    select:focus {
+      outline: none;
+      border-color: #F8AC58;
+      box-shadow: 0 0 0 3px rgba(248, 172, 88, 0.2);
+    }
+
+    /* Option Styling (limited control, but some browsers respect it) */
+    select option {
+      background-color: #fff;
+      color: #333;
+      font-size: 0.9em;
+      padding: 10px;
+    }
+
+    /* Disabled or Placeholder Option */
+    select option[value=""] {
+      color: #888;
+      font-style: italic;
+    }
