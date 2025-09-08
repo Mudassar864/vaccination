@@ -9,7 +9,15 @@ body {
 
   background-color: #f8f9fa;
 }
-
+.button {
+  padding: 12px 32px;
+  font-size: 16px;
+  background-color: #d17728;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 /* ================== BANNER SECTION ================== */
 .banner {
   background-color: #fef2e4;
@@ -26,8 +34,12 @@ body {
 }
 
 .banner-left h1 {
-  font-size: 42px;
+  font-size: 5rem;
   font-weight: 700;
+}
+.banner-left span {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
 .search-container {

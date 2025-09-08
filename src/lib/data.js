@@ -195,6 +195,7 @@ export const COUNTRIES = [
   "Zambia",
   "Zimbabwe",
 ];
+
 export const COUNTRIES_WITH_REGION = [
   { name: "Albania", region: "Europe" },
   { name: "Andorra", region: "Europe" },
@@ -398,7 +399,6 @@ export const COUNTRIES_WITH_REGION = [
   { name: "Vanuatu", region: "Oceania" },
 ];
 
-
 export const COUNTRY_CODES = {
   Afghanistan: "af",
   Albania: "al",
@@ -596,7 +596,6 @@ export const COUNTRY_CODES = {
   Zambia: "zm",
   Zimbabwe: "zw",
 };
-
 export const VACCINATION_DATA_OLD = 
 [
   {
@@ -3657,7 +3656,6 @@ export const VACCINATION_DATA_OLD =
       "https://www.gavi.org/vaccineswork/routine-immunisation-credited-drop-infant-deaths-zimbabwe",
   },
 ];
-
 export const VACCINATION_DATA = [
   {
     "Country": "Afghanistan",

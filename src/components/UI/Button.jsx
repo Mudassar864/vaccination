@@ -6,13 +6,7 @@ const Button = ({ onClick, children, type = "button", className = "", ...props }
     onClick={onClick}
     className={className}
     style={{
-      padding: "12px 32px",
-      fontSize: "16px",
-      backgroundColor: "#0078d4",
-      color: "#fff",
-      border: "none",
-      borderRadius: "8px",
-      cursor: "pointer",
+     
       ...props.style
     }}
     {...props}

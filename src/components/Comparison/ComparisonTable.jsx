@@ -123,12 +123,7 @@ const ComparisonTable = ({
 
   return (
     <div className="comparison-wrapper">
-      {comparisonCountries.length === 0 ? (
-        <div style={{ textAlign: "center", padding: "40px", color: "#666" }}>
-          <h3>No countries selected for comparison</h3>
-          <p>Please select at least one country to view the comparison table.</p>
-        </div>
-      ) : (
+      
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: `${tableWidth}px` }}>
             <thead>
@@ -190,7 +185,6 @@ const ComparisonTable = ({
                           ? ""
                           : "category-cell-collapsed-bg"
                       }`}
-                      style={{ width: "400px" }}
                       colSpan={displayCountries.length + 1} // Span all columns
                     >
                       <div
@@ -236,7 +230,6 @@ const ComparisonTable = ({
             </tbody>
           </table>
         </div>
-      )}
     </div>
   );
 };

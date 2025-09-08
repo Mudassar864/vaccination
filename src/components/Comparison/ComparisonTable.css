@@ -1,173 +1,225 @@
- .comparison-wrapper {
-              overflow-x: auto;
-              width: 1440px;
-              max-width: 100%;
-              margin: 0 auto;
-            }
-            table {
-              width: 1200px; /* fixed table width */
-              border-collapse: separate;
-              border-spacing: 10px;
-              margin: 20px auto;
-              font-family: Arial, sans-serif;
-              table-layout: fixed; /* important for fixed-width cells */
-            }
+.comparison-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-            th, td {
-              border: none;
-              padding: 15px;
-              background-color: #fff;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-              border-radius: 8px;
-              overflow: hidden;
-              word-wrap: break-word;
-            }
+table {
+  /* Remove fixed width - let JS handle dynamic sizing */
+  min-width: 1440px; /* Ensure minimum width */
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  /* Change to auto for flexible column sizing */
+  table-layout: auto;
+}
 
-           
-            th:not(:first-child),
-            td:not(:first-child) {
-              width: 120px;  /* fixed width for each country column */
-              min-width: 120px;
-            }
+th,
+td {
+  border: none;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
 
-           
-            
-            th {
-              background-color: #f2f2f2;
-              font-weight: bold;
-            }
-           
-            td.category-cell {
-              text-align: left;
-              vertical-align: middle;
-              font-weight: bold;
-              padding: 0;
-              background-color: #fff;
-            }
-            td.category-cell.category-cell-collapsed-bg {
-              background-color: #F8AC58;
-            }
-            td.category-cell table {
-              width: 100%;
-              height: 100%;
-              border-collapse: collapse;
-              margin: 0;
-            }
-            td.category-cell table td {
-              border: none;
-              text-align: left;
-              vertical-align: middle;
-              padding: 10px 15px;
-              font-weight: normal;
-              font-size: 0.9em;
-            }
-            td.category-cell .category-name {
-              display: block;
-              padding: 15px;
-              background-color: #F8AC58;
-              border-bottom: none;
-              font-weight: bold;
-              font-size: 1em;
-              cursor: pointer;
-              border-top-left-radius: 8px;
-              border-top-right-radius: 8px;
-            }
-            tr.gap-row td {
-              height: 20px;
-              border: none;
-              background-color: transparent;
-              padding: 0;
-              box-shadow: none;
-            }
-            .evaluation-box {
-              display: inline-block;
-              padding: 6px 10px;
-              border-radius: 4px;
-              font-size: 0.85em;
-              font-weight: bold;
-            }
-            .evaluation-box.yes {
-              background-color: #d4edda;
-              color: #155724;
-            }
-            .evaluation-box.no {
-              background-color: #f8d7da;
-              color: #721c24;
-            }
-            .expand-icon {
-              transition: transform 0.2s ease-in-out;
-              margin-right: 5px;
-            }
-            .expand-icon.expanded {
-              transform: rotate(180deg);
-            }
-            .collapsible-questions-table, .collapsible-questions-table td, .collapsible-questions-table tr {
-              background-color: #C5BDBB;
-            }
-            .empty-state {
-              color: #666;
-              font-style: italic;
-            }
-              /* Enhanced Dropdown Styling */
-    select {
-      appearance: none; /* Remove default browser styling */
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      width: 100%;
-      padding: 10px 30px 10px 12px; /* Adjust padding for arrow */
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background-color: #ffffff;
-      font-size: 0.9em;
-      font-family: Arial, sans-serif;
-      color: #333;
-      cursor: pointer;
-      transition: all 0.3s ease; /* Smooth transitions for hover/focus */
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
+/* First column (Questions) - fixed width */
+th:first-child,
+td:first-child {
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+}
 
-    /* Custom Dropdown Arrow */
-    select::-ms-expand {
-      display: none; /* Hide default arrow in IE */
-    }
-    th {
-      position: relative; /* For positioning the custom arrow */
-    }
-    select::after {
-      content: '▼';
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.8em;
-      color: #F8AC58; /* Match table's accent color */
-      pointer-events: none; /* Prevent arrow from intercepting clicks */
-    }
+/* Country columns - let JS handle the width via inline styles */
+th:not(:first-child),
+td:not(:first-child) {
+  min-width: 120px; /* Minimum width to prevent shrinking */
+  /* Remove fixed width - let inline styles from JS take precedence */
+}
 
-    /* Hover Effect */
-    select:hover {
-      border-color: #F8AC58;
-      box-shadow: 0 0 8px rgba(248, 172, 88, 0.3);
-      background-color: #f9f9f9;
-    }
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
 
-    /* Focus Effect */
-    select:focus {
-      outline: none;
-      border-color: #F8AC58;
-      box-shadow: 0 0 0 3px rgba(248, 172, 88, 0.2);
-    }
+td.category-cell {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bold;
+  padding: 0;
+  background-color: #fff;
+}
 
-    /* Option Styling (limited control, but some browsers respect it) */
-    select option {
-      background-color: #fff;
-      color: #333;
-      font-size: 0.9em;
-      padding: 10px;
-    }
+td.category-cell.category-cell-collapsed-bg {
+  background-color: #f8ac58;
+}
 
-    /* Disabled or Placeholder Option */
-    select option[value=""] {
-      color: #888;
-      font-style: italic;
-    }
+td.category-cell table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+td.category-cell table td {
+  border: none;
+  text-align: left;
+  vertical-align: middle;
+  padding: 10px 15px;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+td.category-cell .category-name {
+  display: block;
+  padding: 15px;
+  background-color: #f8ac58;
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.collapsible-category-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+tr.gap-row td {
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.evaluation-box {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
+  min-width: 40px;
+}
+
+.evaluation-box.yes {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.evaluation-box.no {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.expand-icon {
+  transition: transform 0.2s ease-in-out;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.collapsible-questions-table,
+.collapsible-questions-table td,
+.collapsible-questions-table tr {
+  background-color: #c5bdbb;
+}
+
+.empty-state {
+  color: #666;
+  font-style: italic;
+}
+
+.country-score {
+  font-weight: bold;
+  color: #f8ac58;
+  font-size: 1.1em;
+}
+
+/* Enhanced Dropdown Styling */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px 30px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 0.9em;
+  font-family: Arial, sans-serif;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Ensure minimum width */
+  min-width: 120px;
+}
+
+/* Custom Dropdown Arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Create arrow using background image instead of ::after (which doesn't work on select) */
+select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f8ac58'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Hover Effect */
+select:hover {
+  border-color: #f8ac58;
+  box-shadow: 0 0 8px rgba(248, 172, 88, 0.3);
+  background-color: #f9f9f9;
+}
+
+/* Focus Effect */
+select:focus {
+  outline: none;
+  border-color: #f8ac58;
+  box-shadow: 0 0 0 3px rgba(248, 172, 88, 0.2);
+}
+
+/* Option Styling */
+select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 0.9em;
+  padding: 10px;
+}
+
+/* Disabled or Placeholder Option */
+select option[value=""] {
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .comparison-wrapper {
+    padding: 0 10px;
+  }
+  
+  table {
+    min-width: 600px;
+  }
+  
+  th:not(:first-child),
+  td:not(:first-child) {
+    min-width: 100px;
+  }
+}
