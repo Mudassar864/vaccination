@@ -169,7 +169,12 @@ const App = () => {
       <section className="banner">
         <div className="container">
           <div className="banner-left">
-            <img style={{width:"120px"}} src="ghp-logo.png" alt="Logo" className="logo" />
+            <img
+              style={{ width: "120px" }}
+              src="ghp-logo.png"
+              alt="Logo"
+              className="logo"
+            />
             <h1>VACCiNATION</h1>
             <span>Comparing vaccination systems globally</span>
           </div>
@@ -248,32 +253,10 @@ const App = () => {
       <Popup popup={popup} onClose={closePopup} />
 
       {/* Feedback Button and Text */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: "70px",
-          right: "20px",
-          textAlign: "center",
-          zIndex: 1000,
-        }}
-      >
+      <div className="feedback-container">
         <button
           onClick={() => setIsFeedbackOpen(true)}
-          style={{
-            width: "60px",
-            height: "60px",
-            borderRadius: "50%",
-            backgroundColor: "#d17728",
-            border: "none",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-            transition: "background-color 0.3s",
-            position: "relative",
-            zIndex: 1001,
-          }}
+          className="feed-icon"
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = "#d17728")
           }
@@ -282,25 +265,16 @@ const App = () => {
           }
         >
           <img
-            src="feedback-icon.png" // Replace with your image path
+            src="Joe.png" // Replace with your image path
             alt="Feedback"
             style={{
-              width: "30px",
-              height: "30px",
+              width: "100%",
+              height: "100%",
+              padding: "5px",
             }}
           />
         </button>
-        <div
-          style={{
-            position: "absolute",
-            left: "-400%",
-            bottom: "-40px",
-            backgroundColor: "#f5ac57",
-            padding: "10px",
-            borderRadius: "8px",
-            zIndex: 10,
-          }}
-        >
+        <div className="feed-text">
           <h4 style={{ textAlign: "left" }}>Any Feedback?</h4>
           <p
             style={{
@@ -319,226 +293,88 @@ const App = () => {
       {/* Feedback Dialog */}
       {isFeedbackOpen && (
         <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 1001,
-          }}
+          className="feedback-overlay"
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsFeedbackOpen(false);
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#f3eae3",
-              padding: "20px",
-              borderRadius: "15px",
-              width: "400px",
-              maxWidth: "90%",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-              position: "relative",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <span
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "15px",
-                fontSize: "24px",
-                cursor: "pointer",
-                color: "#333",
-              }}
-              onClick={() => setIsFeedbackOpen(false)}
-            >
-              &times;
-            </span>
-            <p
-              style={{
-                fontSize: "14px",
-                color: "#333",
-                textAlign: "center",
-                marginBottom: "20px",
-              }}
-            >
-              We value your feedback! This project is still in progress. If you
-              have additional information or spot something we missed, please
-              share it with us. Thank you.
-            </p>
-            <form
-              onSubmit={handleFeedbackSubmit}
-              style={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={feedbackForm.name}
-                onChange={handleFeedbackChange}
-                required
-                placeholder="Name"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "10px",
-                  border: "1px solid #ccc",
-                  borderRadius: "5px",
-                  boxSizing: "border-box",
-                  fontSize: "14px",
-                }}
-              />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={feedbackForm.email}
-                onChange={handleFeedbackChange}
-                required
-                placeholder="Email"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "10px",
-                  border: "1px solid #ccc",
-                  borderRadius: "5px",
-                  boxSizing: "border-box",
-                  fontSize: "14px",
-                }}
-              />
-              <select
-                id="country"
-                name="country"
-                value={feedbackForm.country}
-                onChange={handleFeedbackChange}
-                required
-                placeholder="Country"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "10px",
-                  border: "1px solid #ccc",
-                  borderRadius: "5px",
-                  boxSizing: "border-box",
-                  fontSize: "14px",
-                }}
+          <div className="feedback-con">
+            <div className="feedback-modal">
+              <span
+                className="feedback-close"
+                onClick={() => setIsFeedbackOpen(false)}
               >
-                <option value="">Select a country</option>
-                {COUNTRIES.map((country) => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-              <textarea
-                id="message"
-                name="message"
-                value={feedbackForm.message}
-                onChange={handleFeedbackChange}
-                required
-                placeholder="Message"
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  marginBottom: "10px",
-                  border: "1px solid #ccc",
-                  borderRadius: "5px",
-                  boxSizing: "border-box",
-                  fontSize: "14px",
-                  minHeight: "100px",
-                  resize: "vertical",
-                }}
-              />
-              <div style={{ display: "flex", justifyContent: "center", gap: "10px", alignItems: "center" }}>
+                &times;
+              </span>
+              <p className="feedback-text">
+                We value your feedback! This project is still in progress. If
+                you have additional information or spot something we missed,
+                please share it with us. Thank you.
+              </p>
+              <form className="feedback-form" onSubmit={handleFeedbackSubmit}>
                 <input
-                  type="file"
-                  id="attachment"
-                  name="attachment"
-                  onChange={handleFeedbackChange}
-                  style={{
-                    display: "none",
-                  }}
+                  className="feedback-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Name"
                 />
-                <button
-                  type="button"
-                  onClick={() => document.getElementById("attachment").click()}
-                  style={{
-                    backgroundColor: "#D4A373",
-                    border: "none",
-                    maxWidth: "max-content",
-
-                    padding: "10px 20px",
-                    color: "#fff",
-                    cursor: "pointer",
-                    position: "relative",
-                    overflow: "hidden",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                  }}
+                <input
+                  className="feedback-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                />
+                <select
+                  className="feedback-select"
+                  id="country"
+                  name="country"
+                  required
                 >
-                  Attachment
-                </button>
-                <Button
-                  type="submit"
-                  style={{
-                    backgroundColor: "#D4A373",
-                    color: "#fff",
-                    padding: "10px 20px",
-                    border: "none",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                    fontSize: "14px",
-                  }}
-                >
-                  Let's go!
-                </Button>
-              </div>
-            </form>
-            <div
-              style={{
-                position: "absolute",
-                top: "20px",
-                right: "20px",
-                width: "100px",
-                height: "100px",
-                backgroundColor: "#D4A373",
-                borderRadius: "50%",
-                zIndex: -1,
-                opacity: 0.5,
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                left: "20px",
-                width: "80px",
-                height: "80px",
-                backgroundColor: "#D4A373",
-                borderRadius: "50%",
-                zIndex: -1,
-                opacity: 0.5,
-              }}
-            />
+                  <option value="">Select a country</option>
+                  {COUNTRIES.map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+                <textarea
+                  className="feedback-textarea"
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Message"
+                />
+                <div className="feedback-buttons">
+                  <input
+                    type="file"
+                    id="attachment"
+                    name="attachment"
+                    style={{ display: "none" }}
+                  />
+                  <button
+                    type="button"
+                    className="feedback-attachment-btn"
+                    onClick={() =>
+                      document.getElementById("attachment").click()
+                    }
+                  >
+                    Attachment
+                  </button>
+                  <button type="submit" className="feedback-submit-btn">
+                    Let's go!
+                  </button>
+                </div>
+              </form>
+              <div className="feedback-circle-top"></div>
+              <div className="feedback-circle-bottom"></div>
+            </div>
           </div>
         </div>
       )}
-
-
     </>
   );
 };

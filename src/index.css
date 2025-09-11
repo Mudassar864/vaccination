@@ -21,6 +21,7 @@ body {
 /* ================== BANNER SECTION ================== */
 .banner {
   background-color: #fef2e4;
+  background-image: url("./assets/bg.png");
 }
 .banner .container {
   display: flex;
@@ -485,4 +486,182 @@ body {
     font-size: 10px;
     padding: 4px 8px;
   }
+}
+.feedback-container {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+.feed-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #d17728;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 1001;
+}
+.feed-text {
+  position: absolute;
+  left: -400%;
+  bottom: -40px;
+  background-color: #f5ac57;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  display: none;
+}
+.feedback-container:hover .feed-text {
+  display: block;
+}
+
+/* Overlay background */
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+.feedback-con {
+  position: relative;
+  width: 600px;
+  max-width: 90%;
+  background-color: #f3eae3;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Add padding between modal and container */
+  padding: 40px;
+}
+/* Modal container */
+.feedback-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+
+  /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* light translucent border */
+  backdrop-filter: blur(10px); /* blur the background behind the modal */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+/* Close button */
+.feedback-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Paragraph text */
+.feedback-text {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Form wrapper */
+.feedback-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input, select, textarea */
+.feedback-input,
+.feedback-select,
+.feedback-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.feedback-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons wrapper */
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Attachment button */
+.feedback-attachment-btn {
+  background-color: #d4a373;
+  border: none;
+  max-width: max-content;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button */
+.feedback-submit-btn {
+  background-color: #d4a373;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Decorative circles */
+.feedback-circle-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #d4a373;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.feedback-circle-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #d4a373;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
 }
