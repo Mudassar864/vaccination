@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 table {
@@ -27,12 +28,38 @@ td {
   word-wrap: break-word;
 }
 
-/* First column (Questions) - fixed width */
+/* First column (Questions) - fixed width and sticky */
 th:first-child,
 td:first-child {
   width: 300px;
   min-width: 300px;
   max-width: 300px;
+  position: sticky;
+  left: 10px; /* Account for border-spacing */
+  z-index: 10;
+  background-color: #f9f9f9; /* Light gray background for sticky column */
+  /* Add a subtle border to separate from scrolling content */
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Special handling for category cells when sticky */
+td.category-cell:first-child {
+  position: sticky;
+  left: 10px;
+  z-index: 11; /* Higher than regular cells */
+  background-color: #f9f9f9; /* Match sticky column background */
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+td.category-cell.category-cell-collapsed-bg:first-child {
+  background-color: #f8ac58;
+}
+
+/* Ensure the category name maintains its styling when sticky */
+td.category-cell:first-child .category-name {
+  background-color: #f8ac58;
 }
 
 /* Country columns - let JS handle the width via inline styles */
@@ -45,6 +72,13 @@ td:not(:first-child) {
 th {
   background-color: #f2f2f2;
   font-weight: bold;
+}
+
+/* Header row styling for sticky column */
+th:first-child {
+  background-color: #f2f2f2; /* Slightly darker for header */
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 td.category-cell {
@@ -221,5 +255,11 @@ select option[value=""] {
   th:not(:first-child),
   td:not(:first-child) {
     min-width: 100px;
+  }
+  
+  /* Adjust sticky positioning for smaller screens */
+  th:first-child,
+  td:first-child {
+    left: 0;
   }
 }
