@@ -123,7 +123,6 @@ const ComparisonTable = ({
 
   return (
     <div className="comparison-wrapper">
-      
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: `${tableWidth}px` }}>
             <thead>
@@ -178,14 +177,13 @@ const ComparisonTable = ({
             <tbody>
               {EVALUATION_CATEGORIES.map((category) => (
                 <React.Fragment key={category}>
-                  <tr>
+                  <tr style={{ background: "#df0f0fff !important" }}>
                     <td
                       className={`category-cell ${
                         expandedCategories[category]
                           ? ""
                           : "category-cell-collapsed-bg"
                       }`}
-                      colSpan={displayCountries.length + 1} // Span all columns
                     >
                       <div
                         className="category-name collapsible-category-header"
@@ -201,11 +199,16 @@ const ComparisonTable = ({
                         {category}
                       </div>
                     </td>
+                    {displayCountries.map((country, i) => (
+                      <td key={i}  className="category-spacer-cell">
+                        {/* Empty cells for category row */}
+                      </td>
+                    ))}
                   </tr>
                   {expandedCategories[category] &&
                     getQuestions(category).map((question, qIndex) => (
                       <tr key={`${category}-${qIndex}`}>
-                        <td style={{ width: "400px",textAlign: "left" }}>
+                        <td style={{ width: "400px", textAlign: "left" }}>
                           {question}
                         </td>
                         {displayCountries.map((country, i) => (

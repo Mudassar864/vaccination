@@ -3,17 +3,15 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  position: relative;
+  position: relative; /* Ensure sticky positioning works within this container */
 }
 
 table {
-  /* Remove fixed width - let JS handle dynamic sizing */
   min-width: 1440px; /* Ensure minimum width */
   border-collapse: separate;
   border-spacing: 10px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
-  /* Change to auto for flexible column sizing */
   table-layout: auto;
 }
 
@@ -28,71 +26,68 @@ td {
   word-wrap: break-word;
 }
 
-/* First column (Questions) - fixed width and sticky */
+/* Sticky first column */
 th:first-child,
 td:first-child {
+  position: sticky;
+  left: 0;
   width: 300px;
   min-width: 300px;
   max-width: 300px;
-  position: sticky;
-  left: 10px; /* Account for border-spacing */
-  z-index: 10;
-  background-color: #f9f9f9; /* Light gray background for sticky column */
-  /* Add a subtle border to separate from scrolling content */
-  border-right: 2px solid #e0e0e0;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  z-index: 2; /* Ensure it appears above other cells */
+  background-color: #fff; /* Maintain background for visibility */
 }
 
-/* Special handling for category cells when sticky */
-td.category-cell:first-child {
-  position: sticky;
-  left: 10px;
-  z-index: 11; /* Higher than regular cells */
-  background-color: #f9f9f9; /* Match sticky column background */
-  border-right: 2px solid #e0e0e0;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-}
-
-td.category-cell.category-cell-collapsed-bg:first-child {
-  background-color: #f8ac58;
-}
-
-/* Ensure the category name maintains its styling when sticky */
-td.category-cell:first-child .category-name {
-  background-color: #f8ac58;
-}
-
-/* Country columns - let JS handle the width via inline styles */
-th:not(:first-child),
-td:not(:first-child) {
-  min-width: 120px; /* Minimum width to prevent shrinking */
-  /* Remove fixed width - let inline styles from JS take precedence */
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-/* Header row styling for sticky column */
-th:first-child {
-  background-color: #f2f2f2; /* Slightly darker for header */
-  border-right: 2px solid #e0e0e0;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-}
-
+/* Ensure category cell spans correctly and is sticky */
 td.category-cell {
   text-align: left;
   vertical-align: middle;
   font-weight: bold;
   padding: 0;
   background-color: #fff;
+  position: sticky;
+  left: 0;
+  z-index: 3; /* Higher z-index for category headers to stay above other cells */
 }
 
+/* Adjust background for collapsed category cells */
 td.category-cell.category-cell-collapsed-bg {
   background-color: #f8ac58;
 }
 
+/* Ensure the category header inside sticky column looks consistent */
+td.category-cell .category-name {
+  display: block;
+  padding: 15px;
+  background-color: #f8ac58;
+  border-bottom: none;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Fix for table header in first column */
+th:first-child {
+  z-index: 4; /* Higher z-index to ensure header stays above all */
+  background-color: #f2f2f2; /* Match existing header background */
+}
+
+/* Ensure the table header for questions has proper styling */
+th:first-child[style*="background: none"] {
+  background-color: transparent !important; /* Override inline style for sticky header */
+}
+
+/* Ensure the second header row (Questions row) is sticky and styled */
+th[style*="background: #F8AC58"] {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  background-color: #f8ac58 !important; /* Match the category background */
+}
+
+/* Rest of the existing styles remain unchanged */
 td.category-cell table {
   width: 100%;
   height: 100%;
@@ -107,18 +102,6 @@ td.category-cell table td {
   padding: 10px 15px;
   font-weight: normal;
   font-size: 0.9em;
-}
-
-td.category-cell .category-name {
-  display: block;
-  padding: 15px;
-  background-color: #f8ac58;
-  border-bottom: none;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 .collapsible-category-header {
@@ -197,16 +180,13 @@ select {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  /* Ensure minimum width */
   min-width: 120px;
 }
 
-/* Custom Dropdown Arrow */
 select::-ms-expand {
   display: none;
 }
 
-/* Create arrow using background image instead of ::after (which doesn't work on select) */
 select {
   background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f8ac58'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
@@ -214,21 +194,18 @@ select {
   background-size: 16px;
 }
 
-/* Hover Effect */
 select:hover {
   border-color: #f8ac58;
   box-shadow: 0 0 8px rgba(248, 172, 88, 0.3);
   background-color: #f9f9f9;
 }
 
-/* Focus Effect */
 select:focus {
   outline: none;
   border-color: #f8ac58;
   box-shadow: 0 0 0 3px rgba(248, 172, 88, 0.2);
 }
 
-/* Option Styling */
 select option {
   background-color: #fff;
   color: #333;
@@ -236,7 +213,6 @@ select option {
   padding: 10px;
 }
 
-/* Disabled or Placeholder Option */
 select option[value=""] {
   color: #888;
   font-style: italic;
@@ -247,19 +223,38 @@ select option[value=""] {
   .comparison-wrapper {
     padding: 0 10px;
   }
-  
+
   table {
     min-width: 600px;
   }
-  
+
   th:not(:first-child),
   td:not(:first-child) {
     min-width: 100px;
   }
-  
-  /* Adjust sticky positioning for smaller screens */
+
+  /* Ensure sticky column remains visible on smaller screens */
   th:first-child,
   td:first-child {
+    position: sticky;
     left: 0;
+    z-index: 2;
   }
+
+  td.category-cell {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+  }
+
+  th[style*="background: #F8AC58"] {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+  }
+}
+.category-spacer-cell {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
