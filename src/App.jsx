@@ -171,16 +171,26 @@ const App = () => {
           <div className="banner-left">
             <img
               style={{ width: "120px" }}
-              src="ghp-logo.png"
+              src="./ghp-logo.png"
               alt="Logo"
               className="logo"
             />
             <h1>VACCiNATION</h1>
             <span>Comparing vaccination systems globally</span>
+            <img
+              style={{ width: "300px" }}
+              src="./syringe.png"
+              alt="syringe"
+              className="syringe"
+            />
+             <img
+              style={{ width: "300px" }}
+              src="./round.png"
+              alt="round"
+              className="round"
+            />
           </div>
-          <div className="banner-right">
-            <img src="LADY-1.png" alt="Vaccinated Woman" />
-          </div>
+         
         </div>
       </section>
 

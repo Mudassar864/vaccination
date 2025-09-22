@@ -4,11 +4,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
-
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
+
 .button {
   padding: 12px 32px;
   font-size: 16px;
@@ -17,40 +19,79 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.button:hover {
+  background-color: #b5641f;
+}
+
 /* ================== BANNER SECTION ================== */
 .banner {
   background-color: #fef2e4;
-  background-image: url("./assets/bg.png");
+  background-image: url("./assets/vaccination/top-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
 }
+
 .banner .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
+  padding: 80px 20px;
+  min-height: inherit;
 }
+
 .banner-left {
-  flex: 3;
+  max-width: max-content;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+}
+
+.syringe {
+  right: 60px;
+}
+
+.syringe,
+.round {
+  position: absolute;
+  bottom: -60px;
+}
+
+.round {
+  z-index: -1;
+  right: 0;
 }
 
 .banner-left h1 {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
+
 .banner-left span {
   margin-bottom: 20px;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  display: block;
+  line-height: 1.4;
 }
 
 .search-container {
   position: relative;
-  max-width: 350px;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 24px;
 }
 
 .search-container input {
   width: 100%;
-  padding: 14px 18px;
+  padding: 14px 50px 14px 18px;
   font-size: 16px;
   border: none;
   border-radius: 12px;
@@ -94,10 +135,15 @@ body {
 
 .banner-right {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .banner-right img {
-  width: 400px;
+  max-width: 100%;
   height: auto;
+  width: clamp(250px, 50vw, 400px);
 }
 
 /* ================== COUNTRY SECTION ================== */
@@ -108,7 +154,7 @@ body {
 }
 
 .countries-section h2 {
-  font-size: 28px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 30px;
 }
 
@@ -116,6 +162,7 @@ body {
   position: relative;
   max-width: 400px;
   margin: 0 auto 30px auto;
+  width: 100%;
 }
 
 .country-filter-input {
@@ -149,12 +196,13 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
 }
 
 .country-option {
-  max-width: 120px;
+  max-width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -170,10 +218,12 @@ body {
 
 .country-option:hover {
   border-color: #ccc;
+  transform: translateY(-2px);
 }
 
 .country-option img {
   width: 40px;
+  height: auto;
   margin-bottom: 10px;
 }
 
@@ -193,7 +243,7 @@ body {
   transition: 0.3s;
 }
 
-.country-option input[type="checkbox"]:checked + .checkmark {
+.country-option input[type="checkbox"]:checked+.checkmark {
   background-color: #4caf50;
   border-color: #4caf50;
 }
@@ -204,7 +254,7 @@ body {
   display: none;
 }
 
-.country-option input[type="checkbox"]:checked + .checkmark::after {
+.country-option input[type="checkbox"]:checked+.checkmark::after {
   display: block;
   left: 6px;
   top: 1px;
@@ -227,6 +277,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 20px;
 }
 
 .modal-content {
@@ -234,7 +285,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   max-width: 800px;
-  width: 90%;
+  width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -248,6 +299,7 @@ body {
   font-weight: bold;
   color: #aaa;
   cursor: pointer;
+  z-index: 10;
 }
 
 .close-button:hover {
@@ -256,22 +308,24 @@ body {
 
 .modal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 15px;
-  padding-top: 20px;
-  margin-bottom: 50px;
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
 
 .modal-grid button {
   background-color: #f4f6fc;
   border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* ================== COMPARISON TABLE ================== */
-
 .comparison-wrapper {
   text-align: center;
-  padding-top: 0px;
+  padding: 40px 20px;
   background-color: #f8f9fa;
   min-height: 60vh;
 }
@@ -281,7 +335,7 @@ body {
 }
 
 .table-center-header h1 {
-  font-size: 32px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: #2c3e50;
   margin: 0;
   font-weight: 600;
@@ -289,24 +343,27 @@ body {
 
 .selectors-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   max-width: 1200px;
   margin: auto;
   gap: 8px;
   text-align: center;
   border-radius: 12px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .selectors-grid select {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .comparison-table {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   max-width: 1200px;
   margin: auto;
   gap: 8px;
@@ -315,6 +372,7 @@ body {
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
 }
 
 .question-header {
@@ -323,7 +381,7 @@ body {
   font-weight: bold;
   padding: 15px 10px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: clamp(12px, 2.5vw, 16px);
   margin-bottom: 5px;
 }
 
@@ -333,7 +391,7 @@ body {
   font-weight: bold;
   padding: 15px 10px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: clamp(11px, 2vw, 14px);
 }
 
 .category-header {
@@ -342,7 +400,7 @@ body {
   font-weight: bold;
   padding: 12px 8px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: clamp(11px, 2vw, 14px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,6 +418,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .expand-icon {
@@ -375,9 +435,10 @@ body {
   background-color: #f8f9fa;
   color: #495057;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: clamp(10px, 2vw, 13px);
   line-height: 1.4;
   text-align: left;
+  padding: 8px;
 }
 
 .question-answer-cell,
@@ -390,12 +451,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 40px;
 }
 
 .single-answer {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: clamp(10px, 2vw, 14px);
 }
 
 .evaluation-container {
@@ -409,7 +472,7 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: clamp(10px, 2vw, 12px);
   min-width: 40px;
   text-align: center;
 }
@@ -430,7 +493,7 @@ body {
   font-weight: bold;
   padding: 12px 8px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: clamp(11px, 2vw, 14px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,51 +505,15 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: clamp(11px, 2vw, 14px);
 }
 
 .table-cell img {
-  width: 40px;
+  width: clamp(25px, 5vw, 40px);
+  height: auto;
 }
 
-/* ================== RESPONSIVE ================== */
-@media (max-width: 768px) {
-  .banner .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .banner-left,
-  .banner-right {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .banner-right {
-    position: static;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .comparison-table,
-  .selectors-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .evaluation-container {
-    flex-direction: row;
-    gap: 8px;
-    justify-content: center;
-  }
-
-  .evaluation-box {
-    font-size: 10px;
-    padding: 4px 8px;
-  }
-}
+/* ================== FEEDBACK ================== */
 .feedback-container {
   position: fixed;
   bottom: 70px;
@@ -494,6 +521,7 @@ body {
   text-align: center;
   z-index: 1000;
 }
+
 .feed-icon {
   width: 60px;
   height: 60px;
@@ -509,21 +537,24 @@ body {
   position: relative;
   z-index: 1001;
 }
+
 .feed-text {
   position: absolute;
-  left: -400%;
-  bottom: -40px;
+  right: 70px;
+  bottom: 0;
   background-color: #f5ac57;
   padding: 10px;
   border-radius: 8px;
   z-index: 10;
   display: none;
+  white-space: nowrap;
+  font-size: 12px;
 }
+
 .feedback-container:hover .feed-text {
   display: block;
 }
 
-/* Overlay background */
 .feedback-overlay {
   position: fixed;
   top: 0;
@@ -535,60 +566,57 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1001;
+  padding: 20px;
 }
+
 .feedback-con {
   position: relative;
-  width: 600px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 600px;
   background-color: #f3eae3;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  /* Add padding between modal and container */
   padding: 40px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
-/* Modal container */
+
 .feedback-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   border-radius: 20px;
-
-  /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.4); /* light translucent border */
-  backdrop-filter: blur(10px); /* blur the background behind the modal */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Close button */
 .feedback-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 15px;
+  right: 20px;
   font-size: 24px;
   cursor: pointer;
   color: #333;
+  z-index: 10;
 }
 
-/* Paragraph text */
 .feedback-text {
-  font-size: 14px;
+  font-size: clamp(12px, 2.5vw, 14px);
   color: #333;
   text-align: left;
   margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-/* Form wrapper */
 .feedback-form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Input, select, textarea */
 .feedback-input,
 .feedback-select,
 .feedback-textarea {
@@ -606,62 +634,325 @@ body {
   resize: vertical;
 }
 
-/* Buttons wrapper */
 .feedback-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Attachment button */
-.feedback-attachment-btn {
-  background-color: #d4a373;
-  border: none;
-  max-width: max-content;
-  padding: 10px 20px;
-  color: #fff;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Submit button */
+.feedback-attachment-btn,
 .feedback-submit-btn {
   background-color: #d4a373;
-  color: #fff;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
   cursor: pointer;
+  border-radius: 5px;
   font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
-/* Decorative circles */
-.feedback-circle-top {
+.feedback-attachment-btn:hover,
+.feedback-submit-btn:hover {
+  background-color: #c1956a;
+}
+
+.feedback-circle-top,
+.feedback-circle-bottom {
   position: absolute;
+  background-color: #d4a373;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.feedback-circle-top {
   top: 20px;
   right: 20px;
   width: 100px;
   height: 100px;
-  background-color: #d4a373;
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.5;
 }
 
 .feedback-circle-bottom {
-  position: absolute;
   bottom: 20px;
   left: 20px;
   width: 80px;
   height: 80px;
-  background-color: #d4a373;
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.5;
+}
+
+/* ================== RESPONSIVE BREAKPOINTS ================== */
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .banner .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .banner {
+    background-image: url("./assets/vaccination/top-banner-mobile.png");
+  }
+  .banner img{
+    display: block;
+  }
+  .banner-left,
+  .banner-right {
+    flex: none;
+  }
+
+  .banner-right {
+    order: -1;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  .comparison-table,
+  .selectors-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .evaluation-container {
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .evaluation-box {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .modal-content {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .feedback-con {
+    padding: 20px;
+  }
+
+  .feedback-circle-top {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feedback-circle-bottom {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .banner .container {
+    padding: 20px 15px;
+  }
+
+  .countries-section {
+    padding: 30px 15px;
+  }
+
+  .comparison-wrapper {
+    padding: 30px 15px;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .country-option {
+    padding: 12px 8px;
+  }
+
+  .country-option img {
+    width: 30px;
+  }
+
+  .feedback-container {
+    bottom: 20px;
+    right: 15px;
+  }
+
+  .feed-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feed-text {
+    right: 60px;
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .feedback-con {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .feedback-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .feedback-attachment-btn,
+  .feedback-submit-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .banner .container {
+    padding: 15px 10px;
+  }
+
+  .countries-section {
+    padding: 20px 10px;
+  }
+
+  .comparison-wrapper {
+    padding: 20px 10px;
+  }
+
+  .country-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .feedback-container {
+    bottom: 15px;
+    right: 10px;
+  }
+
+  .feedback-con {
+    padding: 10px;
+  }
+}
+
+/* Landscape Phone Styles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner .container {
+    flex-direction: row;
+    align-items: center;
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .banner-left,
+  .banner-right {
+    flex: 1;
+  }
+
+  .banner-left img {
+    display: block;
+  }
+
+  .banner-right {
+    order: initial;
+  }
+}
+
+/* Large Screen Optimizations (1200px and above) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .country-grid {
+    max-width: 1400px;
+  }
+
+  .comparison-table,
+  .selectors-grid {
+    max-width: 1400px;
+  }
+}
+
+/* Print Styles */
+@media print {
+
+  .feedback-container,
+  .modal,
+  .feedback-overlay {
+    display: none !important;
+  }
+
+  .banner {
+    background-image: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+
+  .banner-right img,
+  .country-option img,
+  .table-cell img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Focus and Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .modal-content,
+  .feedback-modal {
+    background-color: #2d2d2d;
+    color: #ffffff;
+  }
+
+  .country-option,
+  .question-answer-cell,
+  .evaluation-cell,
+  .score-cell {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
 }
