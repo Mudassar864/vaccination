@@ -935,24 +935,3 @@ body {
   }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
-
-  .modal-content,
-  .feedback-modal {
-    background-color: #2d2d2d;
-    color: #ffffff;
-  }
-
-  .country-option,
-  .question-answer-cell,
-  .evaluation-cell,
-  .score-cell {
-    background-color: #2d2d2d;
-    border-color: #444;
-  }
-}
