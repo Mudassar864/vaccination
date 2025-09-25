@@ -29,7 +29,7 @@ body {
 /* ================== BANNER SECTION ================== */
 .banner {
   background-color: #fef2e4;
-  background-image: url("./assets/vaccination/top-banner.png");
+  background-image: url("./assets/vaccination/top-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -48,40 +48,48 @@ body {
 
 .banner-left {
   max-width: max-content;
-  position: relative;
   z-index: 10;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.syringe {
-  right: 60px;
-}
 
-.syringe,
-.round {
-  position: absolute;
-  bottom: -60px;
-}
 
-.round {
-  z-index: -1;
-  right: 0;
-}
 
+.banner-left .logo{
+  margin-bottom: 3rem;
+}
 .banner-left h1 {
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 16px;
+  position: relative;
+  text-align: left;
 }
 
 .banner-left span {
-  margin-bottom: 20px;
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   display: block;
   line-height: 1.4;
 }
-
+.banner-left .syringe {
+  width: clamp(150px, 30vw, 300px);
+  height: auto;
+  margin-top: -10px;
+  animation: float 6s ease-in-out infinite;
+  transform: rotate(180deg);
+  align-self: flex-end;  
+}
+.banner-left .round {
+  position: absolute;
+  width: clamp(200px, 30vw, 350px);
+  height: auto;
+  top: -25%;
+  transform: translateY(-25%);
+  right: -25px;
+  z-index: -10;
+}
 .search-container {
   position: relative;
   max-width: 100%;
@@ -523,10 +531,10 @@ body {
 }
 
 .feed-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: #d17728;
+  background-color: #ffffff;
   border: none;
   cursor: pointer;
   display: flex;
@@ -693,9 +701,6 @@ body {
     gap: 30px;
   }
 
-  .banner {
-    background-image: url("./assets/vaccination/top-banner-mobile.png");
-  }
   .banner img{
     display: block;
   }

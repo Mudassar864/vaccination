@@ -1,10 +1,9 @@
-import React from "react";
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="ft-container">
         <div className="footer-logo">
           <img src="/ghp-logo.png" alt="Logo" />
         </div>

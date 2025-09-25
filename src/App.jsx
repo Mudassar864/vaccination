@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { COUNTRIES, COUNTRIES_WITH_REGION } from "./lib/data";
-
+import syringe from "../src/assets/vaccination/syringe.svg";
 // Components
 import Button from "./components/UI/Button";
 import CountryOption from "./components/UI/CountryOption";
@@ -175,20 +175,20 @@ const App = () => {
               alt="Logo"
               className="logo"
             />
-            <h1>VACCiNATION</h1>
-            <span>Comparing vaccination systems globally</span>
-            <img
-              style={{ width: "300px" }}
-              src="./syringe.png"
-              alt="syringe"
-              className="syringe"
-            />
-             <img
-              style={{ width: "300px" }}
+            <h1>VACCiNATION
+              <img
               src="./round.png"
               alt="round"
               className="round"
             />
+            </h1>
+            <span>Comparing vaccination systems globally</span>
+            <img
+              src={syringe}
+              alt="syringe"
+              className="syringe"
+            />
+             
           </div>
          
         </div>
@@ -267,19 +267,13 @@ const App = () => {
         <button
           onClick={() => setIsFeedbackOpen(true)}
           className="feed-icon"
-          onMouseOver={(e) =>
-            (e.currentTarget.style.backgroundColor = "#d17728")
-          }
-          onMouseOut={(e) =>
-            (e.currentTarget.style.backgroundColor = "#f18322ff")
-          }
         >
           <img
-            src="Joe.png" // Replace with your image path
+            src="ghp-logo.png" // Replace with your image path
             alt="Feedback"
             style={{
-              width: "100%",
-              height: "100%",
+              width: "80%",
+              height: "auto",
               padding: "5px",
             }}
           />
