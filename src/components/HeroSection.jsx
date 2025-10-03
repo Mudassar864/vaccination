@@ -17,10 +17,10 @@ const HeroSection = () => {
             />
           </Link>
           <div className="flex justify-end flex-col">
-            <h1 className="text-6xl font-bold leading-tight text-right text-[#635a55]">
+            <h1 className="text-9xl font-bold leading-tight text-right text-[#635a55]">
               Vacci<span className="text-[#e37a23]">NATION</span>
             </h1>
-            <span className="text-3xl block leading-snug mt-4 text-right">
+            <span className="text-3xl block leading-snug -mt-4 text-right">
               Comparing vaccination systems globally
             </span>
             <img
@@ -29,7 +29,7 @@ const HeroSection = () => {
               className="w-[300px] h-auto -mt-2 rotate-180 self-end"
             />
           </div>
-          <img src={global} alt="global" className="w-[800px] h-auto absolute -top-[60%] -right-28 -z-10 " />
+          <img src={global} alt="global" className="w-[800px] h-auto absolute -top-[45%] -right-28 -z-10 " />
         </div>
 
       </div>
