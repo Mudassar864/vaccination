@@ -312,7 +312,7 @@ const ComparisonTable = ({
                   >
                     ▼
                   </span>
-                  Extra Questions
+                  Vaccination System
                 </div>
               </td>
               {displayCountries.map((country, i) => (
