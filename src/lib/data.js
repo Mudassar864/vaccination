@@ -3666,7 +3666,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.adb.org/sites/default/files/linked-documents/55012-001-sd-03.pdf",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5379688/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10409276/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Afghanistan Food and Drugs Authority (AFDA)",
+    "q2": "Information not readily available online.",
+    "q3": "Government/donor-driven market, with support from Gavi, the Vaccine Alliance.",
+    "q4": "https://www.afda.gov.af/en/afghanistan-food-and-drugs-authority-afda"
   },
   {
     "Country": "Albania",
@@ -3677,7 +3681,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Agency for Medicines and Medical Devices",
+    "q2": "Yes, the National Agency for Medicines and Medical Devices is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.akbpm.gov.al/"
   },
   {
     "Country": "Algeria",
@@ -3688,7 +3696,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/88420c69c4147738eb544478c16d445cdffad9cf_1.pdf",
     "Implementation b": "https://www.perplexity.ai/search/are-there-clearly-defined-resp-9tMj67KvQVyQQO6EcjT95w",
     "Evaluation a": "https://www.statista.com/statistics/1197950/share-of-children-s-vaccinations-in-algeria-by-type/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence Nationale des Produits Pharmaceutiques (ANPP)",
+    "q2": "Yes, the ANPP is responsible for monitoring adverse drug reactions.",
+    "q3": "Government-controlled market, with the Pasteur Institute of Algeria being a key player in vaccine production and distribution.",
+    "q4": "https://www.anpp.dz/"
   },
   {
     "Country": "Andorra",
@@ -3699,7 +3711,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health (Ministeri de Salut)",
+    "q2": "Andorra collaborates with neighboring countries (Spain and France) and the WHO for pharmacovigilance.",
+    "q3": "Government purchases based on public health needs.",
+    "q4": "https://www.salut.ad/"
   },
   {
     "Country": "Angola",
@@ -3710,7 +3726,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.eib.org/en/press/news/angola-receives-vaccines-to-fight-cervical-cancer",
     "Evaluation a": "https://www.unicef.org/media/152216/file/Angola-2023-COAR.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agência Reguladora de Medicamentos e Tecnologias de Saúde (ARMED)",
+    "q2": "Yes, ARMED is responsible for pharmacovigilance.",
+    "q3": "Primarily government-led procurement, with support from international partners like Gavi.",
+    "q4": "https://armed.ao/"
   },
   {
     "Country": "Antigua and Barbuda",
@@ -3721,7 +3741,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Implementation b": "https://www.paho.org/fr/node/96754",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-atg.pdf?sfvrsn=83b3e061_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health, Wellness and the Environment",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://health.gov.ag/"
   },
   {
     "Country": "Argentina",
@@ -3732,7 +3756,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "https://www.unicef.org/media/140051/file/Argentina-case-study-Building-confidence-in-routine-childhood-vaccines-2023.pdf",
     "Evaluation a": "https://ycharts.com/indicators/argentina_coronavirus_vaccination_rate_any_dosage",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Administración Nacional de Medicamentos, Alimentos y Tecnología Médica (ANMAT)",
+    "q2": "Yes, ANMAT has a National Pharmacovigilance System.",
+    "q3": "Mixed system with public procurement for the national immunization program and a private market.",
+    "q4": "https://www.argentina.gob.ar/anmat"
   },
   {
     "Country": "Armenia",
@@ -3743,7 +3771,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://pivipartners.org/armenia/",
     "Evaluation a": "https://hetq.am/en/article/169266",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Scientific Centre of Drug and Medical Technology Expertise",
+    "q2": "Yes, the Centre is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the national immunization program.",
+    "q4": "https://www.pharm.am/"
   },
   {
     "Country": "Australia",
@@ -3754,18 +3786,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://journals.sagepub.com/doi/full/10.1177/09685332211002594",
     "Implementation b": "No",
     "Evaluation a": "https://ncirs.org.au/sites/default/files/2024-10/NCIRS Annual Immunisation Coverage Report 2023.pdf",
-    "Evaluation b": "https://www.aihw.gov.au/reports/australias-health/immunisation-and-vaccination"
+    "Evaluation b": "https://www.aihw.gov.au/reports/australias-health/immunisation-and-vaccination",
+    "q1": "Therapeutic Goods Administration (TGA)",
+    "q2": "Yes, the TGA conducts post-market surveillance of vaccines.",
+    "q3": "A mixed system of government-funded national immunization programs and a private market.",
+    "q4": "https://www.tga.gov.au/"
   },
   {
     "Country": "Austria",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
-    "Plan b": "https://www.who.int/europe/groups/national-immunization-technical-advisory-groups-%28nitags%29",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Austrian Medicines and Medical Devices Agency (AGES)",
+    "q2": "Yes, AGES is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.ages.at/"
   },
   {
     "Country": "Azerbaijan",
@@ -3776,7 +3816,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://rm.coe.int/eng-coe-azerbaijan-strategy-and-action-plan-on-execution-15-02-2024/1680aee02f",
     "Implementation b": "No",
     "Evaluation a": "https://www.ceicdata.com/en/azerbaijan/social-health-statistics/az-immunization-measles--of-children-aged-1223-months",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Analytical Expertise Center of the Ministry of Health",
+    "q2": "Yes, the Center is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.pharma.az/"
   },
   {
     "Country": "Bahamas",
@@ -3787,7 +3831,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.paho.org/en/news/27-4-2023-countries-caribbean-agree-strengthen-national-immunization-programs-through",
     "Implementation b": "https://www.paho.org/en/news/27-4-2023-countries-caribbean-agree-strengthen-national-immunization-programs-through",
     "Evaluation a": "https://www.paho.org/en/news/27-4-2023-countries-caribbean-agree-strengthen-national-immunization-programs-through",
-    "Evaluation b": "https://www.paho.org/en/news/27-4-2023-countries-caribbean-agree-strengthen-national-immunization-programs-through"
+    "Evaluation b": "https://www.paho.org/en/news/27-4-2023-countries-caribbean-agree-strengthen-national-immunization-programs-through",
+    "q1": "Ministry of Health & Wellness",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.bahamas.gov.bs/health"
   },
   {
     "Country": "Bahrain",
@@ -3798,7 +3846,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Health Regulatory Authority (NHRA)",
+    "q2": "Yes, the NHRA is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the national immunization program.",
+    "q4": "https://www.nhra.bh/"
   },
   {
     "Country": "Bangladesh",
@@ -3809,7 +3861,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Evaluation a": "https://journals.plos.org/globalpublichealth/article?id=10.1371%2Fjournal.pgph.0004178",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Directorate General of Drug Administration (DGDA)",
+    "q2": "Yes, the DGDA has a pharmacovigilance system.",
+    "q3": "Primarily government-led procurement for the Expanded Program on Immunization (EPI).",
+    "q4": "https://dgda.gov.bd/"
   },
   {
     "Country": "Barbados",
@@ -3820,7 +3876,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://energy.gov.bb/wp-content/uploads/2024/09/Implementation-Plan-BNEP.pdf",
     "Implementation b": "https://www.health.gov.bb/News/Press-Releases/Campaign-To-Increase-Uptake-Of-Chi",
     "Evaluation a": "https://barbadostoday.bb/2024/09/14/promising-improvement-in-vaccination-rates-health-ministry-says/",
-    "Evaluation b": "https://data.who.int/countries/052"
+    "Evaluation b": "https://data.who.int/countries/052",
+    "q1": "Ministry of Health and Wellness",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.bb/"
   },
   {
     "Country": "Belarus",
@@ -3831,7 +3891,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881447/",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Centre for Examinations and Tests in Health Service",
+    "q2": "Yes, the Centre is responsible for pharmacovigilance.",
+    "q3": "Government-controlled market.",
+    "q4": "https://www.rceth.by/"
   },
   {
     "Country": "Belgium",
@@ -3842,7 +3906,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://journals.sagepub.com/doi/full/10.1177/09685332211002594",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Federal Agency for Medicines and Health Products (FAMHP)",
+    "q2": "Yes, the FAMHP is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.famhp.be/en"
   },
   {
     "Country": "Belize",
@@ -3853,7 +3921,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.health.gov.bz/",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11622853/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10483062/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health & Wellness",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.bz/"
   },
   {
     "Country": "Benin",
@@ -3864,7 +3936,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/88420c69c4147738eb544478c16d445cdffad9cf_1.pdf",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/46bb8c6ff2efadd38335fe2481d2a9037fbc9520_1.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11841864/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence Béninoise de Régulation Pharmaceutique (ABRP)",
+    "q2": "Yes, the ABRP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.facebook.com/p/Agence-B%C3%A9ninoise-de-R%C3%A9gulation-Pharmaceutique-ABRP-100064955361371/"
   },
   {
     "Country": "Bhutan",
@@ -3875,7 +3951,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8136800/",
     "Evaluation a": "https://www.elgaronline.com/downloadpdf/edcollchap-oa/book/9781803929170/book-part-9781803929170-25.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Bhutan Food and Drug Authority (BFDA)",
+    "q2": "Yes, the BFDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://bfda.gov.bt/"
   },
   {
     "Country": "Bolivia",
@@ -3886,18 +3966,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9997729/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agencia Estatal de Medicamentos y Tecnologías en Salud (AGEMED)",
+    "q2": "Yes, AGEMED is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.agemed.gob.bo/"
   },
   {
     "Country": "Bosnia and Herzegovina",
-    "Goals a": "https://www.ncbi.nlm.nih.gov/",
+    "Goals a": "No",
     "Goals b": "No",
     "Plan a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881447/",
     "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://www.who.int/about/accountability/results/who-results-report-2020-mtr/country-story/2023/periodic-intensification-of-routine-immunization-activities-increase-vaccination-in-bosnia-and-herzegovina",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agency for Medicinal Products and Medical Devices of Bosnia and Herzegovina",
+    "q2": "Yes, the Agency is responsible for pharmacovigilance.",
+    "q3": "Government procurement for public health programs.",
+    "q4": "https://www.almbih.gov.ba/"
   },
   {
     "Country": "Botswana",
@@ -3908,7 +3996,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://napglobalnetwork.org/wp-content/uploads/2020/06/napgn-en-2020-nap-framework-for-botswana.pdf",
     "Implementation b": "https://covid19communicationnetwork.org/wp-content/uploads/2023/11/Botswana_Success_Story_published-june-9th.pdf",
     "Evaluation a": "https://covid19communicationnetwork.org/wp-content/uploads/2023/11/Botswana_Success_Story_published-june-9th.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Botswana Medicines Regulatory Authority (BOMRA)",
+    "q2": "Yes, BOMRA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.bomra.co.bw/"
   },
   {
     "Country": "Brazil",
@@ -3919,7 +4011,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/cb05e048b8dabcea655590e26dc77daf90e06c02_1.pdf",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10911277/",
     "Evaluation a": "https://www.medscape.com/viewarticle/brazil-bucked-trend-childhood-vaccination-2023-2024a1000dg5",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Brazilian Health Regulatory Agency (Anvisa)",
+    "q2": "Yes, Anvisa and the Ministry of Health conduct pharmacovigilance.",
+    "q3": "Mixed market with a strong public sector (National Immunization Program) and a private market.",
+    "q4": "https://www.gov.br/anvisa/en"
   },
   {
     "Country": "Brunei",
@@ -3930,7 +4026,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-brn.pdf?sfvrsn=b2cb4943_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Pharmaceutical Services, Ministry of Health",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.moh.gov.bn/"
   },
   {
     "Country": "Bulgaria",
@@ -3941,7 +4041,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1464370/full",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Bulgarian Drug Agency",
+    "q2": "Yes, the Bulgarian Drug Agency is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.bda.bg/"
   },
   {
     "Country": "Burkina Faso",
@@ -3952,7 +4056,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.actntdswest.org/sites/default/files/inline-files/Burkina Faso-FY25 work plan.pdf",
     "Implementation b": "https://www.gavi.org/vaccineswork/burkina-faso-taking-on-typhoid",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-bfa.pdf?sfvrsn=52920509_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence Nationale de Régulation Pharmaceutique (ANRP)",
+    "q2": "Yes, the ANRP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.anrp.bf/"
   },
   {
     "Country": "Burundi",
@@ -3963,7 +4071,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.gavi.org/vaccineswork/burundis-covid-19-vaccination-campaign-accelerates",
     "Evaluation a": "https://www.gavi.org/programmes-impact/country-hub/africa/burundi",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence Burundaise de Régulation des Médicaments et des Aliments (ABREMA)",
+    "q2": "Yes, ABREMA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Cabo Verde",
@@ -3974,7 +4086,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.worldbank.org/en/news/press-release/2021/02/11/first-world-bank-support-for-covid-19-vaccine-rollout-in-africa",
     "Implementation b": "https://www.worldbank.org/en/news/press-release/2021/02/11/first-world-bank-support-for-covid-19-vaccine-rollout-in-africa",
     "Evaluation a": "https://insp.gov.cv/wp-content/uploads/2024/02/Knowledge-attitudes-and-adherence-of-the-Cape-Verdean-population-to-the-COVID-19-vaccine.pdf",
-    "Evaluation b": "https://www.worldbank.org/en/news/press-release/2021/02/11/first-world-bank-support-for-covid-19-vaccine-rollout-in-africa"
+    "Evaluation b": "https://www.worldbank.org/en/news/press-release/2021/02/11/first-world-bank-support-for-covid-19-vaccine-rollout-in-africa",
+    "q1": "Entidade Reguladora Independente da Saúde (ERIS)",
+    "q2": "Yes, ERIS is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.eris.cv/"
   },
   {
     "Country": "Cambodia",
@@ -3985,7 +4101,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.linkedin.com/pulse/building-capacity-health-system-unicef-cambodias-george-laryea-adjei-cxjqc",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Drugs and Food, Ministry of Health",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://ddf.moh.gov.kh/"
   },
   {
     "Country": "Cameroon",
@@ -3996,7 +4116,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.unicef.org/wca/media/10481/file/Cameroon-RTM-Case-Study.pdf.pdf",
     "Implementation b": "https://www.unicef.org/wca/media/10481/file/Cameroon-RTM-Case-Study.pdf.pdf",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-cmr.pdf?sfvrsn=fb0d6c18_3&download=true",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8920166/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8920166/",
+    "q1": "Ministry of Public Health",
+    "q2": "The Ministry of Public Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement for the Expanded Program on Immunization (EPI).",
+    "q4": "https://www.minsante.gov.cm/"
   },
   {
     "Country": "Canada",
@@ -4007,7 +4131,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6284504/",
     "Implementation b": "https://www.nitag-resource.org/news/naci-mandate-expands-support-local-decision-making-vaccine-programs",
     "Evaluation a": "https://www.canada.ca/en/public-health/services/immunization-vaccines/vaccination-coverage/childhood-seasonal-immunization-coverage-survey-2024-results.html",
-    "Evaluation b": "https://www.canada.ca/en/public-health/services/immunization-vaccine-priorities/national-immunization-strategy.html"
+    "Evaluation b": "https://www.canada.ca/en/public-health/services/immunization-vaccine-priorities/national-immunization-strategy.html",
+    "q1": "Health Canada",
+    "q2": "Yes, Health Canada and the Public Health Agency of Canada (PHAC) conduct vaccine safety surveillance.",
+    "q3": "A mix of federal, provincial, and territorial government purchases for public immunization programs.",
+    "q4": "https://www.canada.ca/en/health-canada.html"
   },
   {
     "Country": "Central African Republic",
@@ -4018,7 +4146,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://reliefweb.int/report/central-african-republic/gavi-increases-support-reach-all-children-immunisation-central-african-republic",
     "Evaluation a": "https://www.unicef.org/car/media/2026/file/UNICEF CAR %7C Annual report 2023.pdf.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Population",
+    "q2": "The Ministry of Health and Population oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Chad",
@@ -4029,7 +4161,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6284504/",
     "Implementation b": "https://www.gatesfoundation.org/ideas/media-center/press-releases/2011/10/chad-launches-a-national-immunization-campaign-against-polio",
     "Evaluation a": "https://www.unicef.org/media/152981/file/Chad-2023-COAR.pdf",
-    "Evaluation b": "https://www.unicef.org/chad/topics/immunization"
+    "Evaluation b": "https://www.unicef.org/chad/topics/immunization",
+    "q1": "Ministry of Public Health and Prevention",
+    "q2": "The Ministry of Public Health and Prevention oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "https://www.mspt.td/"
   },
   {
     "Country": "Chile",
@@ -4040,7 +4176,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/e777e4bbe47bded147e7eacf884ed034a8412506_1.pdf",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/e777e4bbe47bded147e7eacf884ed034a8412506_1.pdf",
     "Evaluation a": "https://tradingeconomics.com/chile/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Instituto de Salud Pública de Chile (ISP)",
+    "q2": "Yes, the ISP is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement for the national immunization program and a private market.",
+    "q4": "https://www.ispch.cl/"
   },
   {
     "Country": "China",
@@ -4051,7 +4191,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8428415/",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10720319/",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Medical Products Administration (NMPA)",
+    "q2": "Yes, the NMPA is responsible for pharmacovigilance.",
+    "q3": "Government-led market, with both public and private options for vaccination.",
+    "q4": "https://www.nmpa.gov.cn/"
   },
   {
     "Country": "Colombia",
@@ -4062,7 +4206,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "https://www.bbc.com/news/world-latin-america-57819261",
     "Evaluation a": "https://www.ssph-journal.org/journals/international-journal-of-public-health/articles/10.3389/ijph.2024.1606689/full",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Instituto Nacional de Vigilancia de Medicamentos y Alimentos (INVIMA)",
+    "q2": "Yes, INVIMA has a national pharmacovigilance program.",
+    "q3": "Mixed system with public procurement for the national immunization program and a private market.",
+    "q4": "https://www.invima.gov.co/"
   },
   {
     "Country": "Comoros",
@@ -4073,7 +4221,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://aho.org/countries/comoros/",
     "Implementation b": "No",
     "Evaluation a": "https://pubmed.ncbi.nlm.nih.gov/33069840/",
-    "Evaluation b": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1470021/full"
+    "Evaluation b": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1470021/full",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Congo (Congo-Brazzaville)",
@@ -4084,7 +4236,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://terrance.who.int/mediacentre/data/sage/SAGE_Docs_Ppt_April2019/1_session_report_from_ivb_director/April2019_Session1_Meeting_Report_Regional_ITAG.pdf",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-cog.pdf?sfvrsn=5ae416e5_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence de Régulation Pharmaceutique (ARP)",
+    "q2": "Yes, the ARP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Costa Rica",
@@ -4095,7 +4251,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://ticotimes.net/2024/09/06/costa-rica-begins-vaccination-campaign-to-fight-respiratory-illnesses",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-cri.pdf?sfvrsn=df1a5ae6_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "Yes, the Ministry of Health is responsible for pharmacovigilance.",
+    "q3": "Government purchases through the social security system (Caja Costarricense de Seguro Social).",
+    "q4": "https://www.ministeriodesalud.go.cr/"
   },
   {
     "Country": "Croatia",
@@ -4106,7 +4266,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.opengovpartnership.org/wp-content/uploads/2019/02/Croatia_Action-Plan_2018-2020_EN.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10657860/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agency for Medicinal Products and Medical Devices of Croatia (HALMED)",
+    "q2": "Yes, HALMED is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.halmed.hr/"
   },
   {
     "Country": "Cuba",
@@ -4115,9 +4279,13 @@ export const VACCINATION_DATA = [
     "Plan a": "No",
     "Plan b": "https://pubmed.ncbi.nlm.nih.gov/33780421/",
     "Implementation a": "No",
-    "Implementation b": "https://extranet.who.int/countryplanningcycles/sites/default/files/country_docs/Cuba/cuba_cmyp_2007-2011.pdf",
-    "Evaluation a": "https://www.cmedlabsfoundation.com/updates-emerging-issues/cuba-leads-the-world-in-vaccinating-children-as-young-as-two-against-covid/",
-    "Evaluation b": "No"
+    "Implementation b": "No",
+    "Evaluation a": "No",
+    "Evaluation b": "No",
+    "q1": "Center for State Control of Medicines, Equipment and Medical Devices (CECMED)",
+    "q2": "Yes, CECMED is responsible for pharmacovigilance.",
+    "q3": "Government-controlled market.",
+    "q4": "https://www.cecmed.cu/"
   },
   {
     "Country": "Cyprus",
@@ -4128,7 +4296,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7393851/",
     "Implementation b": "https://www.pio.gov.cy/en/campaigns/",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Pharmaceutical Services, Ministry of Health",
+    "q2": "Yes, the Pharmaceutical Services are responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public health system.",
+    "q4": "https://www.moh.gov.cy/"
   },
   {
     "Country": "Czechia (Czech Republic)",
@@ -4139,7 +4311,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1464370/full",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11513313/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Institute for Drug Control (SÚKL)",
+    "q2": "Yes, SÚKL is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.sukl.eu/"
   },
   {
     "Country": "Democratic Republic of the Congo",
@@ -4150,7 +4326,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.unicef.org/media/167386/file/DR-Congo-Humanitarian-SitRep-No.-5-(Level-3-Mpox),-31-December-2024.pdf.pdf",
     "Evaluation a": "https://www.unicef.org/media/152761/file/Democratic-Republic-of-the-Congo-2023-COAR.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Autorité Congolaise de Réglementation Pharmaceutique (ACOREP)",
+    "q2": "Yes, ACOREP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Denmark",
@@ -4161,7 +4341,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.vaccines4life.com/wp-content/uploads/2021/05/SAAV_Environmental-Scan_Denmark.pdf",
     "Implementation b": "https://overcomingobstaclestovaccination.eu/en/solutions/onsite-visits/onsite-visit-copenhagen-denmark",
     "Evaluation a": "No",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11004589/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11004589/",
+    "q1": "Danish Medicines Agency",
+    "q2": "Yes, the Danish Medicines Agency is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://laegemiddelstyrelsen.dk/en/"
   },
   {
     "Country": "Djibouti",
@@ -4172,7 +4356,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.gavi.org/fr/actualites/librarie-de-documents/proposal-nvs-ipv-djibouti-francais-0",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-dji.pdf?sfvrsn=1808fe8c_3&download=true",
-    "Evaluation b": "https://ijariie.com/AdminUploadPdf/Advancements_in_Disease_Surveillance_and_Data_Coverage_in_Djibouti__A_Commentary_and_Brief_Overview_ijariie23162.pdf"
+    "Evaluation b": "https://ijariie.com/AdminUploadPdf/Advancements_in_Disease_Surveillance_and_Data_Coverage_in_Djibouti__A_Commentary_and_Brief_Overview_ijariie23162.pdf",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.sante.gouv.dj/"
   },
   {
     "Country": "Dominica",
@@ -4183,7 +4371,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Implementation b": "No",
     "Evaluation a": "https://www.paho.org/en/news/3-5-2023-vaccination-week-americas-2023-observed-dominica",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health, Wellness and Social Services",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "http://www.dominica.gov.dm/ministries/health"
   },
   {
     "Country": "Dominican Republic",
@@ -4194,7 +4386,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.msp.gob.do/",
     "Implementation b": "https://www.msp.gob.do/",
     "Evaluation a": "https://en.ssi.dk/news/epi-news/2024/no-10---2024",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Dirección General de Medicamentos, Alimentos y Productos Sanitarios (DIGEMAPS)",
+    "q2": "Yes, DIGEMAPS is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.msp.gob.do/web/"
   },
   {
     "Country": "Ecuador",
@@ -4205,7 +4401,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "https://www.paho.org/en/news/18-12-2024-note-third-regional-national-immunization-technical-advisory-group-nitag-network",
     "Evaluation a": "https://ycharts.com/indicators/ecuador_coronavirus_vaccination_rate_any_dosage",
-    "Evaluation b": "https://www.paho.org/sites/default/files/2025-02/2025-feb-14-phe-risk-assessment-yellow-fever-final2.pdf"
+    "Evaluation b": "https://www.paho.org/sites/default/files/2025-02/2025-feb-14-phe-risk-assessment-yellow-fever-final2.pdf",
+    "q1": "Agencia Nacional de Regulación, Control y Vigilancia Sanitaria (ARCSA)",
+    "q2": "Yes, ARCSA is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.controlsanitario.gob.ec/"
   },
   {
     "Country": "Egypt",
@@ -4216,7 +4416,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.fondation-merieux.org/wp-content/uploads/2023/06/introducing-pcv-rotavirus-vaccine-2023-day-2-joseph-biey.pdf",
     "Implementation b": "https://fount.aucegypt.edu/studenttxt/101/",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-egy.pdf?sfvrsn=643481a7_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Egyptian Drug Authority (EDA)",
+    "q2": "Yes, the EDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.edaegypt.gov.eg/"
   },
   {
     "Country": "El Salvador",
@@ -4227,7 +4431,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "https://www.who.int/emergencies/funding/health-emergency-appeals/2022/2023/2023-appeals/appeal-el-salvador",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-slv.pdf?sfvrsn=febf6647_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Dirección Nacional de Medicamentos (DNM)",
+    "q2": "Yes, the DNM is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.medicamentos.gob.sv/"
   },
   {
     "Country": "Equatorial Guinea",
@@ -4238,7 +4446,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-gnq.pdf?sfvrsn=fe581699_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Social Welfare",
+    "q2": "The Ministry of Health and Social Welfare oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.guineasalud.org/"
   },
   {
     "Country": "Eritrea",
@@ -4249,7 +4461,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.unicef.org/esa/stories/eritrea-maintains-over-95-cent-coverage-nationwide-immunization-programmes",
     "Evaluation a": "https://www.who.int/about/accountability/results/who-results-report-2020-mtr/country-story/2023/improving-access-to-immunization-in-hard-to-reach-areas-of-eritrea",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-controlled market.",
+    "q4": "No official website found."
   },
   {
     "Country": "Estonia",
@@ -4260,7 +4476,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://fra.europa.eu/sites/default/files/fra_uploads/ee_report_on_national_vaccine_deployment.pdf",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Agency of Medicines",
+    "q2": "Yes, the State Agency of Medicines is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.ravimiamet.ee/"
   },
   {
     "Country": "Eswatini",
@@ -4271,7 +4491,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://icap-aws-bucket.s3.amazonaws.com/icapcolumbiau/wp-content/uploads/pages-ICAP-Eswatini_Report-002.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10460101/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.gov.sz/index.php/ministries-departments/ministry-of-health"
   },
   {
     "Country": "Ethiopia",
@@ -4282,7 +4506,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/ethiopia-establishes-its-nitag",
     "Implementation b": "https://www.nitag-resource.org/news/ethiopia-establishes-its-nitag",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11717282/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ethiopian Food and Drug Authority (EFDA)",
+    "q2": "Yes, the EFDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.efda.gov.et/"
   },
   {
     "Country": "Fiji",
@@ -4293,7 +4521,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.greenpolicyplatform.org/sites/default/files/downloads/policy-database/Fiji NDC Implementation Roadmap 2017-2030.pdf",
     "Implementation b": "https://www.ivi.int/fiji-launches-mass-vaccination-campaign-against-typhoid-in-the-northern-division/",
     "Evaluation a": "https://tradingeconomics.com/fiji/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Fiji Pharmaceutical & Biomedical Services",
+    "q2": "Yes, the services are responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public health system.",
+    "q4": "https://www.health.gov.fj/"
   },
   {
     "Country": "Finland",
@@ -4304,7 +4536,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://thl.fi/en/-/the-vaccination-coverage-of-young-children-in-finland-is-very-good-the-proportion-of-unvaccinated-children-among-those-born-in-2021-is-slightly-higher-than-in-the-previous-age-groups",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Finnish Medicines Agency (Fimea)",
+    "q2": "Yes, Fimea is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.fimea.fi/"
   },
   {
     "Country": "France",
@@ -4315,7 +4551,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://www.statista.com/statistics/1202549/vaccination-number-covid19-france/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10843936/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10843936/",
+    "q1": "National Agency for the Safety of Medicines and Health Products (ANSM)",
+    "q2": "Yes, the ANSM is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://ansm.sante.fr/"
   },
   {
     "Country": "Gabon",
@@ -4326,7 +4566,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-gab.pdf?sfvrsn=e4974919_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Gambia",
@@ -4337,7 +4581,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/ghana-inaugurates-nitag",
     "Implementation b": "https://gambia.un.org/en/109407-launch-gambia%E2%80%99s-national-immunization-technical-advisory-group-gambia-gambia-nitag",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10361478/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10361478/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10361478/",
+    "q1": "Medicines Control Agency (MCA)",
+    "q2": "Yes, the MCA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.mca.gm/"
   },
   {
     "Country": "Georgia",
@@ -4348,7 +4596,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Regulation Agency for Medical and Pharmaceutical Activities",
+    "q2": "Yes, the Agency is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.moh.gov.ge/"
   },
   {
     "Country": "Germany",
@@ -4359,7 +4611,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11488180/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11488180/",
+    "q1": "Paul Ehrlich Institute (PEI) / European Medicines Agency (EMA)",
+    "q2": "Paul-Ehrlich-Institut (PEI)",
+    "q3": "Government/insurance purchases for the public via statutory health insurance.",
+    "q4": "https://www.ema.europa.eu/en, https://www.pei.de/EN/home/home_node.html"
   },
   {
     "Country": "Ghana",
@@ -4370,7 +4626,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.moh.gov.gh/wp-content/uploads/2024/10/NITAG-Ghana_IP-Manual_Final_09Oct24_Shared-with-Minister.pdf",
     "Implementation b": "https://www.moh.gov.gh/wp-content/uploads/2024/10/NITAG-Ghana_IP-Manual_Final_09Oct24_Shared-with-Minister.pdf",
     "Evaluation a": "https://www.medrxiv.org/content/10.1101/2024.12.13.24318976v1.full",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Food and Drugs Authority (FDA)",
+    "q2": "Yes, the FDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.fdaghana.gov.gh/"
   },
   {
     "Country": "Greece",
@@ -4381,7 +4641,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/0fb9413f5c0dee22b6319c30e22d71ab8a76f1c2_1.pdf",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9914444/",
-    "Evaluation b": "https://eody.gov.gr/wp-content/uploads/2024/02/pertussis-2004-2023-eng.pdf"
+    "Evaluation b": "https://eody.gov.gr/wp-content/uploads/2024/02/pertussis-2004-2023-eng.pdf",
+    "q1": "National Organization for Medicines (EOF)",
+    "q2": "Yes, the EOF is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.eof.gr/"
   },
   {
     "Country": "Grenada",
@@ -4392,7 +4656,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Implementation b": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Evaluation a": "https://iris.paho.org/bitstream/handle/10665.2/57281/v47e442023.pdf?sequence=1",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health, Wellness and Religious Affairs",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.gd/"
   },
   {
     "Country": "Guatemala",
@@ -4403,7 +4671,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.who.int/europe/activities/strengthening-national-immunization-technical-advisory-groups-(nitags)",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10911077/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health and Social Assistance",
+    "q2": "The Ministry of Public Health and Social Assistance oversees pharmacovigilance activities.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.mspas.gob.gt/"
   },
   {
     "Country": "Guinea",
@@ -4414,7 +4686,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.gavi.org/country-documents/guinea",
     "Evaluation a": "https://www.gavi.org/vaccineswork/routine-immunisation-guinea-mountain-climb-find-zero-dose-children",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Public Hygiene",
+    "q2": "The Ministry of Health and Public Hygiene oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.sante.gov.gn/"
   },
   {
     "Country": "Guinea-Bissau",
@@ -4425,7 +4701,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.undp.org/guinea-bissau/press-releases/undp-and-guinea-bissau-renew-partnership-strengthen-national-response-hiv-tuberculosis-and-malaria",
     "Evaluation a": "https://bmjopen.bmj.com/content/2/6/e001509",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health",
+    "q2": "The Ministry of Public Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Guyana",
@@ -4436,7 +4716,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://ewsdata.rightsindevelopment.org/files/documents/59/IADB-GY-L1059_6sXfO5Q.pdf",
     "Implementation b": "https://guyana.un.org/en/180060-un-guyana-support-national-immunization",
     "Evaluation a": "https://data.unicef.org/wp-content/uploads/2023/07/progress-and-challenges_wuenic2023rev_20-September.pdf",
-    "Evaluation b": "https://hpvcentre.net/statistics/reports/GUY.pdf"
+    "Evaluation b": "https://hpvcentre.net/statistics/reports/GUY.pdf",
+    "q1": "Ministry of Health",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.gy/"
   },
   {
     "Country": "Haiti",
@@ -4447,7 +4731,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.gavi.org/thousands-of-haitian-children-to-be-protected-against-leading-cause-of-severe-diarrhoea",
     "Evaluation a": "https://www.unicef.org/haiti/en/press-releases/haiti-sees-10-increase-routine-vaccination-coverage-between-2022-and-2023",
-    "Evaluation b": "https://www.paho.org/sites/default/files/2024-05/phsa-haiti-update-public-final_0.pdf"
+    "Evaluation b": "https://www.paho.org/sites/default/files/2024-05/phsa-haiti-update-public-final_0.pdf",
+    "q1": "Ministry of Public Health and Population (MSPP)",
+    "q2": "The MSPP oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "https://www.mspp.gouv.ht/"
   },
   {
     "Country": "Honduras",
@@ -4458,7 +4746,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11265310/",
     "Implementation b": "https://www.vaccines4life.com/wp-content/uploads/2021/05/NITAGs-Technical-Report-Updated-FINAL.June_.pdf",
     "Evaluation a": "https://www.paho.org/en/news/15-7-2024-global-childhood-immunization-levels-stalled-2023-leaving-many-without-life-saving",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agencia de Regulación Sanitaria (ARSA)",
+    "q2": "Yes, ARSA is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.arsa.gob.hn/"
   },
   {
     "Country": "Hungary",
@@ -4469,18 +4761,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://tradingeconomics.com/hungary/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11125914/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11125914/",
+    "q1": "National Institute of Pharmacy and Nutrition (OGYÉI)",
+    "q2": "Yes, the OGYÉI is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://ogyei.gov.hu/"
   },
   {
     "Country": "Iceland",
     "Goals a": "No",
     "Goals b": "No",
-    "Plan a": "https://www.who.int/europe/groups/national-immunization-technical-advisory-groups-(nitags)",
+    "Plan a": "No",
     "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Icelandic Medicines Agency",
+    "q2": "Yes, the Icelandic Medicines Agency is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.ima.is/"
   },
   {
     "Country": "India",
@@ -4491,7 +4791,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Implementation b": "No",
     "Evaluation a": "https://www.deccanherald.com/india/16-lakh-indian-kids-missed-vital-vaccine-shots-in-2023-who-unicef-report-3105641",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Central Drugs Standard Control Organisation (CDSCO)",
+    "q2": "Yes, through the Adverse Events Following Immunization (AEFI) surveillance program.",
+    "q3": "Mixed market, with a large government role through the Universal Immunization Program (UIP).",
+    "q4": "https://cdsco.gov.in/opencms/opencms/en/Home/"
   },
   {
     "Country": "Indonesia",
@@ -4502,7 +4806,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5853604/",
     "Implementation b": "https://dcvmn.org/wp-content/uploads/2023/11/Indonesia-Country-Profile_vf.pdf",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-idn.pdf?sfvrsn=bdb26101_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Agency of Drug and Food Control (BPOM)",
+    "q2": "Yes, BPOM is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement for the national immunization program and a private market.",
+    "q4": "https://www.pom.go.id/"
   },
   {
     "Country": "Iran",
@@ -4513,7 +4821,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/d7bb977ed4a6c44684a566183ede58661781b3aa_2.pdf",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/d7bb977ed4a6c44684a566183ede58661781b3aa_2.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11188638/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Food and Drug Administration of Iran",
+    "q2": "Yes, the Food and Drug Administration is responsible for pharmacovigilance.",
+    "q3": "Government-controlled market.",
+    "q4": "https://www.fda.gov.ir/"
   },
   {
     "Country": "Iraq",
@@ -4524,7 +4836,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.emro.who.int/fr/iraq/news/unicef-and-who-support-national-multi-antigen-campaign-for-more-than-400-000-children.html",
     "Evaluation a": "https://reliefweb.int/report/iraq/over-500000-children-reached-lifesaving-vaccines-ministry-health-supported-unicef-who-enarku",
-    "Evaluation b": "https://assets-eu.researchsquare.com/files/rs-5234424/v1/44964e89-3a03-41dc-8fe0-64fbaacab39c.pdf?c=1730450187"
+    "Evaluation b": "https://assets-eu.researchsquare.com/files/rs-5234424/v1/44964e89-3a03-41dc-8fe0-64fbaacab39c.pdf?c=1730450187",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://moh.gov.iq/"
   },
   {
     "Country": "Ireland",
@@ -4535,7 +4851,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.hse.ie/eng/health/immunisation/infomaterials/niostrategy.pdf",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Health Products Regulatory Authority (HPRA)",
+    "q2": "Yes, the HPRA is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.hpra.ie/"
   },
   {
     "Country": "Israel",
@@ -4546,7 +4866,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/resources/national-immunization-technical-advisory-group-israel",
     "Implementation b": "https://www.nitag-resource.org/resources/national-immunization-technical-advisory-group-israel",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6373067/",
-    "Evaluation b": "https://www.nature.com/articles/s41541-022-00526-5"
+    "Evaluation b": "https://www.nature.com/articles/s41541-022-00526-5",
+    "q1": "Ministry of Health",
+    "q2": "Yes, the Ministry of Health is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.gov.il/en/departments/ministry_of_health"
   },
   {
     "Country": "Italy",
@@ -4557,10 +4881,14 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://annali.iss.it/index.php/anna/article/view/1505",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/2023-06/ANN_23_01_04.pdf",
     "Evaluation a": "https://www.statista.com/topics/10437/vaccinations-in-italy/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Italian Medicines Agency (AIFA)",
+    "q2": "Yes, AIFA is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.aifa.gov.it/"
   },
   {
-    "Country": "Ivory Coast (CÃ´te d'Ivoire)",
+    "Country": "Ivory Coast (Côte d'Ivoire)",
     "Goals a": "https://www.gavi.org/news/media-room/gavi-and-cote-divoire-commit-successful-programmatic-and-financial-transition",
     "Goals b": "No",
     "Plan a": "https://www.nitag-resource.org/sites/default/files/2022-09/09685332211002594.pdf",
@@ -4568,7 +4896,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/05bb82a6867d54f735105ef71d86908c5ab2d30b_1.pdf",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/05bb82a6867d54f735105ef71d86908c5ab2d30b_1.pdf",
     "Evaluation a": "No",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/CIV.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/CIV.pdf",
+    "q1": "Autorité Ivoirienne de Régulation Pharmaceutique (AIRP)",
+    "q2": "Yes, the AIRP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.airp.ci/"
   },
   {
     "Country": "Jamaica",
@@ -4579,7 +4911,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Implementation b": "https://www.paho.org/en/news/20-12-2024-jamaicas-expanded-immunization-programme-takes-major-step-strengthening-public",
     "Evaluation a": "https://www.moh.gov.jm/jamaica-wins-regional-award-for-immunization-coverage/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health & Wellness",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.moh.gov.jm/"
   },
   {
     "Country": "Japan",
@@ -4590,7 +4926,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.vaccines4life.com/wp-content/uploads/2021/05/NITAGs-Technical-Report-Updated-FINAL.June_.pdf",
     "Implementation b": "https://www.researchgate.net/publication/224810380_Current_issues_with_the_immunization_program_in_Japan_Can_we_fill_the_vaccine_gap",
     "Evaluation a": "https://wwwnc.cdc.gov/eid/article/30/6/23-1454_article",
-    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/38782366/"
+    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/38782366/",
+    "q1": "Pharmaceuticals and Medical Devices Agency (PMDA)",
+    "q2": "Yes, the PMDA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with government/insurance purchases and a private market.",
+    "q4": "https://www.pmda.go.jp/english/"
   },
   {
     "Country": "Jordan",
@@ -4601,7 +4941,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10783979/",
     "Implementation b": "https://www.who.int/about/accountability/results/who-results-report-2020-mtr/country-story/2022/strengthening-primary-health-services-to-improve-routine-immunization-coverage-for-infants-in-jordan",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10611337/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Jordan Food and Drug Administration (JFDA)",
+    "q2": "Yes, the JFDA is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health sector and a private market.",
+    "q4": "https://www.jfda.jo/"
   },
   {
     "Country": "Kazakhstan",
@@ -4612,7 +4956,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881447/",
     "Implementation b": "No",
     "Evaluation a": "https://www.mdpi.com/2076-393X/12/2/237",
-    "Evaluation b": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(23)00247-8/fulltext"
+    "Evaluation b": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(23)00247-8/fulltext",
+    "q1": "National Center for Expertise of Medicines and Medical Devices",
+    "q2": "Yes, the Center is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.ndda.kz/"
   },
   {
     "Country": "Kenya",
@@ -4623,7 +4971,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pubmed.ncbi.nlm.nih.gov/32950303/",
     "Implementation b": "https://www.afro.who.int/news/kenya-launches-us9million-integrated-measles-vaccination-campaign-targeting-6-million-children",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10309080/",
-    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2025.02.11.25322096v1.full"
+    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2025.02.11.25322096v1.full",
+    "q1": "Pharmacy and Poisons Board (PPB)",
+    "q2": "Yes, the PPB is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://web.pharmacyboardkenya.org/"
   },
   {
     "Country": "Kiribati",
@@ -4634,29 +4986,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.undp.org/sites/g/files/zskgke326/files/2024-11/undp-pacific-chssc-report-kiribati-undp-acccountability-ecosystems.pdf",
     "Implementation b": "https://reliefweb.int/report/kiribati/kiribati-healthcare-facilities-benefit-ultra-cold-chain-equipment-support-roll-out-pfizer-vaccines",
     "Evaluation a": "https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&df=GLOBAL_DATAFLOW&ver=1.0&dq=KIR.IM_HIB3.&startPeriod=2015&endPeriod=2023",
-    "Evaluation b": "No"
-  },
-  {
-    "Country": "Korea, North",
-    "Goals a": "https://www.who.int/dprkorea/news/detail/26-04-2023-nationwide-catch-up-immunization-campaign-in-dpr-korea",
-    "Goals b": "No",
-    "Plan a": "No",
-    "Plan b": "No",
-    "Implementation a": "No",
-    "Implementation b": "No",
-    "Evaluation a": "No",
-    "Evaluation b": "No"
-  },
-  {
-    "Country": "Korea, South",
-    "Goals a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11261207/",
-    "Goals b": "No",
-    "Plan a": "https://thinkwell.global/wp-content/uploads/2019/02/Korea-Country-Report-DEC-2018-FINAL.pdf",
-    "Plan b": "No",
-    "Implementation a": "https://jkms.org/DOIx.php?id=10.3346%2Fjkms.2024.39.e166",
-    "Implementation b": "https://www.vaccines4life.com/wp-content/uploads/2020/09/Korea-Report-Design-Final.pdf",
-    "Evaluation a": "https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=7527&type=O",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11861641/"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Medical Services",
+    "q2": "The Ministry of Health and Medical Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Kuwait",
@@ -4667,7 +5001,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.zawya.com/en/world/middle-east/kuwait-winter-vaccination-campaign-boosts-health-reduces-seasonal-infection-tmu2i3q1",
     "Evaluation a": "https://tradingeconomics.com/kuwait/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health",
+    "q2": "The Ministry of Public Health oversees all aspects of the healthcare system.",
+    "q3": "Government-controlled market.",
+    "q4": "No official website found."
   },
   {
     "Country": "Kyrgyzstan",
@@ -4678,7 +5016,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881447/",
     "Implementation b": "https://www.adb.org/sites/default/files/linked-documents/55206-001-ld-04.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10605049/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11471421/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11471421/",
+    "q1": "Ministry of Food and Drug Safety (MFDS)",
+    "q2": "Yes, the MFDS is responsible for pharmacovigilance.",
+    "q3": "Mixed system with government/insurance purchases and a private market.",
+    "q4": "https://www.mfds.go.kr/eng/index.do"
   },
   {
     "Country": "Laos",
@@ -4689,7 +5031,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.hitap.net/wp-content/uploads/2023/10/Country-Mission-Report-Lao-PDR-EE-training.pdf",
     "Implementation b": "https://www.gavi.org/news/media-room/government-lao-pdr-and-partners-announce-campaign-tackle-measles-and-rubella",
     "Evaluation a": "https://tradingeconomics.com/laos/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://www.pasteur.la/activities-3/lao-lux-lab-vaccine-preventable-diseases-2021-2022/"
+    "Evaluation b": "https://www.pasteur.la/activities-3/lao-lux-lab-vaccine-preventable-diseases-2021-2022/",
+    "q1": "Ministry of Health",
+    "q2": "Yes, the Ministry of Health is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.moh.gov.kw/"
   },
   {
     "Country": "Latvia",
@@ -4700,7 +5046,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://tradingeconomics.com/latvia/immunization-measles-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Medicines and Medical Devices",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.pharm.kg/"
   },
   {
     "Country": "Lebanon",
@@ -4711,7 +5061,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://lebanon.un.org/en/226421-who-oversees-memorandum-understanding-between-task-force-global-health-and-ministry-public",
     "Implementation b": "https://reliefweb.int/report/lebanon/lebanon-launches-nation-wide-vaccination-campaign-protect-children-against-polio",
     "Evaluation a": "https://www.emro.who.int/emhj-volume-30-2024/volume-30-issue-12/the-increasing-threat-of-vaccine-preventable-diseases-in-lebanon.html",
-    "Evaluation b": "https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/measles-outbreak-in-lebanon-july-2023/E7608AE3E860789267109436C90FD80F"
+    "Evaluation b": "https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/measles-outbreak-in-lebanon-july-2023/E7608AE3E860789267109436C90FD80F",
+    "q1": "Food and Drug Department, Ministry of Health",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://fdd.gov.la/"
   },
   {
     "Country": "Lesotho",
@@ -4722,7 +5076,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://reliefweb.int/report/ethiopia/who-ethiopia-hosts-capacity-building-workshop-national-immunization-technical-advisory-group-nitags-6-countries",
     "Implementation b": "https://reliefweb.int/report/lesotho/national-measles-campaign-launched-lesotho",
     "Evaluation a": "https://www.gavi.org/vaccineswork/lesotho-steps-fight-against-cervical-cancer",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Lesotho.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Lesotho.pdf",
+    "q1": "State Agency of Medicines",
+    "q2": "Yes, the State Agency of Medicines is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.zva.gov.lv/"
   },
   {
     "Country": "Liberia",
@@ -4733,7 +5091,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://health.uct.ac.za/nish/articles/2023-02-22-nish-supports-5-day-capacity-building-workshop-nitag-members-botswana-liberia-south-sudan-and-uganda",
     "Implementation b": "https://breakthroughactionandresearch.org/wp-content/uploads/2025/01/Breakthrough-ACTION-Liberia-Our-Legacy.pdf",
     "Evaluation a": "https://www.afro.who.int/sites/default/files/2024-02/WHO Liberia 2023 annual report_e-copy.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health",
+    "q2": "Yes, the Ministry of Public Health is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public and private sector involvement.",
+    "q4": "https://www.moph.gov.lb/"
   },
   {
     "Country": "Libya",
@@ -4744,18 +5106,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://reliefweb.int/report/libya/national-center-disease-control-libya-technical-cooperation-office-annual-report-2019",
     "Implementation b": "https://open.unicef.org/sites/transparency/files/2023-05/Libya CER 2022.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11660290/",
-    "Evaluation b": "https://applications.emro.who.int/docs/9789292742584-eng.pdf"
+    "Evaluation b": "https://applications.emro.who.int/docs/9789292742584-eng.pdf",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.gov.ls/ministries/ministry-of-health/"
   },
   {
     "Country": "Liechtenstein",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
-    "Plan b": "https://ghsindex.org/wp-content/uploads/2021/12/Liechtenstein.pdf",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Liberia Medicines and Health Products Regulatory Authority (LMHRA)",
+    "q2": "Yes, the LMHRA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "https://www.lmhra.gov.lr/"
   },
   {
     "Country": "Lithuania",
@@ -4766,7 +5136,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Luxembourg",
@@ -4777,7 +5151,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Office of Health",
+    "q2": "Liechtenstein collaborates with Switzerland (Swissmedic) for medicines regulation and pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.llv.li/"
   },
   {
     "Country": "Madagascar",
@@ -4788,7 +5166,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.gavi.org/sites/default/files/document/targeted-country-assistance-plan-madagascar-2018--french-pdf.pdf",
     "Implementation b": "https://www.poliokit.org/news/madagascars-sbc-strategy-against-polio-engaging-schools-and-communities",
     "Evaluation a": "https://www.gavi.org/vaccineswork/how-madagascar-rising-challenge-vaccinating-unprotected-kids",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Medicines Control Agency",
+    "q2": "Yes, the State Medicines Control Agency is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.vvkt.lt/"
   },
   {
     "Country": "Malawi",
@@ -4799,7 +5181,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.coalitionagainsttyphoid.org/wp-content/uploads/2024/02/Malawi-integrated-campaign-brief-Feb2024-final.pdf",
     "Evaluation a": "https://iffim.org/impact/after-pandemic-setback-and-natural-disasters-malawi-school-teachers-help-dial-hpv-vaccine",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2024-08/WHO Malawi 2023 Annual Report.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2024-08/WHO Malawi 2023 Annual Report.pdf",
+    "q1": "Directorate of Health",
+    "q2": "Yes, the Directorate of Health is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://sante.public.lu/fr.html"
   },
   {
     "Country": "Malaysia",
@@ -4810,7 +5196,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://immunizationdata.who.int/global/wiise-detail-page/national-immunization-advisory-mechanism?ISO_3_CODE=MYS&YEAR=",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7482843/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10228831/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10355013/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10355013/",
+    "q1": "Agence du Médicament de Madagascar (AGEMED)",
+    "q2": "Yes, AGEMED is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Maldives",
@@ -4821,7 +5211,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Implementation b": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Evaluation a": "https://www.unicef.org/maldives/media/3441/file/Formative Assessment Report - COVID-19 Vaccination Uptake and Hesitancy in Maldives.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Pharmacy and Medicines Regulatory Authority (PMRA)",
+    "q2": "Yes, the PMRA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.pmra.mw/"
   },
   {
     "Country": "Mali",
@@ -4832,7 +5226,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6661538/",
     "Implementation b": "https://www.who.int/europe/activities/strengthening-national-immunization-technical-advisory-groups-(nitags)",
     "Evaluation a": "https://data.unicef.org/resources/data_explorer/unicef_f/?ag=UNICEF&df=GLOBAL_DATAFLOW&ver=1.0&dq=MLI.IM_DTP3.&startPeriod=2015&endPeriod=2023",
-    "Evaluation b": "https://zdlh.gavi.org/country-profiles/mali"
+    "Evaluation b": "https://zdlh.gavi.org/country-profiles/mali",
+    "q1": "National Pharmaceutical Regulatory Agency (NPRA)",
+    "q2": "Yes, the NPRA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement for the national immunization program and a private market.",
+    "q4": "https://www.npra.gov.my/"
   },
   {
     "Country": "Malta",
@@ -4843,18 +5241,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "https://mcfd.org.mt/wp-content/uploads/2024/01/Annual-Report-2023-of-IDCU.pdf"
+    "Evaluation b": "https://mcfd.org.mt/wp-content/uploads/2024/01/Annual-Report-2023-of-IDCU.pdf",
+    "q1": "Maldives Food and Drug Authority (MFDA)",
+    "q2": "Yes, the MFDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public health system.",
+    "q4": "https://www.mfda.gov.mv/"
   },
   {
     "Country": "Marshall Islands",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "https://rmihealth.org/",
-    "Plan b": "https://bmjpublichealth.bmj.com/content/bmjph/1/1/e000330.full.pdf",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "https://ndcpartnership.org/news/marshall-islands-leads-way-high-ambition-and-calls-accelerated-action-and-development-partner",
     "Evaluation a": "https://www.unicef.org/pacificislands/press-releases/immunization-rates-drop-6-pacific-island-countries-during-covid-19-pandemic",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Social Development",
+    "q2": "The Ministry of Health and Social Development oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.sante.gov.ml/"
   },
   {
     "Country": "Mauritania",
@@ -4865,7 +5271,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6661538/",
     "Implementation b": "https://www.unicef.org/media/124676/file/Mauritania-Humanitarian-SitRep-No.1-30-June-2022.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9778331/",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Mauritania.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Mauritania.pdf",
+    "q1": "Malta Medicines Authority",
+    "q2": "Yes, the Malta Medicines Authority is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public health system.",
+    "q4": "https://www.medicinesauthority.gov.mt/"
   },
   {
     "Country": "Mauritius",
@@ -4876,7 +5286,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://health.govmu.org/health/wp-content/uploads/2023/03/National-Deployment-Vaccination-Plan-for-COVID-19-vaccines-in-the-Republic-of-Mauritius-2021.pdf",
     "Implementation b": "https://www.afro.who.int/sites/default/files/2021-01/WHO Biennial Report (002)vv.pdf",
     "Evaluation a": "https://www.afro.who.int/sites/default/files/2019-10/WHO MAURITIUS ANNUAL REPORT 2018.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Human Services",
+    "q2": "The Ministry of Health and Human Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from the US.",
+    "q4": "https://www.rmihealth.org/"
   },
   {
     "Country": "Mexico",
@@ -4887,7 +5301,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10675656/",
-    "Evaluation b": "https://www.scielosp.org/article/rpsp/2023.v47/e35/"
+    "Evaluation b": "https://www.scielosp.org/article/rpsp/2023.v47/e35/",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "http://www.sante.gov.mr/"
   },
   {
     "Country": "Micronesia",
@@ -4898,18 +5316,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://fsmembassy.fm/all-fsm-states-begin-measles-mumps-rubella-mmr-integrated-vaccination-campaign/",
     "Evaluation a": "https://fsmembassy.fm/97-8-of-fsm-adults-aged-45-fully-vaccinated-19-boosted-41-of-fsm-adolescentsaged-12-17-fully-vaccinated-27-7-of-fsm-children-aged-5-11-fully-vaccinated/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Wellness",
+    "q2": "The Ministry of Health and Wellness is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://health.govmu.org/"
   },
   {
     "Country": "Moldova",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
-    "Plan b": "https://www.unicef.org/moldova/media/11926/file/Integrating health and communication to achieve better results for routine and COVID-19 immunization in Moldova.pdf",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Comisión Federal para la Protección contra Riesgos Sanitarios (COFEPRIS)",
+    "q2": "Yes, COFEPRIS is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.gob.mx/cofepris"
   },
   {
     "Country": "Monaco",
@@ -4920,7 +5346,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Health and Social Affairs",
+    "q2": "The Department of Health and Social Affairs oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from the US.",
+    "q4": "https://gov.fm/"
   },
   {
     "Country": "Mongolia",
@@ -4931,7 +5361,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/1bd0117377bcaeb12c4222a0389d27ac786720aa_1.pdf",
     "Implementation b": "https://www.worldbank.org/en/news/press-release/2021/02/11/world-bank-approves-507-million-for-affordable-and-equitable-covid-19-vaccine-access-in-mongolia",
     "Evaluation a": "https://tradingeconomics.com/mongolia/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "https://wwwnc.cdc.gov/eid/article/30/3/23-0864_article"
+    "Evaluation b": "https://wwwnc.cdc.gov/eid/article/30/3/23-0864_article",
+    "q1": "Agency for Medicines and Medical Devices",
+    "q2": "Yes, the Agency is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://amdm.gov.md/"
   },
   {
     "Country": "Montenegro",
@@ -4942,7 +5376,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.who.int/about/accountability/results/who-results-report-2020-mtr/country-story/2022/introducing-hpv-vaccines-for-a-cervical-cancer-free-generation-in-montenegro",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Health Affairs",
+    "q2": "Monaco collaborates with France (ANSM) for medicines regulation and pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.gouv.mc/"
   },
   {
     "Country": "Morocco",
@@ -4953,7 +5391,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8475612/",
     "Implementation b": "https://fesnews.media/290604/2024/10/28/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11110695/",
-    "Evaluation b": "https://trendsnafrica.com/falling-vaccination-rates-fuel-measles-outbreak-in-morocco/"
+    "Evaluation b": "https://trendsnafrica.com/falling-vaccination-rates-fuel-measles-outbreak-in-morocco/",
+    "q1": "Medicines and Medical Devices Regulatory Agency",
+    "q2": "Yes, the Agency is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.mmda.gov.mn/"
   },
   {
     "Country": "Mozambique",
@@ -4964,7 +5406,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/mozambique-and-angola-hand-hand",
     "Implementation b": "https://documents1.worldbank.org/curated/en/638431651842910222/pdf/Mozambique-COVID-19-Strategic-Preparedness-and-Response-Project-Additional-Financing.pdf",
     "Evaluation a": "https://www.gavi.org/vaccineswork/how-mozambique-leapt-ahead-vaccination-coverage",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Institute for Medicines and Medical Devices (CInMED)",
+    "q2": "Yes, CInMED is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.cinmed.me/"
   },
   {
     "Country": "Myanmar (Burma)",
@@ -4975,7 +5421,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Implementation b": "https://www.moi.gov.mm/moi:eng/news/2146",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11816299/",
-    "Evaluation b": "https://cdn.who.int/media/docs/default-source/searo/whe/him/mmr-ext-phsa-2024.pdf?sfvrsn=21aaf859_3&download=true"
+    "Evaluation b": "https://cdn.who.int/media/docs/default-source/searo/whe/him/mmr-ext-phsa-2024.pdf?sfvrsn=21aaf859_3&download=true",
+    "q1": "Directorate of Medicines and Pharmacy",
+    "q2": "Yes, the Directorate is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.sante.gov.ma/"
   },
   {
     "Country": "Namibia",
@@ -4986,7 +5436,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.hrw.org/reports/pdfs/n/namibia/namibia.927/namibia927.pdf",
     "Implementation b": "https://www.thinknamibia.org.na/about",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9969425/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11435688/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11435688/",
+    "q1": "Autoridade Nacional Reguladora de Medicamentos (ANARME)",
+    "q2": "Yes, ANARME is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.misau.gov.mz/"
   },
   {
     "Country": "Nauru",
@@ -4997,7 +5451,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.undp.org/pacific/projects/nauru-accountable-and-inclusive-governance-project",
     "Implementation b": "https://everychildafuture.com/wp-content/uploads/2024/07/2024_06-Rotary_UNICEF-Australia_Annual-Report-FINAL.pdf",
     "Evaluation a": "https://everychildafuture.com/wp-content/uploads/2024/07/2024_06-Rotary_UNICEF-Australia_Annual-Report-FINAL.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Department of Food and Drug Administration",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.fdamyanmar.gov.mm/"
   },
   {
     "Country": "Nepal",
@@ -5008,18 +5466,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9486040/",
     "Evaluation a": "https://www.unicef.org/media/152701/file/Nepal-2023-COAR.pdf",
-    "Evaluation b": "https://fwd.gov.np/wp-content/uploads/2023/12/VPD-Surveillance-Field-Guide.pdf"
+    "Evaluation b": "https://fwd.gov.np/wp-content/uploads/2023/12/VPD-Surveillance-Field-Guide.pdf",
+    "q1": "Namibia Medicines Regulatory Council (NMRC)",
+    "q2": "Yes, the NMRC is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.mhss.gov.na/"
   },
   {
     "Country": "Netherlands",
     "Goals a": "https://www.rivm.nl/en/news/changes-in-childhood-vaccination-schedule-for-2025",
     "Goals b": "No",
-    "Plan a": "https://www.who.int/teams/immunization-vaccines-and-biologicals/policies/NITAGs",
+    "Plan a": "No",
     "Plan b": "https://rijksvaccinatieprogramma.nl/sites/default/files/2018-06/Thesis_NvdM.pdf",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://www.vaccinestoday.eu/stories/the-netherlands-concerns-rise-as-vaccination-falls/",
-    "Evaluation b": "https://www.rivm.nl/bibliotheek/rapporten/2024-0072.pdf"
+    "Evaluation b": "https://www.rivm.nl/bibliotheek/rapporten/2024-0072.pdf",
+    "q1": "Ministry of Health and Medical Services",
+    "q2": "The Ministry of Health and Medical Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "New Zealand",
@@ -5030,7 +5496,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.scoop.co.nz/stories/PA2408/S00147/govt-funding-boosts-immunisation-in-high-needs-communities.htm",
     "Evaluation a": "https://www.tewhatuora.govt.nz/health-services-and-programmes/vaccine-information/immunisation-coverage",
-    "Evaluation b": "https://arxiv.org/pdf/2401.09679"
+    "Evaluation b": "https://arxiv.org/pdf/2401.09679",
+    "q1": "Department of Drug Administration",
+    "q2": "Yes, the Department is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.dda.gov.np/"
   },
   {
     "Country": "Nicaragua",
@@ -5041,7 +5511,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://documents1.worldbank.org/curated/en/137651654610333776/txt/Nicaragua-COVID-19-Response-under-the-COVID-19-Strategic-Preparedness-and-Response-Program-SPRP-Additional-Financing.txt",
     "Evaluation a": "No",
-    "Evaluation b": "https://journals.plos.org/plosntds/article/file?id=10.1371%2Fjournal.pntd.0012811&type=printable"
+    "Evaluation b": "https://journals.plos.org/plosntds/article/file?id=10.1371%2Fjournal.pntd.0012811&type=printable",
+    "q1": "Medicines Evaluation Board (MEB)",
+    "q2": "Yes, the MEB is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.cbg-meb.nl/english"
   },
   {
     "Country": "Niger",
@@ -5052,10 +5526,14 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.gavi.org/vaccineswork/niger-operation-koutouho-reach-zero-dose-children",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Medsafe",
+    "q2": "Yes, Medsafe is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.medsafe.govt.nz/"
   },
   {
-    "Country": 0,
+    "Country": "North Korea",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
@@ -5063,7 +5541,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.minsa.gob.ni/"
   },
   {
     "Country": "Nigeria",
@@ -5074,7 +5556,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2b302ead55915d61468ac747e2e437aee65871b1_1.pdf",
     "Implementation b": "https://www.afro.who.int/countries/nigeria/news/who-partners-government-big-catch-campaign-close-immunization-coverage-gaps",
     "Evaluation a": "No",
-    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.02.18.24302994v1.full"
+    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.02.18.24302994v1.full",
+    "q1": "Ministry of Public Health, Population and Social Affairs",
+    "q2": "The Ministry of Public Health, Population and Social Affairs oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.sante.gouvne.org/"
   },
   {
     "Country": "North Macedonia",
@@ -5085,7 +5571,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://pivipartners.org/slideshow-strengthening-vaccination-in-high-risk-groups-in-north-macedonia/",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Agency for Food and Drug Administration and Control (NAFDAC)",
+    "q2": "Yes, NAFDAC is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.nafdac.gov.ng/"
   },
   {
     "Country": "Norway",
@@ -5096,7 +5586,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agency for Medicines and Medical Devices (MALMED)",
+    "q2": "Yes, MALMED is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://malmed.gov.mk/"
   },
   {
     "Country": "Oman",
@@ -5107,7 +5601,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/182e06d969d04960d10df1f1a974246665032bcf_1.pdf",
     "Implementation b": "https://www.nitag-resource.org/sites/default/files/182e06d969d04960d10df1f1a974246665032bcf_1.pdf",
     "Evaluation a": "https://data.unicef.org/wp-content/uploads/cp/immunisation/omn.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Norwegian Medicines Agency",
+    "q2": "Yes, the Norwegian Medicines Agency is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.noma.no/"
   },
   {
     "Country": "Pakistan",
@@ -5118,7 +5616,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://pid.gov.pk/site/press_detail/26797",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11679383/",
-    "Evaluation b": "https://documents1.worldbank.org/curated/en/099610104112220455/pdf/P16773308140f90eb0aef509d35d40acb47.pdf"
+    "Evaluation b": "https://documents1.worldbank.org/curated/en/099610104112220455/pdf/P16773308140f90eb0aef509d35d40acb47.pdf",
+    "q1": "Directorate General of Pharmaceutical Affairs and Drug Control, Ministry of Health",
+    "q2": "Yes, the Directorate General is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.moh.gov.om/"
   },
   {
     "Country": "Palau",
@@ -5129,18 +5631,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://archive.cdc.gov/www_cdc_gov/vaccines/covid-19/downloads/palau-jurisdiction-executive-summary.pdf",
     "Evaluation a": "https://tradingeconomics.com/palau/immunization-measles-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11563571/"
-  },
-  {
-    "Country": "Palestine",
-    "Goals a": "https://www.ifrc.org/press-release/gavi-ifrc-and-unicef-collaborate-emergency-response-palestine-0",
-    "Goals b": "No",
-    "Plan a": "No",
-    "Plan b": "https://www.hrw.org/news/2021/03/19/israels-discriminatory-vaccine-push-underscores-need-action",
-    "Implementation a": "https://www.meig.ch/highlight-12-implementation-monitoring-accountability-and-review-of-sdg-16-peace-justice-and-strong-institutions-in-the-case-of-palestine-and-ghana/",
-    "Implementation b": "No",
-    "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8949838/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11919384/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11563571/",
+    "q1": "Drug Regulatory Authority of Pakistan (DRAP)",
+    "q2": "Yes, DRAP is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.dra.gov.pk/"
   },
   {
     "Country": "Panama",
@@ -5151,18 +5646,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.worldbank.org/en/news/press-release/2022/03/28/banco-mundial-aportar-us-100-millones-para-apoyar-los-esfuerzos-de-vacunacion-contra-la-covid-19-en-panama",
     "Evaluation a": "https://tradingeconomics.com/panama/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10789724/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10789724/",
+    "q1": "Ministry of Health and Human Services",
+    "q2": "The Ministry of Health and Human Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from the US.",
+    "q4": "https://www.palauhealth.org/"
   },
   {
     "Country": "Papua New Guinea",
-    "Goals a": "https://www.who.int/papuanewguinea/news/detail/24-02-2025-who-allocates-pgk-5.9-million-to-boost-routine-immunisation-in-12-provinces-in-papua-new-guinea",
+    "Goals a": "No",
     "Goals b": "No",
-    "Plan a": "https://www.mspbs.gov.py/",
-    "Plan b": "https://www.who.int/papuanewguinea/news/detail/24-02-2025-who-allocates-pgk-5.9-million-to-boost-routine-immunisation-in-12-provinces-in-papua-new-guinea",
-    "Implementation a": "https://eiti.org/sites/default/files/attachments/png_eiti_national_policy_final_2019.pdf",
+    "Plan a": "No",
+    "Plan b": "No",
+    "Implementation a": "No",
     "Implementation b": "No",
-    "Evaluation a": "https://www.unicef.org/media/152186/file/Papua-New-Guinea-2023-COAR.pdf",
-    "Evaluation b": "No"
+    "Evaluation a": "No",
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.minsa.gob.pa/"
   },
   {
     "Country": "Paraguay",
@@ -5173,18 +5676,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.who.int/about/accountability/results/who-results-report-2020-mtr/country-story/2022/access-to-vaccines-for-indigenous-populations-in-paraguay--a-joint-effort",
     "Evaluation a": "https://journal.paho.org/en/articles/impact-new-intervention-model-increase-vaccination-coverage-paraguay-2023",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Department of Health",
+    "q2": "The National Department of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.health.gov.pg/"
   },
   {
     "Country": "Peru",
     "Goals a": "https://p4h.world/en/documents/perus-ministry-of-health-strategic-plan-2025-2030-approved/",
     "Goals b": "No",
-    "Plan a": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/12/towards-a-national-integrity-and-transparency-system-in-peru_0f35258c/4207602e-en.pdf",
+    "Plan a": "No",
     "Plan b": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-per.pdf?sfvrsn=94603836_3&download=true",
     "Implementation a": "No",
     "Implementation b": "No",
-    "Evaluation a": "https://www.medrxiv.org/content/10.1101/2024.06.03.24308410v1",
-    "Evaluation b": "No"
+    "Evaluation a": "No",
+    "Evaluation b": "No",
+    "q1": "Dirección Nacional de Vigilancia Sanitaria (DINAVISA)",
+    "q2": "Yes, DINAVISA is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.dinavisa.gov.py/"
   },
   {
     "Country": "Philippines",
@@ -5195,7 +5706,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.aaspjournal.org/uploads/155/5922_pdf.pdf",
     "Implementation b": "https://www.vaccines4life.com/wp-content/uploads/2021/05/SAAV_Environmental-Scan_Philippines.pdf",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11625405/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Dirección General de Medicamentos, Insumos y Drogas (DIGEMID)",
+    "q2": "Yes, DIGEMID is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.gob.pe/digemid"
   },
   {
     "Country": "Poland",
@@ -5206,18 +5721,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://stat.gov.pl/en/topics/health/health/vaccinations-of-children-and-youth,5,5.html?pdf=1",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Food and Drug Administration (FDA)",
+    "q2": "Yes, the FDA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.fda.gov.ph/"
   },
   {
     "Country": "Portugal",
     "Goals a": "https://www.vaccinestoday.eu/stories/portugal-in-focus-public-trust-drives-vaccine-uptake-at-all-ages/",
     "Goals b": "No",
-    "Plan a": "https://www.who.int/europe/groups/national-immunization-technical-advisory-groups-(nitags)",
+    "Plan a": "No",
     "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "https://www.vaccinestoday.eu/stories/portugal-in-focus-public-trust-drives-vaccine-uptake-at-all-ages/",
     "Evaluation a": "https://www.vaccinestoday.eu/stories/portugal-in-focus-public-trust-drives-vaccine-uptake-at-all-ages/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Office for Registration of Medicinal Products, Medical Devices and Biocidal Products",
+    "q2": "Yes, the Office is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.urpl.gov.pl/"
   },
   {
     "Country": "Qatar",
@@ -5228,7 +5751,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://dig.watch/resource/qatar-digital-government-strategy-2023-2025",
     "Evaluation a": "https://tradingeconomics.com/qatar/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Authority of Medicines and Health Products (INFARMED)",
+    "q2": "Yes, INFARMED is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.infarmed.pt/"
   },
   {
     "Country": "Romania",
@@ -5239,7 +5766,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health",
+    "q2": "Yes, the Ministry of Public Health is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.moph.gov.qa/"
   },
   {
     "Country": "Russia",
@@ -5250,7 +5781,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "https://www.epidemvac.ru/jour?locale=en_US"
+    "Evaluation b": "No",
+    "q1": "National Agency for Medicines and Medical Devices of Romania (ANMDMR)",
+    "q2": "Yes, the ANMDMR is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.anm.ro/"
   },
   {
     "Country": "Rwanda",
@@ -5261,7 +5796,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://reachalliance.org/wp-content/uploads/2020/02/Rwanda-Published-Manuscript.pdf",
     "Implementation b": "https://resolvetosavelives.org/about/success-stories/campaigns-build-vaccine-confidence-in-rwanda-and-uganda/",
     "Evaluation a": "https://reachalliance.org/case-study/expanded-program-on-immunization-near-universal-childhood-vaccination-rates/",
-    "Evaluation b": "https://rbc.gov.rw/fileadmin/user_upload/report_2024/Knowledge_Attitudes_Practices_Behaviours_on_Immunization_in_Rwanda_Final_Report_19.05.2021_compressed.pdf"
+    "Evaluation b": "https://rbc.gov.rw/fileadmin/user_upload/report_2024/Knowledge_Attitudes_Practices_Behaviours_on_Immunization_in_Rwanda_Final_Report_19.05.2021_compressed.pdf",
+    "q1": "Federal Service for Surveillance in Healthcare (Roszdravnadzor)",
+    "q2": "Yes, Roszdravnadzor is responsible for pharmacovigilance.",
+    "q3": "Government-controlled market.",
+    "q4": "https://roszdravnadzor.gov.ru/"
   },
   {
     "Country": "Saint Kitts and Nevis",
@@ -5272,7 +5811,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.paho.org/sites/default/files/2021-10/saint-kitts-nevis-2020-epi-country-report-english.pdf",
     "Implementation b": "https://www.sknis.gov.kn/2024/12/03/government-of-st-kitts-and-nevis-to-share-findings-from-90-day-crime-and-violence-campaign/",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-kna.pdf?sfvrsn=8aae8bc6_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Rwanda Food and Drugs Authority (Rwanda FDA)",
+    "q2": "Yes, the Rwanda FDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.rwandafda.gov.rw/"
   },
   {
     "Country": "Saint Lucia",
@@ -5283,7 +5826,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2020-06/FIELDGUIDE-NITAG-JUNE8.pdf",
     "Implementation b": "No",
     "Evaluation a": "https://tradingeconomics.com/saint-lucia/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.kn/"
   },
   {
     "Country": "Saint Vincent and the Grenadines",
@@ -5294,7 +5841,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://unfccc.int/sites/default/files/resource/NAP-Saint-Vincent-and-the-Grenadines-2019.pdf",
     "Implementation b": "https://caribbean.un.org/en/160835-un-launches-initiative-tackle-vaccine-hesitancy-and-increase-covid-19-vaccine-uptake-eastern",
     "Evaluation a": "https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-vct.pdf?sfvrsn=19c94684_3&download=true",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health, Wellness and Elderly Affairs",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.health.gov.lc/"
   },
   {
     "Country": "Samoa",
@@ -5305,7 +5856,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.adb.org/sites/default/files/linked-documents/50282-003-sd-04.pdf",
     "Implementation b": "https://www.who.int/niue/news/feature-stories/detail/samoa-s-two-day-vaccination-lockdown-helps-to-boost-coverage",
     "Evaluation a": "https://www.who.int/westernpacific/newsroom/feature-stories/item/samoa-strengthens-its-vaccination-programme",
-    "Evaluation b": "https://www.coalitionagainsttyphoid.org/amidst-a-global-pandemic-samoa-rolls-out-tcv-and-other-new-vaccines/"
+    "Evaluation b": "https://www.coalitionagainsttyphoid.org/amidst-a-global-pandemic-samoa-rolls-out-tcv-and-other-new-vaccines/",
+    "q1": "Ministry of Health, Wellness and the Environment",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "http://www.health.gov.vc/"
   },
   {
     "Country": "San Marino",
@@ -5316,7 +5871,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.health.gov.ws/"
   },
   {
     "Country": "Sao Tome and Principe",
@@ -5327,7 +5886,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Istituto per la Sicurezza Sociale (ISS)",
+    "q2": "San Marino collaborates with Italy (AIFA) for medicines regulation and pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.iss.sm/"
   },
   {
     "Country": "Saudi Arabia",
@@ -5338,29 +5901,41 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10919942/",
     "Evaluation a": "https://tradingeconomics.com/saudi-arabia/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/39643949/"
+    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/39643949/",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Senegal",
     "Goals a": "https://www.exemplars.health/topics/vaccine-delivery/senegal",
     "Goals b": "No",
     "Plan a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6143477/",
-    "Plan b": "https://www.exemplars.health/topics/vaccine-delivery/senegal",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6143477/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10551957/",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Senegal.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Senegal.pdf",
+    "q1": "Saudi Food and Drug Authority (SFDA)",
+    "q2": "Yes, the SFDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.sfda.gov.sa/"
   },
   {
     "Country": "Serbia",
-    "Goals a": "https://www.who.int/europe/news-room/05-04-2024-strategic-outreach-in-serbia--reaching-unvaccinated-children-with-measles-vaccine",
+    "Goals a": "No",
     "Goals b": "No",
     "Plan a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9713902/",
     "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Agence Sénégalaise de Réglementation Pharmaceutique (ARP)",
+    "q2": "Yes, the ARP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.arp.sn/"
   },
   {
     "Country": "Seychelles",
@@ -5371,7 +5946,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.afro.who.int/countries/seychelles/news/seychelles-paving-way-sustained-immunization-efforts-2030-whos-technical-assistance-seychelles",
     "Evaluation a": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0299747",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Medicines and Medical Devices Agency of Serbia (ALIMS)",
+    "q2": "Yes, ALIMS is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.alims.gov.rs/"
   },
   {
     "Country": "Sierra Leone",
@@ -5382,7 +5961,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://icap.columbia.edu/news-events/with-icap-support-sierra-leone-improves-childhood-vaccination-uptake-within-a-year/",
     "Evaluation a": "https://www.afro.who.int/sites/default/files/2023-07/WHO Sierra Leone Annual Report for 2022.pdf",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Sierra Leone.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Sierra Leone.pdf",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "http://www.health.gov.sc/"
   },
   {
     "Country": "Singapore",
@@ -5393,7 +5976,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.tech.gov.sg/our-digital-government-efforts/",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10392729/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Pharmacy Board of Sierra Leone",
+    "q2": "Yes, the Pharmacy Board is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://pharmacyboard.gov.sl/"
   },
   {
     "Country": "Slovakia",
@@ -5404,7 +5991,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Health Sciences Authority (HSA)",
+    "q2": "Yes, the HSA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with government subsidies and a private market.",
+    "q4": "https://www.hsa.gov.sg/"
   },
   {
     "Country": "Slovenia",
@@ -5415,7 +6006,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Institute for Drug Control (ŠÚKL)",
+    "q2": "Yes, ŠÚKL is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.sukl.sk/"
   },
   {
     "Country": "Solomon Islands",
@@ -5426,7 +6021,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "https://www.who.int/westernpacific/newsroom/feature-stories/item/let-s-talk-about-it-improving-immunization-coverage-in-the-solomon-islands",
     "Evaluation a": "https://pubmed.ncbi.nlm.nih.gov/39318888/",
-    "Evaluation b": "https://gco.iarc.fr/media/covid/factsheets/90-SLB-solomon_islands.pdf"
+    "Evaluation b": "https://gco.iarc.fr/media/covid/factsheets/90-SLB-solomon_islands.pdf",
+    "q1": "Agency for Medicinal Products and Medical Devices of the Republic of Slovenia (JAZMP)",
+    "q2": "Yes, JAZMP is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.jazmp.si/"
   },
   {
     "Country": "Somalia",
@@ -5437,7 +6036,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11907845/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11732465/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11732465/",
+    "q1": "Ministry of Health and Medical Services",
+    "q2": "The Ministry of Health and Medical Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.health.gov.sb/"
   },
   {
     "Country": "South Africa",
@@ -5448,10 +6051,14 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/88420c69c4147738eb544478c16d445cdffad9cf_1.pdf",
     "Implementation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6284504/",
     "Evaluation a": "https://theconversation.com/south-africa-has-a-good-childhood-vaccination-system-whats-stopping-it-from-being-great-237336",
-    "Evaluation b": "https://www.nicd.ac.za/nicd-germs-sa-surveillance-report-reveals-a-rise-in-vaccine-preventable-diseases/"
+    "Evaluation b": "https://www.nicd.ac.za/nicd-germs-sa-surveillance-report-reveals-a-rise-in-vaccine-preventable-diseases/",
+    "q1": "Ministry of Health and Human Services",
+    "q2": "The Ministry of Health and Human Services oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "https://moh.gov.so/"
   },
   {
-    "Country": 0,
+    "Country": "South Korea",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
@@ -5459,7 +6066,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "South African Health Products Regulatory Authority (SAHPRA)",
+    "q2": "Yes, SAHPRA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.sahpra.org.za/"
   },
   {
     "Country": "South Sudan",
@@ -5470,7 +6081,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/south-sudan-nitag-now-re-established",
     "Implementation b": "https://www.nitag-resource.org/news/high-level-commitment-strengthening-nitags-despite-political-instability-example-south-sudan",
     "Evaluation a": "https://tradingeconomics.com/south-sudan/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/South Sudan.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/South Sudan.pdf",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "http://www.moh.gov.ss/"
   },
   {
     "Country": "Spain",
@@ -5481,7 +6096,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/39103777/"
+    "Evaluation b": "https://pubmed.ncbi.nlm.nih.gov/39103777/",
+    "q1": "Spanish Agency of Medicines and Medical Devices (AEMPS)",
+    "q2": "Yes, the AEMPS is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.aemps.gob.es/"
   },
   {
     "Country": "Sri Lanka",
@@ -5492,7 +6111,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Implementation b": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Evaluation a": "https://data.unicef.org/wp-content/uploads/cp/immunisation/lka.pdf",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "National Medicines Regulatory Authority (NMRA)",
+    "q2": "Yes, the NMRA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.nmra.gov.lk/"
   },
   {
     "Country": "Sudan",
@@ -5503,18 +6126,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://emphnet.net/media/gsmjcwuc/gavi_y23_sudan-pef-tca_-project-brief_final.pdf",
     "Implementation b": "https://unfccc.int/sites/default/files/NDC/2022-10/Sudan Updated First NDC-12102021.pdf",
     "Evaluation a": "https://www.dabangasudan.org/en/all-news/article/un-700k-children-unvaccinated-as-immunisation-plummets-in-sudan",
-    "Evaluation b": "https://cdn.who.int/media/docs/default-source/2021-dha-docs/20250310_phsa_sudan-conflict.pdf?sfvrsn=d1b69fc1_3&download=true"
+    "Evaluation b": "https://cdn.who.int/media/docs/default-source/2021-dha-docs/20250310_phsa_sudan-conflict.pdf?sfvrsn=d1b69fc1_3&download=true",
+    "q1": "National Medicines and Poisons Board",
+    "q2": "Yes, the Board is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Suriname",
     "Goals a": "No",
     "Goals b": "No",
     "Plan a": "No",
-    "Plan b": "https://www.paho.org/en/news/19-6-2023-paho-evaluates-national-immunization-program-through-field-assessment-activities",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "https://evaluationreports.unicef.org/GetDocument?documentID=18948&fileID=50149",
     "Evaluation a": "https://www.paho.org/en/news/25-4-2023-vaccination-week-americas-2023-launched-suriname",
-    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.01.09.24301061v1.full.pdf"
+    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.01.09.24301061v1.full.pdf",
+    "q1": "Ministry of Health",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement through the Pan American Health Organization (PAHO) Revolving Fund.",
+    "q4": "https://www.gov.sr/ministerie-van-volksgezondheid/"
   },
   {
     "Country": "Sweden",
@@ -5525,7 +6156,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/changing-national-vaccination-programmes-sweden",
     "Implementation b": "No",
     "Evaluation a": "https://www.pathogens.se/dashboards/vaccines/",
-    "Evaluation b": "https://www.nature.com/articles/s41598-025-86968-y"
+    "Evaluation b": "https://www.nature.com/articles/s41598-025-86968-y",
+    "q1": "Swedish Medical Products Agency",
+    "q2": "Yes, the Swedish Medical Products Agency is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public immunization program.",
+    "q4": "https://www.lakemedelsverket.se/en"
   },
   {
     "Country": "Switzerland",
@@ -5536,7 +6171,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://reisemedizin.uzh.ch/en/blog/interview_phung_lang",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10570900/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10570900/",
+    "q1": "Swiss Agency for Therapeutic Products (Swissmedic)",
+    "q2": "Yes, Swissmedic is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.swissmedic.ch/"
   },
   {
     "Country": "Syria",
@@ -5547,7 +6186,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://emphnet.net/media/wjll12ji/32_2021_5-2-nitag-emr_project-brief.pdf",
     "Implementation b": "https://www.emro.who.int/syria/news/syria-completes-the-first-phase-of-covid-19-vaccination-campaign.html",
     "Evaluation a": "https://www.gavi.org/news/media-room/big-catch-syria-rolls-out-initiative-reach-millions-children-missed-during-covid-19",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Taiwan",
@@ -5558,7 +6201,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://caribbeannewsglobal.com/taiwans-smart-technology-and-innovative-economy-core-to-national-development-plan-and-development-strategies/",
     "Implementation b": "https://www.cdc.gov.tw/En/Bulletin/Detail/i6vk975MaKP1ajyXsKWxcQ?typeid=158",
     "Evaluation a": "https://www.cdc.gov.tw/Uploads/infectionreport/b0b27d2c-6e9d-4533-98d1-3228807445b7.pdf",
-    "Evaluation b": "https://www.cdc.gov.tw/Uploads/infectionreport/b0b27d2c-6e9d-4533-98d1-3228807445b7.pdf"
+    "Evaluation b": "https://www.cdc.gov.tw/Uploads/infectionreport/b0b27d2c-6e9d-4533-98d1-3228807445b7.pdf",
+    "q1": "Taiwan Food and Drug Administration (TFDA)",
+    "q2": "Yes, the TFDA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with government/insurance purchases and a private market.",
+    "q4": "https://www.fda.gov.tw/"
   },
   {
     "Country": "Tajikistan",
@@ -5569,7 +6216,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10205045/",
     "Implementation b": "https://www.gavi.org/sites/default/files/document/2022/Multi-stakeholder-dialogue-Tajikistan-2020.pdf",
     "Evaluation a": "https://tradingeconomics.com/tajikistan/immunization-pol3-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Social Protection of the Population",
+    "q2": "The Ministry of Health and Social Protection of the Population oversees pharmacovigilance activities.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://moh.tj/"
   },
   {
     "Country": "Tanzania",
@@ -5580,7 +6231,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/newly-established-tanzania-nitag-oriented-nitag-functioning",
     "Implementation b": "https://thecompassforsbc.org/project-examples/tanzania-capacity-and-communication-project-tccp-list-campaigns",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11123454/",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784152/"
+    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784152/",
+    "q1": "Tanzania Medicines and Medical Devices Authority (TMDA)",
+    "q2": "Yes, the TMDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.tmda.go.tz/"
   },
   {
     "Country": "Thailand",
@@ -5591,7 +6246,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10783979/",
     "Implementation b": "https://cdn.who.int/media/docs/default-source/searo/evaluation-reports/evaluation-of-national-immunization-technical-advisory-groups-(nitag)-in-south-east-asia-region.pdf?sfvrsn=4bd8990e_5",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Food and Drug Administration (FDA)",
+    "q2": "Yes, the FDA is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://www.fda.moph.go.th/"
   },
   {
     "Country": "Timor-Leste",
@@ -5602,7 +6261,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://www.moh.gov.tl/"
   },
   {
     "Country": "Togo",
@@ -5613,7 +6276,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/46bb8c6ff2efadd38335fe2481d2a9037fbc9520_1.pdf",
     "Implementation b": "https://www.actntdswest.org/sites/default/files/inline-files/Togo-FY 25 work plan.pdf",
     "Evaluation a": "https://tradingeconomics.com/togo/immunization-dpt-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://www.gavi.org/news/media-room/togo-introduces-human-papillomavirus-vaccine-protect-adolescent-girls-leading"
+    "Evaluation b": "https://www.gavi.org/news/media-room/togo-introduces-human-papillomavirus-vaccine-protect-adolescent-girls-leading",
+    "q1": "Ministry of Health and Public Hygiene",
+    "q2": "The Ministry of Health and Public Hygiene oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement, with support from international partners.",
+    "q4": "https://sante.gouv.tg/"
   },
   {
     "Country": "Tonga",
@@ -5624,7 +6291,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "https://www.adb.org/sites/default/files/linked-documents/50282-003-sd-05.pdf",
     "Evaluation a": "https://tradingeconomics.com/tonga/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.health.gov.to/"
   },
   {
     "Country": "Trinidad and Tobago",
@@ -5635,7 +6306,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/caribbean-immunization-technical-advisory-group-citag-first-nitag-its-kind",
     "Implementation b": "https://health.gov.tt/ncd-microsite/trinidad-and-tobagos-response-to-ncds-0",
     "Evaluation a": "https://tradingeconomics.com/trinidad-and-tobago/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health",
+    "q2": "Surveillance is conducted in collaboration with the Caribbean Public Health Agency (CARPHA).",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.health.gov.tt/"
   },
   {
     "Country": "Tunisia",
@@ -5646,18 +6321,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6143477/",
     "Implementation b": "https://www.worldbank.org/en/news/press-release/2021/03/26/world-bank-approves-us-100-million-to-support-covid-19-vaccine-deployment-in-tunisia",
     "Evaluation a": "https://tradingeconomics.com/tunisia/immunization-hepb3-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.09.17.24313756v2.full"
+    "Evaluation b": "https://www.medrxiv.org/content/10.1101/2024.09.17.24313756v2.full",
+    "q1": "National Agency of Drug and Health Products Control (ANSM)",
+    "q2": "Yes, the ANSM is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "http://www.dpm.rns.tn/"
   },
   {
     "Country": "Turkey",
-    "Goals a": "https://www.saglik.gov.tr/",
+    "Goals a": "No",
     "Goals b": "No",
-    "Plan a": "https://disab.saglik.gov.tr/EN-77506/national-immunization-technical-advisory-group-nitag-turkey-meeting.html",
-    "Plan b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10604964/",
-    "Implementation a": "https://disab.saglik.gov.tr/EN-77506/national-immunization-technical-advisory-group-nitag-turkey-meeting.html",
+    "Plan a": "No",
+    "Plan b": "No",
+    "Implementation a": "No",
     "Implementation b": "No",
-    "Evaluation a": "https://tradingeconomics.com/turkey/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7750331/"
+    "Evaluation a": "No",
+    "Evaluation b": "No",
+    "q1": "Turkish Medicines and Medical Devices Agency (TİTCK)",
+    "q2": "Yes, the TİTCK is responsible for pharmacovigilance.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.titck.gov.tr/"
   },
   {
     "Country": "Turkmenistan",
@@ -5668,18 +6351,26 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://ghpp.de/en/projects/euro-nitags/",
     "Implementation b": "https://turkmenistan.un.org/en/10703-turkmenistan-receives-unicef%E2%80%99s-award-letter-sustaining-high-immunization-rates",
     "Evaluation a": "https://tradingeconomics.com/turkmenistan/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Medical Industry",
+    "q2": "The Ministry of Health and Medical Industry oversees pharmacovigilance activities.",
+    "q3": "Government-controlled market.",
+    "q4": "No official website found."
   },
   {
     "Country": "Tuvalu",
     "Goals a": "No",
-    "Goals b": "https://reliefweb.int/report/tuvalu/tuvalu-launches-typhoid-campaign",
+    "Goals b": "No",
     "Plan a": "No",
-    "Plan b": "https://www.adb.org/sites/default/files/project-documents/50282/50282-001-rrp-en.pdf",
+    "Plan b": "No",
     "Implementation a": "No",
     "Implementation b": "https://reliefweb.int/report/tuvalu/tuvalu-launches-typhoid-campaign",
     "Evaluation a": "https://tradingeconomics.com/tuvalu/immunization-bcg-percent-of-one-year-old-children-wb-data.html",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health, Social Welfare and Gender Affairs",
+    "q2": "The Ministry of Health, Social Welfare and Gender Affairs oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "No official website found."
   },
   {
     "Country": "Uganda",
@@ -5690,7 +6381,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/dff9f6f2ab6a045e85105d55ff202bf49dd9ac17_1.pdf",
     "Implementation b": "https://www.nitag-resource.org/resources/uganda-national-immunisation-technical-advisory-group-position-paper-public-health",
     "Evaluation a": "https://www.springermedizin.de/comparing-full-immunisation-status-of-children-0-23-months-betwe/25921426",
-    "Evaluation b": "https://zdlh.gavi.org/country-profiles/uganda"
+    "Evaluation b": "https://zdlh.gavi.org/country-profiles/uganda",
+    "q1": "National Drug Authority (NDA)",
+    "q2": "Yes, the NDA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.nda.or.ug/"
   },
   {
     "Country": "Ukraine",
@@ -5701,7 +6396,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Expert Center of the Ministry of Health",
+    "q2": "Yes, the State Expert Center is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.dec.gov.ua/"
   },
   {
     "Country": "United Arab Emirates",
@@ -5712,7 +6411,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9376339/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Ministry of Health and Prevention (MOHAP)",
+    "q2": "Yes, MOHAP is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the public healthcare system.",
+    "q4": "https://www.mohap.gov.ae/"
   },
   {
     "Country": "United Kingdom",
@@ -5723,7 +6426,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "https://www.gov.uk/government/news/latest-childhood-vaccination-uptake-statistics-published",
-    "Evaluation b": "https://www.gov.uk/government/news/ukhsa-publishes-first-annual-report-summarising-latest-infectious-disease-trends"
+    "Evaluation b": "https://www.gov.uk/government/news/ukhsa-publishes-first-annual-report-summarising-latest-infectious-disease-trends",
+    "q1": "Medicines and Healthcare products Regulatory Agency (MHRA)",
+    "q2": "Yes, the MHRA is responsible for pharmacovigilance.",
+    "q3": "Government purchases for the public through the National Health Service (NHS).",
+    "q4": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
   },
   {
     "Country": "United States",
@@ -5734,7 +6441,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "No",
     "Evaluation a": "https://www.cidrap.umn.edu/childhood-vaccines/childhood-vaccine-uptake-continues-decline-while-exemptions-reach-record-high",
-    "Evaluation b": "https://www.cdc.gov/flu-burden/php/data-vis-vac/2023-2024-prevented.html"
+    "Evaluation b": "https://www.cdc.gov/flu-burden/php/data-vis-vac/2023-2024-prevented.html",
+    "q1": "U.S. Food and Drug Administration (FDA)",
+    "q2": "Vaccine Adverse Event Reporting System (VAERS), co-managed by the CDC and FDA.",
+    "q3": "Mixed market with public (e.g., Vaccines for Children program) and private sector involvement.",
+    "q4": "https://www.fda.gov/vaccines-blood-biologics/vaccines/vaccines-licensed-use-united-states, https://vaers.hhs.gov/"
   },
   {
     "Country": "Uruguay",
@@ -5745,7 +6456,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/sites/default/files/2021-03/2020 EURO training Mosina et al.pdf",
     "Implementation b": "No",
     "Evaluation a": "https://en.mercopress.com/2024/05/24/uruguay-respiratory-diseases-on-the-rise-amid-low-vaccination-coverage",
-    "Evaluation b": "https://en.mercopress.com/2025/03/17/uruguay-s-health-ministry-launches-vax-campaign"
+    "Evaluation b": "No",
+    "q1": "Ministry of Public Health",
+    "q2": "The Ministry of Public Health is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public health system.",
+    "q4": "https://www.gub.uy/ministerio-salud-publica/"
   },
   {
     "Country": "Uzbekistan",
@@ -5756,7 +6471,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881447/",
     "Implementation b": "https://www.gavi.org/vaccineswork/decade-progress-rotavirus-vaccination-transforms-child-health-outcomes-uzbekistan",
     "Evaluation a": "https://www.gazeta.uz/en/2024/04/24/immunization/",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "State Center for Expertise and Standardization of Medicines, Medical Devices and Medical Equipment",
+    "q2": "Yes, the State Center is responsible for pharmacovigilance.",
+    "q3": "Government procurement for the public immunization program.",
+    "q4": "https://www.uzpharm-control.uz/"
   },
   {
     "Country": "Vanuatu",
@@ -5767,7 +6486,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://covid19.gov.vu/index.php/vaccination/information?utm_source=chatgpt.com",
     "Implementation b": "https://respondglobal.com/articles/respond-global-vanuatu-mission-press-release/",
     "Evaluation a": "https://tradingeconomics.com/vanuatu/immunization-hib3-percent-of-children-ages-12-23-months-wb-data.html",
-    "Evaluation b": "https://www.adb.org/results/vaccinating-vanuatu-healthier-future"
+    "Evaluation b": "https://www.adb.org/results/vaccinating-vanuatu-healthier-future",
+    "q1": "Ministry of Health",
+    "q2": "The Ministry of Health oversees pharmacovigilance activities.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.moh.gov.vu/"
   },
   {
     "Country": "Vatican City",
@@ -5778,7 +6501,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "No",
     "Implementation b": "No",
     "Evaluation a": "No",
-    "Evaluation b": "No"
+    "Evaluation b": "No",
+    "q1": "Directorate of Health and Hygiene",
+    "q2": "The Directorate of Health and Hygiene oversees healthcare services.",
+    "q3": "Government/insurance purchases for the public.",
+    "q4": "https://www.vaticanstate.va/"
   },
   {
     "Country": "Venezuela",
@@ -5789,7 +6516,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://wwwnc.cdc.gov/eid/article/25/4/18-1305_article?utm_source",
     "Implementation b": "No",
     "Evaluation a": "https://reliefweb.int/report/venezuela-bolivarian-republic/unicef-venezuela-situation-report-no-1-mid-year-01-january-30-june-2024",
-    "Evaluation b": "https://wwwnc.cdc.gov/eid/article/25/4/18-1305_article?utm_source"
+    "Evaluation b": "https://wwwnc.cdc.gov/eid/article/25/4/18-1305_article?utm_source",
+    "q1": "Instituto Nacional de Higiene \"Rafael Rangel\" (INHRR)",
+    "q2": "Yes, the INHRR is responsible for pharmacovigilance.",
+    "q3": "Government-controlled market.",
+    "q4": "http://www.inhrr.gob.ve/"
   },
   {
     "Country": "Vietnam",
@@ -5800,7 +6531,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10236357/",
     "Implementation b": "https://immunizationeconomics.org/wp-content/uploads/2024/03/5.ICANVietnamEPPPlan_20191112.pdf",
     "Evaluation a": "https://www.globenewswire.com/news-release/2024/10/31/2972780/28124/en/Vietnam-Human-Vaccines-Import-Research-Report-2024-United-States-France-Belgium-Thailand-Netherlands-India-Analysis-2021-2024-Forecasts-2024-2033.html",
-    "Evaluation b": "https://assets.kpmg.com/content/dam/kpmg/vn/pdf/publication/2024/10/life-course-immunization-report-en.pdf"
+    "Evaluation b": "https://assets.kpmg.com/content/dam/kpmg/vn/pdf/publication/2024/10/life-course-immunization-report-en.pdf",
+    "q1": "Drug Administration of Vietnam, Ministry of Health",
+    "q2": "Yes, the Drug Administration of Vietnam is responsible for pharmacovigilance.",
+    "q3": "Mixed system with public procurement and a private market.",
+    "q4": "https://dav.gov.vn/"
   },
   {
     "Country": "Yemen",
@@ -5811,7 +6546,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://emphnet.net/media/iu2aeecl/gavi_y24_yemen-southern-governorates-pef-tca-project-brief.pdf",
     "Implementation b": "https://emphnet.net/media/iu2aeecl/gavi_y24_yemen-southern-governorates-pef-tca-project-brief.pdf",
     "Evaluation a": "https://www.emro.who.int/yemen/news/yemen-the-ministry-of-public-health-and-population-gavi-who-and-unicef-launch-an-oral-cholera-vaccination-campaign-targeting-38-million-people-in-6-governorates.html",
-    "Evaluation b": "https://www.emro.who.int/yemen/priority-areas/expanded-programme-on-immunization.html"
+    "Evaluation b": "https://www.emro.who.int/yemen/priority-areas/expanded-programme-on-immunization.html",
+    "q1": "Supreme Board of Drugs and Medical Appliances",
+    "q2": "Yes, the Supreme Board is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement, with significant support from international partners.",
+    "q4": "No official website found."
   },
   {
     "Country": "Zambia",
@@ -5822,7 +6561,11 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/zimnitag-back-track",
     "Implementation b": "https://journals.plos.org/globalpublichealth/article?id=10.1371%2Fjournal.pgph.0002820",
     "Evaluation a": "https://journals.plos.org/globalpublichealth/article?id=10.1371%2Fjournal.pgph.0003028",
-    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Zambia.pdf"
+    "Evaluation b": "https://www.afro.who.int/sites/default/files/2023-08/Zambia.pdf",
+    "q1": "Zambia Medicines Regulatory Authority (ZAMRA)",
+    "q2": "Yes, ZAMRA is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement for the national immunization program.",
+    "q4": "https://www.zamra.co.zm/"
   },
   {
     "Country": "Zimbabwe",
@@ -5833,6 +6576,10 @@ export const VACCINATION_DATA = [
     "Implementation a": "https://www.nitag-resource.org/news/zimnitag-back-track",
     "Implementation b": "https://www.poliokit.org/news/overcoming-misinformation-and-engaging-communities-zimbabwes-polio-vaccination-campaign-0",
     "Evaluation a": "https://www.gavi.org/vaccineswork/outbreak-hit-zimbabweans-embrace-cholera-vaccines-open-arms",
-    "Evaluation b": "https://www.gavi.org/vaccineswork/routine-immunisation-credited-drop-infant-deaths-zimbabwe"
+    "Evaluation b": "https://www.gavi.org/vaccineswork/routine-immunisation-credited-drop-infant-deaths-zimbabwe",
+    "q1": "Medicines Control Authority of Zimbabwe (MCAZ)",
+    "q2": "Yes, the MCAZ is responsible for pharmacovigilance.",
+    "q3": "Government-led procurement.",
+    "q4": "https://www.mcaz.co.zw/"
   }
 ]
