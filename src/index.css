@@ -11,6 +11,11 @@
   .rotate-animation {
     animation: rotate 6s linear infinite;
   }
+  .first-letter-cap {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
 }
 
 @keyframes rotate {
