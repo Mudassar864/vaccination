@@ -17,8 +17,8 @@ export default function Footer() {
             <Link to="/privacy-policy" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">Privacy Policy</Link> |
             <Link to="/disclaimer" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">Disclaimer</Link> |
             <Link to="/imprint" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">Imprint</Link> |
-            <Link to="#" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">Contacts</Link> |
-            <Link to="#" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">LinkedIn</Link>
+            <Link to="https://id-ea.org/contact-us/" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">Contacts</Link> |
+            <Link to="https://id-ea.org/contact-us/" className="text-gray-300 no-underline mx-1 hover:text-[#e67e22]">LinkedIn</Link>
           </div>
 
           <div className="my-2 text-gray-400">

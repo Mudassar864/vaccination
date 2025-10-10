@@ -8,12 +8,12 @@ const HeroSection = () => {
       <div className="flex justify-between items-center w-full mx-auto min-h-[300px]  relative overflow-hidden">
         {/* Left Column (60%) */}
         <div className="w-[calc(100%-650px)] z-10 flex flex-col px-4 py-10  ">
-          <Link to="/" className="max-w-[120px] py-2">
+          <Link to="/" className=" py-2 ">
             <img
               style={{ width: "120px" }}
               src="./ghp-logo.png"
               alt="Logo"
-              className="mb-12"
+              className="mb-12 ml-72"
             />
           </Link>
           <div className="flex justify-end flex-col">

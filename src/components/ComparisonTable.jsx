@@ -13,9 +13,17 @@ const ComparisonTable = ({
 }) => {
   const [expandedCategories, setExpandedCategories] = useState(() => {
     const initial = {};
-    [...EVALUATION_CATEGORIES, "VaccinationSystem", "HCP_Providers","Healthcare","Country","Politics","Education","Population","Others"].forEach(
-      (cat) => (initial[cat] = true)
-    );
+    [
+      ...EVALUATION_CATEGORIES,
+      "VaccinationSystem",
+      "HCP_Providers",
+      "Healthcare",
+      "Country",
+      "Politics",
+      "Education",
+      "Population",
+      "Others",
+    ].forEach((cat) => (initial[cat] = true));
     return initial;
   });
 
@@ -63,14 +71,14 @@ const ComparisonTable = ({
       "Medical schools / university hospitals",
       "Source",
     ],
-    Healthcare:[
+    Healthcare: [
       "Describe In the few words the healthcare system in the country",
       "what type of healthcare insurance is exist and what percentage of the population are covered by insurance",
       "Is there regular and continuous, scientifically sound surveillance for all current and future vaccine preventable diseases",
       "is there mandatory reporting for selected infectious diseases",
-      "Source"
+      "Source",
     ],
-    Country:[
+    Country: [
       "What is the average monthly income in the country?",
       "What are the main sources of income for the nation?",
       "What is the GNP slash B IP in the country?",
@@ -80,28 +88,28 @@ const ComparisonTable = ({
       "what is the percentage of females in the working force?",
       "Source",
     ],
-    Politics:[
+    Politics: [
       "Describe the political system in a few sentences?",
       "what are the main political institutions that govern the country?",
       "Source",
     ],
-    Education:[
+    Education: [
       "Describe briefly the educational system of the country and the relevant final jb titles or academic degrees achievable in the country",
       "Source",
     ],
-    Population:[
+    Population: [
       "What is the size of the population?",
       "What is the size of the birth cohort?",
       "What is the number of subjects 18 to 64 years old?",
       "What is the number of subjects 65 years of age or older?",
     ],
-    Others:[
+    Others: [
       "Which languages are officially spoken in the country?",
       "what is the capital of the country?",
       "what is the size of the country in square kilometers?",
       "what is the population density Population Density (people/sq km)?",
-      "Describe the climate of the country in a few sentences?"
-    ]
+      "Describe the climate of the country in a few sentences?",
+    ],
   };
 
   /** ✅ Render YES/NO logic with links */
@@ -149,14 +157,14 @@ const ComparisonTable = ({
       return val.map((item, i) => (
         <div key={i}>
           {typeof item === "string" && item.startsWith("http") ? (
-            <Link
-              to={item}
+            <a
+              href={item}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline"
             >
               Available
-            </Link>
+            </a>
           ) : (
             String(item)
           )}
@@ -166,21 +174,21 @@ const ComparisonTable = ({
 
     // ✅ Handle plain strings
     if (typeof val === "string") {
-      // If it’s a URL
+      // If it's a URL
       if (val.startsWith("http")) {
         return (
-          <Link
-            to={val}
+          <a
+            href={val}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 underline"
           >
             Available
-          </Link>
+          </a>
         );
       }
 
-      // ✅ Don’t split or modify anything — just print as-is
+      // ✅ Don't split or modify anything — just print as-is
       return val;
     }
 
@@ -204,14 +212,18 @@ const ComparisonTable = ({
     return <span className="font-bold text-lg">{yesCount}/8</span>;
   };
 
-  const minCols = 6;
+  // Show at least 5 columns (one per region), but allow more with scroll
+  const minCols = REGIONS.length;
   const displayCountries = [...comparisonCountries];
-  while (displayCountries.length < minCols)
+  
+  // Ensure minimum 5 columns
+  while (displayCountries.length < minCols) {
     displayCountries.push("Pick Country");
+  }
 
-  const num = Math.max(comparisonCountries.length, minCols);
-  const width = Math.max(800, Math.min(1400, 200 + num * 150));
-  const colWidth = `${(width - 200) / num}px`;
+  const num = displayCountries.length;
+  const width = 200 + num * 250; // Fixed width per column for consistency
+  const colWidth = "250px";
 
   /** ✅ Reusable section */
   const renderGenericSection = (title, prefix) => (
@@ -255,13 +267,14 @@ const ComparisonTable = ({
     <div className="comparison-wrapper text-center py-10 px-5 bg-gray-50 min-h-[60vh]">
       <div className="overflow-x-auto w-full max-w-[1440px] mx-auto">
         <table
-          style={{ width }}
-          className="min-w-[1440px] border-separate border-spacing-2 my-5 mx-auto font-sans"
+          style={{ width: `${width}px` }}
+          className="border-separate border-spacing-2 my-5 font-sans"
         >
           <thead>
             <tr>
-              <th style={{ width: "200px" }}></th>
+              <th style={{ width: "300px" }}></th>
               {displayCountries.map((country, i) => {
+                // Cycle through regions if more than 5 countries
                 const region = REGIONS[i % REGIONS.length];
                 return (
                   <th key={i} style={{ width: colWidth }}>

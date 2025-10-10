@@ -10,7 +10,8 @@ export const getFlagUrl = (country) => {
 export const getCountryData = (country) => 
   VACCINATION_DATA.find(data => data.Country === country) || {};
 
-export const REGIONS = ["Europe", "Africa", "North America", "South America", "Asia", "Oceania"];
+export const REGIONS = ["Europe", "Africa", "Americas", "Asia", "Australia / New Zealand"];
+
 export const MAX_COUNTRIES = 6;
 export const DISPLAY_COUNTRIES = 20;
 export const EVALUATION_CATEGORIES = ["Goals", "Plan", "Implementation", "Evaluation"];
