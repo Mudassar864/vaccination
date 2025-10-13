@@ -81,7 +81,7 @@ const CountrySearch = ({
       <div className="relative max-w-[700px] mx-auto mb-7 w-full">
         <input
           type="text"
-          placeholder={`Filter ${showByContinent ? "countries by continent" : "countries"}...`}
+          placeholder={`Search ${showByContinent ? "countries by continent" : "countries"}...`}
           value={countryFilterQuery}
           onChange={(e) => setCountryFilterQuery(e.target.value)}
           className="w-full py-3 pr-11 pl-4 text-base border-2 border-[#e1e5e9] rounded-xl bg-white transition-all focus:outline-none focus:border-blue-600 focus:shadow-[0_0_0_3px_rgba(0,120,212,0.1)]"
