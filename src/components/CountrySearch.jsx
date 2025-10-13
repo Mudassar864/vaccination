@@ -110,7 +110,7 @@ const CountrySearch = ({
                   <Button
                     type="button"
                     onClick={() => setShowAllCountries(true)}
-                    className="bg-[#d17728] text-white hover:bg-[#b96420] transition rounded-lg px-3 py-2"
+                    className="bg-[#d17728] h-full text-white hover:bg-[#b96420] transition rounded-lg px-3 py-2"
                   >
                     +{remainingCount} countries
                   </Button>
