@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@theme {
+  --color-primary:#d17728;
+  --color-primary-hover:#b5641f;
+}
+
+
+
+
+@layer components {
+  .rotate-animation {
+    animation: rotate 6s linear infinite;
+  }
+  .first-letter-cap {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
