@@ -10,102 +10,117 @@ const CountrySearch = ({
   toggleCountrySelection,
   handleCompare,
   handleClear,
-  COUNTRIES
+  COUNTRIES,
 }) => {
   const [showByContinent, setShowByContinent] = useState(false);
   const [showAllCountries, setShowAllCountries] = useState(false);
 
-  // Create CONTINENT_COUNTRIES mapping from COUNTRIES_WITH_REGION
-  const CONTINENT_COUNTRIES = COUNTRIES_WITH_REGION.reduce(
-    (acc, { name, region }) => {
-      if (!acc[region]) acc[region] = [];
-      acc[region].push(name);
-      return acc;
-    },
-    {}
-  );
+  // Group countries by region
+  const CONTINENT_COUNTRIES = COUNTRIES_WITH_REGION.reduce((acc, { name, region }) => {
+    if (!acc[region]) acc[region] = [];
+    acc[region].push(name);
+    return acc;
+  }, {});
+  const continents = Object.keys(CONTINENT_COUNTRIES);
 
-  // Get unique continents
-  const continents = [
-    ...new Set(COUNTRIES_WITH_REGION.map(({ region }) => region)),
-  ];
-
+  // Filter countries
   const filteredCountries = COUNTRIES.filter((c) =>
     c.toLowerCase().includes(countryFilterQuery.toLowerCase())
   );
-
-  const displayCountries = countryFilterQuery
-    ? filteredCountries
-    : COUNTRIES;
-
-  const countriesToShow = showAllCountries
-    ? displayCountries
-    : displayCountries.slice(0, 20);
-
+  const displayCountries = countryFilterQuery ? filteredCountries : COUNTRIES;
+  const countriesToShow = showAllCountries ? displayCountries : displayCountries.slice(0, 20);
   const remainingCount = displayCountries.length - 20;
 
-  // helper: toggle filtered continent selection
+  // Handle continent select/deselect all
   const handleContinentToggle = (continentCountriesList, checked) => {
     continentCountriesList.forEach((country) => {
-      const isCurrentlySelected = selectedCountries.includes(country);
-
-      // Only toggle if the current state doesn't match desired state
-      if (checked && !isCurrentlySelected) {
-        toggleCountrySelection(country);
-      } else if (!checked && isCurrentlySelected) {
-        toggleCountrySelection(country);
-      }
+      const isSelected = selectedCountries.includes(country);
+      if (checked && !isSelected) toggleCountrySelection(country);
+      else if (!checked && isSelected) toggleCountrySelection(country);
     });
   };
 
   return (
-    <section className="bg-[#f4f6fc] py-6 sm:py-10 px-4 sm:px-5 text-center ">
-      <div className="flex flex-col sm:flex-row gap-2 mb-5 flex-wrap bg-gray-100 p-2 rounded-lg justify-center items-center max-w-max mx-auto shadow-[0_6px_8px_rgba(0,0,0,0.4)] px-3 sm:px-5">
-        <Button
+    <section className="bg-[#f4f6fc] py-6 sm:py-10 px-4 sm:px-5 text-center">
+      {/* Toggle Buttons */}
+      <div className="flex flex-col sm:flex-row gap-2 mb-5 flex-wrap justify-center items-center max-w-max mx-auto">
+        {/* All Countries Button */}
+        <button
           onClick={() => {
             setShowByContinent(false);
-            setShowAllCountries(false);
+            setShowAllCountries(true);
+            setCountryFilterQuery(""); // reset search
           }}
-          style={{
-            backgroundColor: !showByContinent ? "#d17728" : "#f0f0f0",
-            color: "black",
-            padding: "8px 16px",
-            borderRadius: "4px",
-            border: "2px solid #d17728",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
-          }}
+          className={`px-4 py-2 text-2xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
+            !showByContinent
+              ? "bg-[#d17728] text-white"
+              : "bg-gray-100 text-black hover:bg-[#ffe9d5]"
+          }`}
         >
           All Countries
-        </Button>
-        <Button
-          onClick={() => setShowByContinent(true)}
-          style={{
-            backgroundColor: showByContinent ? "#d17728" : "#f0f0f0",
-            color: "black",
-            padding: "8px 16px",
-            borderRadius: "4px",
-            border: "2px solid #d17728",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
+        </button>
+
+        {/* Continents Button */}
+        <button
+          onClick={() => {
+            setShowByContinent(true);
+            setShowAllCountries(false);
+            setCountryFilterQuery(""); // reset search
           }}
+          className={`px-4 py-2 text-2xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
+            showByContinent
+              ? "bg-[#d17728] text-white"
+              : "bg-gray-100 text-black hover:bg-[#ffe9d5]"
+          }`}
         >
           Continents
-        </Button>
+        </button>
       </div>
 
-      <div className="relative max-w-[400px] mx-auto mb-7 w-full">
+      {/* Search Input */}
+      <div className="relative max-w-[700px] mx-auto mb-7 w-full">
         <input
           type="text"
-          placeholder="Filter countries..."
+          placeholder={`Filter ${showByContinent ? "countries by continent" : "countries"}...`}
           value={countryFilterQuery}
           onChange={(e) => setCountryFilterQuery(e.target.value)}
           className="w-full py-3 pr-11 pl-4 text-base border-2 border-[#e1e5e9] rounded-xl bg-white transition-all focus:outline-none focus:border-blue-600 focus:shadow-[0_0_0_3px_rgba(0,120,212,0.1)]"
         />
-        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-base text-gray-600 pointer-events-none">🔍</span>
+        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-base text-gray-600 pointer-events-none">
+          🔍
+        </span>
       </div>
 
+      {/* Country/Continent Display */}
       <form onSubmit={handleCompare}>
-        {showByContinent ? (
+        {!showByContinent ? (
           <>
+            {/* All Countries View */}
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3 sm:gap-5 max-w-7xl mx-auto px-2">
+              {countriesToShow.map((country) => (
+                <CountryOption
+                  key={country}
+                  country={country}
+                  isSelected={selectedCountries.includes(country)}
+                  onClick={toggleCountrySelection}
+                />
+              ))}
+              {!showAllCountries && displayCountries.length > 20 && (
+                <div className="text-center">
+                  <Button
+                    type="button"
+                    onClick={() => setShowAllCountries(true)}
+                    className="bg-[#d17728] text-white hover:bg-[#b96420] transition rounded-lg px-3 py-2"
+                  >
+                    +{remainingCount} countries
+                  </Button>
+                </div>
+              )}
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Continents View */}
             {continents.map((continent) => {
               const continentCountries = CONTINENT_COUNTRIES[continent] || [];
               const filteredContinentCountries = countryFilterQuery
@@ -124,9 +139,11 @@ const CountrySearch = ({
               );
 
               return (
-                <div key={continent} className="mb-4 sm:mb-5 max-w-7xl mx-auto">
+                <div key={continent} className="mb-6 sm:mb-8 max-w-7xl mx-auto">
                   <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-4">
-                    <h3 className="text-base sm:text-lg font-medium">{continent}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                      {continent}
+                    </h3>
                     <input
                       type="checkbox"
                       checked={allSelected}
@@ -136,11 +153,11 @@ const CountrySearch = ({
                       onChange={(e) =>
                         handleContinentToggle(filteredContinentCountries, e.target.checked)
                       }
-                      className="w-5 h-5"
+                      className="w-5 h-5 accent-[#d17728] cursor-pointer"
                     />
                   </div>
 
-                  <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3 sm:gap-5 pt-4 sm:pt-10 max-w-7xl mx-auto px-2">
+                  <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3 sm:gap-5 pt-4 sm:pt-8 max-w-7xl mx-auto px-2">
                     {filteredContinentCountries.map((country) => (
                       <CountryOption
                         key={country}
@@ -154,31 +171,23 @@ const CountrySearch = ({
               );
             })}
           </>
-        ) : (
-          <>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3 sm:gap-5 max-w-7xl mx-auto px-2">
-              {countriesToShow.map((country) => (
-                <CountryOption
-                  key={country}
-                  country={country}
-                  isSelected={selectedCountries.includes(country)}
-                  onClick={toggleCountrySelection}
-                />
-              ))}
-              {!showAllCountries && displayCountries.length > 20 && (
-              <div className="text-center">
-                <Button className="h-full" onClick={() => setShowAllCountries(true)}>
-                  +{remainingCount} countries
-                </Button>
-              </div>
-            )}
-            </div>
-            
-          </>
         )}
-        <div className="flex flex-col sm:flex-row justify-center gap-2 mt-7">
-          <Button type="submit">Compare</Button>
-          <Button onClick={handleClear}>Clear</Button>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mt-7">
+          <Button
+            type="submit"
+            className="bg-[#d17728] text-white hover:bg-[#b96420] px-5 py-2 rounded-lg shadow-md"
+          >
+            Compare
+          </Button>
+          <Button
+            type="button"
+            onClick={handleClear}
+            className="bg-gray-300 text-black hover:bg-gray-400 px-5 py-2 rounded-lg shadow-md"
+          >
+            Clear
+          </Button>
         </div>
       </form>
     </section>
