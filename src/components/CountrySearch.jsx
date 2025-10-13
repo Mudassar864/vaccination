@@ -51,13 +51,13 @@ const CountrySearch = ({
             setShowAllCountries(true);
             setCountryFilterQuery(""); // reset search
           }}
-          className={`px-4 py-2 text-2xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
+          className={`px-4 py-2 text-xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
             !showByContinent
               ? "bg-[#d17728] text-white"
               : "bg-gray-100 text-black hover:bg-[#ffe9d5]"
           }`}
         >
-          All Countries
+          Search by Country
         </button>
 
         {/* Continents Button */}
@@ -67,13 +67,13 @@ const CountrySearch = ({
             setShowAllCountries(false);
             setCountryFilterQuery(""); // reset search
           }}
-          className={`px-4 py-2 text-2xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
+          className={`px-4 py-2 text-xl rounded border-2 border-[#d17728] shadow-md transition-colors duration-300 ${
             showByContinent
               ? "bg-[#d17728] text-white"
               : "bg-gray-100 text-black hover:bg-[#ffe9d5]"
           }`}
         >
-          Continents
+          Search by Continent
         </button>
       </div>
 
