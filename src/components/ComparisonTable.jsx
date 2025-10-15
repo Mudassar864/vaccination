@@ -295,7 +295,7 @@ const ComparisonTable = ({
   return (
     <div className="comparison-wrapper text-center py-10 px-5 bg-gray-50 min-h-[60vh]">
       <div
-        className="w-full max-w-[1440px] mx-auto rounded-lg shadow-sm bg-white"
+        className="w-full max-w-[1480px] mx-auto rounded-lg shadow-sm bg-white"
         style={{
           overflowX: "auto",
           overflowY: "auto",
@@ -309,7 +309,7 @@ const ComparisonTable = ({
           <thead className="sticky top-0 z-20 bg-white">
             <tr>
               <th
-                style={{ width: "300px" }}
+                style={{ width: "350px" }}
                 className="sticky top-0 z-30 bg-white"
               ></th>
               {displayCountries.map((country, i) => {
@@ -423,7 +423,7 @@ const ComparisonTable = ({
               ))}
             </tr>
 
-            {renderGenericSection("VaccinationSystem", "q")}
+            {renderGenericSection("VaccinationSystem", "v")}
             {renderGenericSection("HCP_Providers", "h")}
             {renderGenericSection("Healthcare", "hc")}
             {renderGenericSection("Country", "c")}
